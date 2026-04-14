@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mk</title>
+  <style>
+    body {
+      background-color: #EAD637;
+      margin: 0;
+      font-family: monospace;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      height: 100vh;
+    }
+    #terminal {
+      width: 100%;
+      max-width: 800px;
+      padding: 1rem;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #output {
+      white-space: pre-wrap;
+      flex: 1;
+    }
+    .prompt-line {
+      display: flex;
+      align-items: center;
+    }
+    .prompt-line span {
+      margin-right: 0.5ch;
+    }
+    #input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font: inherit;
+    }
+  </style>
+</head>
+<body>
+  <div id="terminal">
+    <div id="output"></div>
+    <div class="prompt-line">
+      <span>&gt;</span>
+      <input id="input" type="text" autofocus spellcheck="false" autocomplete="off">
+    </div>
+  </div>
+  <script src="wasm_exec.js"></script>
+  <script>
+    const go = new Go();
+    let ready = false;
+    WebAssembly.instantiateStreaming(fetch("mk.wasm"), go.importObject).then((result) => {
+      go.run(result.instance);
+      ready = true;
+    });
+
+    const output = document.getElementById("output");
+    const input = document.getElementById("input");
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key !== "Enter") return;
+      const cmd = input.value.trim();
+      input.value = "";
+      if (!cmd) return;
+
+      output.textContent += "> " + cmd + "\n";
+      if (!ready) {
+        output.textContent += "wasm not loaded yet\n";
+        return;
+      }
+      const result = mkRun(cmd);
+      if (result) output.textContent += result;
+      output.scrollIntoView({ block: "end" });
+    });
+  </script>
+</body>
+</html>
