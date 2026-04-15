@@ -9,7 +9,7 @@
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add ASCII art portrait picture
-- [ ] clickable URLs
+- [ ] support clickable URLs
 - [ ] add favicon
 - [ ] troubleshoot `code 404, message File not found`
 
@@ -39,6 +39,7 @@
 ### Commands
 
 - [ ] version
+  - [ ] embed semver in binary, read version from there
 - [ ] education
 
 ### Done
