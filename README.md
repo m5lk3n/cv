@@ -31,24 +31,6 @@ Then open http://localhost:8000 and type `mk version` in the terminal prompt.
 make clean
 ```
 
-## To do
+## Disclaimer
 
-### Open
-
-- [ ] Resume as JSON?
-
-### Commands
-
-- [ ] education
-- [ ] experience
-- [ ] achievement(s)
-- [ ] language(s)
-- [ ] skills
-- [ ] pages / links / online / social
-- [ ] certification(s) (license(s) as alias?)
-- [ ] volunteering (?)
-- [ ] about / summary (?)
-
-### Makefile
-
-- [ ] deploy
+I used Claude Opus 4.6 to implement this project.
