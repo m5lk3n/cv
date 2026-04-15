@@ -30,3 +30,25 @@ Then open http://localhost:8000 and type `mk version` in the terminal prompt.
 ```sh
 make clean
 ```
+
+## To do
+
+### Open
+
+- [ ] Resume as JSON?
+
+### Commands
+
+- [ ] education
+- [ ] experience
+- [ ] achievement(s)
+- [ ] language(s)
+- [ ] skills
+- [ ] pages / links / online / social
+- [ ] certification(s) (license(s) as alias?)
+- [ ] volunteering (?)
+- [ ] about / summary (?)
+
+### Makefile
+
+- [ ] deploy

@@ -33,12 +33,30 @@
     .prompt-line span {
       margin-right: 0.5ch;
     }
-    #input {
+    .input-wrap {
       flex: 1;
+      position: relative;
+      display: inline-block;
+    }
+    #input {
+      width: 100%;
       border: none;
       outline: none;
       background: transparent;
       font: inherit;
+      caret-color: transparent;
+    }
+    .cursor {
+      position: absolute;
+      top: 0;
+      width: 1ch;
+      height: 1.2em;
+      background: #000;
+      pointer-events: none;
+      animation: blink 1s step-end infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
     }
   </style>
 </head>
@@ -46,8 +64,11 @@
   <div id="terminal">
     <div id="output"></div>
     <div class="prompt-line">
-      <span>&gt;</span>
-      <input id="input" type="text" autofocus spellcheck="false" autocomplete="off">
+      <span>$</span>
+      <div class="input-wrap">
+        <input id="input" type="text" autofocus spellcheck="false" autocomplete="off">
+        <div class="cursor" id="cursor"></div>
+      </div>
     </div>
   </div>
   <script src="wasm_exec.js"></script>
@@ -61,14 +82,24 @@
 
     const output = document.getElementById("output");
     const input = document.getElementById("input");
+    const cursor = document.getElementById("cursor");
+
+    function updateCursor() {
+      cursor.style.left = input.selectionStart + "ch";
+    }
+    input.addEventListener("input", updateCursor);
+    input.addEventListener("click", updateCursor);
+    input.addEventListener("keyup", updateCursor);
+    updateCursor();
 
     input.addEventListener("keydown", (e) => {
       if (e.key !== "Enter") return;
       const cmd = input.value.trim();
       input.value = "";
+      updateCursor();
       if (!cmd) return;
 
-      output.textContent += "> " + cmd + "\n";
+      output.textContent += "$ " + cmd + "\n";
       if (!ready) {
         output.textContent += "wasm not loaded yet\n";
         return;
