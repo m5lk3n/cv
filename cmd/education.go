@@ -29,7 +29,7 @@ var educationCmd = &cobra.Command{
 				fmt.Fprintf(w, "  %s\n", edu.URL)
 			}
 			if edu.Score != "" {
-				fmt.Fprintf(w, "  Score: %s\n", edu.Score)
+				fmt.Fprintf(w, "  GPA: %s\n", edu.Score)
 			}
 			if len(edu.Courses) > 0 {
 				fmt.Fprintf(w, "  Courses: %s\n", strings.Join(edu.Courses, ", "))

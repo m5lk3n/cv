@@ -32,14 +32,18 @@
     ]
   }],
   "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
+    "organization": "Waldmohr Fire Department",
+    "position": "Volunteer Firefighter",
+    "url": "https://www.feuerwehr-waldmohr.de/",
+    "startDate": "1988-10",
+    "endDate": "2019-01",
+    "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
     "highlights": [
-      "Awarded 'Vol unteer of the Month'"
+      "Junior cadet from 1988 to 1990",
+      "Active firefighter from 1990 to 2019",
+      "State-certified incident commander and group leader",
+      "Creator and Developer of organization's website between 1998 and 2006",
+      "Participated in 100+ firefighting operations"
     ]
   }],
   "education": [{
@@ -49,7 +53,7 @@
     "studyType": "Master of Science (M.Sc.)",
     "startDate": "2012-10",
     "endDate": "2016-05",
-    "score": "1.2 (German grading system) / 4.0 (US grading system)"
+    "score": "4.0"
   },
   {
     "institution": "University of Applied Sciences Kaiserlautern",
@@ -57,8 +61,8 @@
     "area": "Computer Science",
     "studyType": "Diplom-Informatiker (FH)",
     "startDate": "1996-10",
-    "endDate": "1999-12",
-    "score": "1.5 (German grading system) / 4.0 (US grading system)"
+    "endDate": "2000-12",
+    "score": "4.0"
    }
   ],
   "awards": [{
@@ -96,10 +100,6 @@
   {
     "language": "German",
     "fluency": "C2"
-  },
-  {
-    "language": "Dutch",
-    "fluency": "A1"
   }],
   "interests": [{
     "name": "Wildlife",

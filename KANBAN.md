@@ -22,7 +22,6 @@
 - [ ] skills
 - [ ] pages / links / online / social
 - [ ] certification(s) (license(s) as alias?)
-- [ ] volunteering (?)
 - [ ] about / summary (?)
 
 #### Extended
@@ -32,6 +31,9 @@
   - [ ] "The only winning move is not to play the game." (Dr. Falken)
   - [ ] "Remember, you'll die" (unknown)
   - [ ] "The world doesn't need more opinions" (unknown)
+- [ ] faq
+  - [ ] recruiter
+  - [ ] sales
 - [ ] misc (?)
   - [ ] Why Saturn yellow?
 
@@ -51,5 +53,6 @@
   - [ ] embed semver in binary, read version from there
 - [ ] education
 - [ ] language(s)
+- [ ] volunteering
 
 ### Done

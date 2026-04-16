@@ -9,8 +9,9 @@ import (
 var resumeData []byte
 
 type Resume struct {
-	Education []Education `json:"education"`
-	Languages []Language  `json:"languages"`
+	Education  []Education `json:"education"`
+	Languages  []Language  `json:"languages"`
+	Volunteer  []Volunteer `json:"volunteer"`
 }
 
 type Education struct {
@@ -27,6 +28,16 @@ type Education struct {
 type Language struct {
 	Language string `json:"language"`
 	Fluency  string `json:"fluency"`
+}
+
+type Volunteer struct {
+	Organization string   `json:"organization"`
+	Position     string   `json:"position"`
+	URL          string   `json:"url"`
+	StartDate    string   `json:"startDate"`
+	EndDate      string   `json:"endDate"`
+	Summary      string   `json:"summary"`
+	Highlights   []string `json:"highlights"`
 }
 
 func Load() (Resume, error) {
