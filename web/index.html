@@ -84,6 +84,7 @@
     WebAssembly.instantiateStreaming(fetch("mk.wasm"), go.importObject).then((result) => {
       go.run(result.instance);
       ready = true;
+      output.textContent += mkRun("mk help");
     });
 
     const output = document.getElementById("output");

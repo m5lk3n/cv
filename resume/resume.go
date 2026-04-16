@@ -10,6 +10,7 @@ var resumeData []byte
 
 type Resume struct {
 	Education []Education `json:"education"`
+	Languages []Language  `json:"languages"`
 }
 
 type Education struct {
@@ -21,6 +22,11 @@ type Education struct {
 	EndDate     string   `json:"endDate"`
 	Score       string   `json:"score"`
 	Courses     []string `json:"courses"`
+}
+
+type Language struct {
+	Language string `json:"language"`
+	Fluency  string `json:"fluency"`
 }
 
 func Load() (Resume, error) {

@@ -19,12 +19,21 @@
 
 - [ ] experience / work
 - [ ] achievement(s)
-- [ ] language(s)
 - [ ] skills
 - [ ] pages / links / online / social
 - [ ] certification(s) (license(s) as alias?)
 - [ ] volunteering (?)
 - [ ] about / summary (?)
+
+#### Extended
+
+- [ ] quotes
+  - [ ] "Whatever tomorrow brings, I'll be there. With open arms and open eyes" (Incubus, Drive)
+  - [ ] "The only winning move is not to play the game." (Dr. Falken)
+  - [ ] "Remember, you'll die" (unknown)
+  - [ ] "The world doesn't need more opinions" (unknown)
+- [ ] misc (?)
+  - [ ] Why Saturn yellow?
 
 ### Makefile
 
@@ -41,5 +50,6 @@
 - [ ] version
   - [ ] embed semver in binary, read version from there
 - [ ] education
+- [ ] language(s)
 
 ### Done

@@ -91,7 +91,15 @@
   }],
   "languages": [{
     "language": "English",
-    "fluency": "Native speaker"
+    "fluency": "C2"
+  },
+  {
+    "language": "German",
+    "fluency": "C2"
+  },
+  {
+    "language": "Dutch",
+    "fluency": "A1"
   }],
   "interests": [{
     "name": "Wildlife",
