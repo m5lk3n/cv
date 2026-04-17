@@ -20,7 +20,6 @@
 - [ ] experience / work
 - [ ] achievement(s)
 - [ ] skills
-- [ ] pages / links / online / social
 - [ ] certification(s) (license(s) as alias?)
 - [ ] about / summary (?)
 
@@ -49,6 +48,8 @@
 
 ### Commands
 
+- [ ] basics
+  - [ ] pages / links / online / social
 - [ ] version
   - [ ] embed semver in binary, read version from there
 - [ ] education

@@ -1,23 +1,23 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
+    "name": "Michael Klein",
+    "label": "Cloud Platform Architect and Engineer",
     "image": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "url": "https://johndoe.com",
-    "summary": "A summary of John Doe…",
+    "email": "devnull@michael-klein.info",
+    "phone": "",
+    "url": "https://michael-klein.info/",
+    "summary": "Lead Cloud Architect | Google Cloud Platform, AWS, Platform Engeneering, CloudOps | 20+ years of experience in IT",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
-      "countryCode": "US",
-      "region": "California"
+      "address": "",
+      "postalCode": "",
+      "city": "The Randstad",
+      "countryCode": "NL",
+      "region": "Zuid-Holland"
     },
     "profiles": [{
-      "network": "Twitter",
-      "username": "john",
-      "url": "https://twitter.com/john"
+      "network": "LinkedIn",
+      "username": "m5lk3n",
+      "url": "https://www.linkedin.com/in/m5lk3n"
     }]
   },
   "work": [{

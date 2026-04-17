@@ -9,9 +9,36 @@ import (
 var resumeData []byte
 
 type Resume struct {
-	Education  []Education `json:"education"`
-	Languages  []Language  `json:"languages"`
-	Volunteer  []Volunteer `json:"volunteer"`
+	Basics    Basics      `json:"basics"`
+	Education []Education `json:"education"`
+	Languages []Language  `json:"languages"`
+	Volunteer []Volunteer `json:"volunteer"`
+}
+
+type Basics struct {
+	Name     string    `json:"name"`
+	Label    string    `json:"label"`
+	Image    string    `json:"image"`
+	Email    string    `json:"email"`
+	Phone    string    `json:"phone"`
+	URL      string    `json:"url"`
+	Summary  string    `json:"summary"`
+	Location Location  `json:"location"`
+	Profiles []Profile `json:"profiles"`
+}
+
+type Location struct {
+	Address     string `json:"address"`
+	PostalCode  string `json:"postalCode"`
+	City        string `json:"city"`
+	CountryCode string `json:"countryCode"`
+	Region      string `json:"region"`
+}
+
+type Profile struct {
+	Network  string `json:"network"`
+	Username string `json:"username"`
+	URL      string `json:"url"`
 }
 
 type Education struct {
