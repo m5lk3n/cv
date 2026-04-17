@@ -120,12 +120,44 @@
     input.addEventListener("keyup", updateCursor);
     updateCursor();
 
+    const history = [];
+    let historyIndex = -1;
+
     input.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowUp") {
+        e.preventDefault();
+        if (historyIndex < history.length - 1) {
+          historyIndex++;
+          input.value = history[history.length - 1 - historyIndex];
+          updateCursor();
+        }
+        return;
+      }
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        if (historyIndex > 0) {
+          historyIndex--;
+          input.value = history[history.length - 1 - historyIndex];
+        } else {
+          historyIndex = -1;
+          input.value = "";
+        }
+        updateCursor();
+        return;
+      }
       if (e.key !== "Enter") return;
       const cmd = input.value.trim();
       input.value = "";
+      historyIndex = -1;
       updateCursor();
       if (!cmd) return;
+
+      history.push(cmd);
+
+      if (cmd === "clear") {
+        output.innerHTML = "";
+        return;
+      }
 
       appendOutput("$ " + cmd + "\n");
       if (!ready) {

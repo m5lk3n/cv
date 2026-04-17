@@ -3,7 +3,6 @@
 ## Open
 
 - [ ] support `resume.json`?
-- [ ] support clear and cursor up/down in shell?
 
 ## Backlog
 
