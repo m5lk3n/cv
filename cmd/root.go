@@ -11,6 +11,9 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "mk",
 	Short: "mk cv tool",
+	CompletionOptions: cobra.CompletionOptions{
+		DisableDefaultCmd: true,
+	},
 }
 
 func Execute() {
