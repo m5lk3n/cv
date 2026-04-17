@@ -11,7 +11,6 @@
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add ASCII art portrait picture
-- [ ] support clickable URLs
 - [ ] add favicon
 - [ ] troubleshoot `code 404, message File not found`
 
@@ -61,3 +60,5 @@
 - [ ] volunteering
 
 ### Done
+
+- [x] support clickable URLs

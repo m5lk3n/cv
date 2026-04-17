@@ -28,6 +28,9 @@
       flex: 1;
       overflow-y: auto;
     }
+    #output a {
+      color: inherit;
+    }
     .prompt-line {
       display: flex;
       align-items: center;
@@ -86,12 +89,27 @@
     WebAssembly.instantiateStreaming(fetch("mk.wasm"), go.importObject).then((result) => {
       go.run(result.instance);
       ready = true;
-      output.textContent += mkRun("mk help");
+      appendOutput(mkRun("mk help"));
     });
 
     const output = document.getElementById("output");
     const input = document.getElementById("input");
     const cursor = document.getElementById("cursor");
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
+    function linkify(text) {
+      return escapeHtml(text).replace(
+        /(https?:\/\/[^\s<]+)/g,
+        '<a href="$1" target="_blank" rel="noopener">$1</a>'
+      );
+    }
+
+    function appendOutput(text) {
+      output.innerHTML += linkify(text);
+    }
 
     function updateCursor() {
       cursor.style.left = input.selectionStart + "ch";
@@ -108,13 +126,13 @@
       updateCursor();
       if (!cmd) return;
 
-      output.textContent += "$ " + cmd + "\n";
+      appendOutput("$ " + cmd + "\n");
       if (!ready) {
-        output.textContent += "wasm not loaded yet\n";
+        appendOutput("wasm not loaded yet\n");
         return;
       }
       const result = mkRun(cmd);
-      if (result) output.textContent += result;
+      if (result) appendOutput(result);
       output.scrollTop = output.scrollHeight;
     });
   </script>

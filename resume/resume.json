@@ -71,7 +71,7 @@
       "Junior cadet from 1988 to 1990",
       "Active firefighter from 1990 to 2019",
       "State-certified incident commander and group leader",
-      "Creator and Developer of organization's website between 1998 and 2006",
+      "Creator and developer of organization's website between 1998 and 2006",
       "Participated in 100+ incidents"
     ]
   }],
@@ -115,10 +115,14 @@
     "keywords": [
       "Platform Engineering",
       "Cloud Infrastructure",
-      "Infrastructure as Code",
-      "Cloud Native",
+      "Infrastructure as Code (IaC)",
+      "Cloud Native Adoption",
+      "Software Delivery (CI/CD)",
       "CloudOps",
-      "FinOps"
+      "FinOps",
+      "Containerization",
+      "Container Orchestration",
+      "Kubernetes"
     ]
   }],
   "languages": [{
