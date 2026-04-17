@@ -2,11 +2,11 @@
   "basics": {
     "name": "Michael Klein",
     "label": "Cloud Platform Architect and Engineer",
-    "image": "",
+    "image": "mk.png",
     "email": "devnull@michael-klein.info",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Lead Cloud Architect | Google Cloud Platform, AWS, Platform Engeneering, CloudOps | 20+ years of experience in IT",
+    "summary": "Lead Cloud Architect | GCP, AWS, Platform Engineering, CloudOps | 20+ years of experience in IT",
     "location": {
       "address": "",
       "postalCode": "",
@@ -17,33 +17,62 @@
     "profiles": [{
       "network": "LinkedIn",
       "username": "m5lk3n",
-      "url": "https://www.linkedin.com/in/m5lk3n"
+      "url": "https://www.linkedin.com/in/m5lk3n/"
     }]
   },
   "work": [{
-    "name": "Company",
-    "position": "President",
-    "url": "https://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description…",
+    "name": "EPO",
+    "position": "Lead Cloud Architect",
+    "url": "https://epo.org/",
+    "startDate": "09/2010",
+    "endDate": "Present",
+    "summary": "",
     "highlights": [
-      "Started the company"
+      "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup",
+      "Instead of paying €1, I make sure our actual spend is ~60 cents",
+      "I've helped to adopt GCP from 0 to > €4m p.a., saving ~50% compared to on-prem",
+      "I was directly involved in the implementation of several discount agreements, e.g., with ~€270k additional saving in 2023 and ~350k in 2024",
+      "I helped to increase our overall 2024 production by 2% (~€50M)",
+      "I'm the sole developer of `cecli` - the missing `gcloud browsers` command"
     ]
+  },
+  {
+    "name": "IDS",
+    "position": "Development Manager",
+    "url": "",
+    "startDate": "09/2003",
+    "endDate": "08/2010",
+    "summary": "",
+    "highlights": [
+      "As Development Manager for Oracle BPA Suite, I achieved ~140% ROI in 3 years",
+      "I built up an office and a development outpost for 5 FTEs in the US",
+      "As Team Manager Web Development, I saved a 7 digit figure deal from customer drop-out",
+      "I mentored a thesis"
+    ]
+  },
+  {
+    "name": "Insiders Technologies",
+    "position": "Software Engineer",
+    "url": "",
+    "startDate": "01/2000",
+    "endDate": "08/2003",
+    "summary": "",
+    "highlights": [
+      "I developed a working prototype of a web-based search system in 6 weeks, which was demoed at the world's largest IT trade fair, CeBIT"]
   }],
   "volunteer": [{
     "organization": "Waldmohr Fire Department",
     "position": "Volunteer Firefighter",
     "url": "https://www.feuerwehr-waldmohr.de/",
-    "startDate": "1988-10",
-    "endDate": "2019-01",
-    "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
+    "startDate": "10/1988",
+    "endDate": "01/2019",
+    "summary": "I served the community as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
     "highlights": [
       "Junior cadet from 1988 to 1990",
       "Active firefighter from 1990 to 2019",
       "State-certified incident commander and group leader",
       "Creator and Developer of organization's website between 1998 and 2006",
-      "Participated in 100+ firefighting operations"
+      "Participated in 100+ incidents"
     ]
   }],
   "education": [{
@@ -51,46 +80,45 @@
     "url": "https://www.fernuni-hagen.de/english/",
     "area": "Computer Science",
     "studyType": "Master of Science (M.Sc.)",
-    "startDate": "2012-10",
-    "endDate": "2016-05",
+    "startDate": "10/2012",
+    "endDate": "05/2016",
     "score": "4.0"
+  },
+  {
+    "institution": "Clemson University",
+    "url": "https://www.clemson.edu/",
+    "area": "Computer Science",
+    "studyType": "Summer School",
+    "startDate": "07/1998",
+    "endDate": "08/1998",
+    "score": "Undergraduate Credits"
   },
   {
     "institution": "University of Applied Sciences Kaiserlautern",
     "url": "https://hs-kl.de/en/",
     "area": "Computer Science",
-    "studyType": "Diplom-Informatiker (FH)",
-    "startDate": "1996-10",
-    "endDate": "2000-12",
+    "studyType": "\"Diplom-Informatiker (FH)\"",
+    "startDate": "10/1996",
+    "endDate": "12/2000",
     "score": "4.0"
    }
   ],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
   "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
+    "name": "Google Cloud Certified Gen AI Leader",
+    "date": "05/2025",
+    "issuer": "Google Cloud",
+    "url": "https://www.credly.com/badges/6944339f-e1c9-4198-8982-fd1f56592c4f"
   }],
   "skills": [{
-    "name": "Web Development",
-    "level": "Master",
+    "name": "Google Cloud Platform",
+    "level": "",
     "keywords": [
-      "HTML",
-      "CSS",
-      "JavaScript"
+      "Platform Engineering",
+      "Cloud Infrastructure",
+      "Infrastructure as Code",
+      "Cloud Native",
+      "CloudOps",
+      "FinOps"
     ]
   }],
   "languages": [{
@@ -101,25 +129,17 @@
     "language": "German",
     "fluency": "C2"
   }],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
   "projects": [{
-    "name": "Project",
-    "startDate": "2019-01-01",
-    "endDate": "2021-01-01",
-    "description": "Description...",
+    "name": "Wyatt",
+    "startDate": "10/2024",
+    "endDate": "02/2025",
+    "description": "A location- and time-based reminder app for Android and iOS.",
     "highlights": [
-      "Won award at AIHacks 2016"
+      "Implemented the app using Flutter, enabling cross-platform development",
+      "Integrated Geofencing and Google Maps",
+      "Published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
+      "Published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of geofencing in the app"  
     ],
-    "url": "https://project.com/"
+    "url": "https://wyatt.lttl.dev/"
   }]
 }

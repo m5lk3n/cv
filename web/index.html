@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mk</title>
+  <title>mk cv tool</title>
   <style>
     body {
       background-color: #EAD637;
       margin: 0;
       font-family: monospace;
+      font-size: 1.1rem;
       display: flex;
       align-items: stretch;
       justify-content: center;
@@ -18,13 +19,14 @@
       width: 100%;
       max-width: 800px;
       padding: 1rem;
-      overflow-y: auto;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
     }
     #output {
       white-space: pre-wrap;
       flex: 1;
+      overflow-y: auto;
     }
     .prompt-line {
       display: flex;
@@ -113,7 +115,7 @@
       }
       const result = mkRun(cmd);
       if (result) output.textContent += result;
-      output.scrollIntoView({ block: "end" });
+      output.scrollTop = output.scrollHeight;
     });
   </script>
 </body>

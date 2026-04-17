@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"fmt"
-	"strings"
 
 	"github.com/spf13/cobra"
 
@@ -10,9 +9,9 @@ import (
 )
 
 var volunteeringCmd = &cobra.Command{
-	Use:   "volunteering",
+	Use:     "volunteering",
 	Aliases: []string{"volunteer", "vol"},
-	Short: "Display volunteering experience",
+	Short:   "Display volunteering experience",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
 		if err != nil {
@@ -32,7 +31,10 @@ var volunteeringCmd = &cobra.Command{
 				fmt.Fprintf(w, "  %s\n", v.Summary)
 			}
 			if len(v.Highlights) > 0 {
-				fmt.Fprintf(w, "  Highlights: %s\n", strings.Join(v.Highlights, ", "))
+				fmt.Fprintln(w, "  Highlights:")
+				for _, h := range v.Highlights {
+					fmt.Fprintf(w, "    • %s\n", h)
+				}
 			}
 		}
 		return nil

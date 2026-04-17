@@ -9,10 +9,14 @@ import (
 var resumeData []byte
 
 type Resume struct {
-	Basics    Basics      `json:"basics"`
-	Education []Education `json:"education"`
-	Languages []Language  `json:"languages"`
-	Volunteer []Volunteer `json:"volunteer"`
+	Basics       Basics        `json:"basics"`
+	Certificates []Certificate `json:"certificates"`
+	Education    []Education   `json:"education"`
+	Languages    []Language    `json:"languages"`
+	Projects     []Project     `json:"projects"`
+	Skills       []Skill       `json:"skills"`
+	Volunteer    []Volunteer   `json:"volunteer"`
+	Work         []Work        `json:"work"`
 }
 
 type Basics struct {
@@ -65,6 +69,38 @@ type Volunteer struct {
 	EndDate      string   `json:"endDate"`
 	Summary      string   `json:"summary"`
 	Highlights   []string `json:"highlights"`
+}
+
+type Project struct {
+	Name        string   `json:"name"`
+	StartDate   string   `json:"startDate"`
+	EndDate     string   `json:"endDate"`
+	Description string   `json:"description"`
+	Highlights  []string `json:"highlights"`
+	URL         string   `json:"url"`
+}
+
+type Certificate struct {
+	Name   string `json:"name"`
+	Date   string `json:"date"`
+	Issuer string `json:"issuer"`
+	URL    string `json:"url"`
+}
+
+type Skill struct {
+	Name     string   `json:"name"`
+	Level    string   `json:"level"`
+	Keywords []string `json:"keywords"`
+}
+
+type Work struct {
+	Name       string   `json:"name"`
+	Position   string   `json:"position"`
+	URL        string   `json:"url"`
+	StartDate  string   `json:"startDate"`
+	EndDate    string   `json:"endDate"`
+	Summary    string   `json:"summary"`
+	Highlights []string `json:"highlights"`
 }
 
 func Load() (Resume, error) {

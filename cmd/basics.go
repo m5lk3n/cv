@@ -20,6 +20,9 @@ var basicsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		b := r.Basics
 		fmt.Fprintf(w, "%s — %s\n", b.Name, b.Label)
+		if b.Image != "" {
+			fmt.Fprintf(w, "  Image: %s\n", b.Image)
+		}
 		if b.Email != "" {
 			fmt.Fprintf(w, "  Email: %s\n", b.Email)
 		}
@@ -27,7 +30,7 @@ var basicsCmd = &cobra.Command{
 			fmt.Fprintf(w, "  Phone: %s\n", b.Phone)
 		}
 		if b.URL != "" {
-			fmt.Fprintf(w, "  %s\n", b.URL)
+			fmt.Fprintf(w, "  Web: %s\n", b.URL)
 		}
 		if b.Summary != "" {
 			fmt.Fprintf(w, "  %s\n", b.Summary)

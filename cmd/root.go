@@ -10,7 +10,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "mk",
-	Short: "mk CLI tool",
+	Short: "mk cv tool",
 }
 
 func Execute() {
