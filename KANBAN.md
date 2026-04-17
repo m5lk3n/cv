@@ -11,8 +11,6 @@
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add ASCII art portrait picture
-- [ ] add favicon
-- [ ] troubleshoot `code 404, message File not found`
 
 ## To do
 
@@ -61,4 +59,5 @@
 
 ### Done
 
+- [x] add favicon
 - [x] support clickable URLs
