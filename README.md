@@ -33,4 +33,4 @@ make clean
 
 ## Disclaimer
 
-I used Claude Opus 4.6 to implement this project.
+I prompted Claude Opus 4.6 to implement this project. However, I had learned and used almost all technologies used in this project before, without the help of AI.

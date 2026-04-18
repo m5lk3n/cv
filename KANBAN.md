@@ -8,7 +8,6 @@
 
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
-- [ ] add ASCII art portrait picture
 
 ## To do
 
