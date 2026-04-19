@@ -18,11 +18,6 @@
 
 #### Extended
 
-- [ ] quotes
-  - [ ] "Whatever tomorrow brings, I'll be there. With open arms and open eyes" (Incubus, Drive)
-  - [ ] "The only winning move is not to play the game." (Dr. Falken)
-  - [ ] "Remember, you'll die." (unknown)
-  - [ ] "The world doesn't need more opinions." (unknown)
 - [ ] faq
   - [ ] recruiter
   - [ ] sales
@@ -53,6 +48,11 @@
 - [ ] education
 - [ ] language(s)
 - [ ] volunteering
+- [ ] quotes
+  - [x] "Whatever tomorrow brings, I'll be there. With open arms and open eyes" (Incubus, Drive)
+  - [x] "The only winning move is not to play." (WarGames)
+  - [ ] "Remember, you'll die." (unknown)
+  - [ ] "The world doesn't need more opinions." (unknown)
 
 ### Done
 

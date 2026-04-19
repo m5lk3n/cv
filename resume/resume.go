@@ -17,6 +17,7 @@ type Resume struct {
 	Skills       []Skill       `json:"skills"`
 	Volunteer    []Volunteer   `json:"volunteer"`
 	Work         []Work        `json:"work"`
+	XMK          XMK           `json:"x-mk"`
 }
 
 type Basics struct {
@@ -101,6 +102,15 @@ type Work struct {
 	EndDate    string   `json:"endDate"`
 	Summary    string   `json:"summary"`
 	Highlights []string `json:"highlights"`
+}
+
+type XMK struct {
+	Quotes []Quote `json:"quotes"`
+}
+
+type Quote struct {
+	Text   string `json:"text"`
+	Author string `json:"author"`
 }
 
 func Load() (Resume, error) {

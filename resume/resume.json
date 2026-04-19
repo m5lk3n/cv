@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "format": "https://jsonresume.org/schema/",
+    "theme": "developer-mono"
+  },
   "basics": {
     "name": "Michael Klein",
     "label": "Cloud Platform Architect and Engineer",
@@ -139,11 +143,25 @@
     "endDate": "02/2025",
     "description": "A location- and time-based reminder app for Android and iOS.",
     "highlights": [
-      "Implemented the app using Flutter, enabling cross-platform development",
-      "Integrated Geofencing and Google Maps",
-      "Published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
-      "Published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of geofencing in the app"  
+      "I implemented the app using Flutter, enabling cross-platform development",
+      "I integrated Geofencing and Google Maps",
+      "I published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
+      "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of geofencing in the app"  
     ],
     "url": "https://wyatt.lttl.dev/"
-  }]
+  }],
+  "x-mk": {
+    "quotes": [ {
+      "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
+      "author": "Incubus, \"Drive\""
+    },
+    {
+      "text": "The only winning move is not to play.",
+      "author": "Joshua, \"WarGames\""
+    },
+    {
+      "text": "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
+      "author": "Albert Schweitzer"
+    }]
+  }
 }
