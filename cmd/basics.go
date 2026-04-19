@@ -10,8 +10,9 @@ import (
 )
 
 var basicsCmd = &cobra.Command{
-	Use:   "basics",
-	Short: "Display basic information",
+	Use:     "basics",
+	Aliases: []string{"contact"},
+	Short:   "Display the basics including contact info",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
 		if err != nil {

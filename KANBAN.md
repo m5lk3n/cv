@@ -15,6 +15,7 @@
 - [ ] update `README.md`
 - [ ] publish on JSON resume's registry
 - [ ] fix links
+- [ ] address FIXMEs
 - [ ] create email alias(es)
 - [ ] improve wording
 
