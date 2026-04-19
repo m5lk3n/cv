@@ -7,7 +7,7 @@
     "name": "Michael Klein",
     "label": "Cloud Platform Architect and Engineer",
     "image": "https://michael-klein.info/images/mk.png",
-    "email": "devnull@michael-klein.info",
+    "email": "hello@michael-klein.info",
     "phone": "",
     "url": "https://michael-klein.info/",
     "summary": "Lead Cloud Architect | GCP, AWS, Platform Engineering, CloudOps | 20+ years of experience in IT",
@@ -33,9 +33,9 @@
     "summary": "",
     "highlights": [
       "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup",
-      "Instead of paying €1, I make sure our actual spend is ~60 cents",
-      "I've helped to adopt GCP from 0 to > €4m p.a., saving ~50% compared to on-prem",
-      "I was directly involved in the implementation of several discount agreements, e.g., with ~€270k additional saving in 2023 and ~350k in 2024",
+      "Instead of paying €1 to Google Cloud, I make sure our actual spend is ~60 cents",
+      "I've helped to adopt GCP from 0 to > €4m p.a., saving ~50% compared to on-premises",
+      "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270k additional saving in 2023 and ~350k in 2024",
       "I helped to increase our overall 2024 production by 2% (~€50M)",
       "I'm the sole developer of `cecli` - the missing `gcloud browsers` command"
     ]
@@ -72,11 +72,11 @@
     "endDate": "01/2019",
     "summary": "I served the community as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
     "highlights": [
-      "Junior cadet from 1988 to 1990",
-      "Active firefighter from 1990 to 2019",
-      "State-certified incident commander and group leader",
-      "Creator and developer of organization's website between 1998 and 2006",
-      "Participated in 100+ incidents"
+      "I was a junior cadet between 1988 and 1990",
+      "I was a firefighter from 1990 to 2019",
+      "I became a state-certified incident commander and group leader",
+      "I was the creator and developer of the organization's website between 1998 and 2006",
+      "I participated in 100+ incidents"
     ]
   }],
   "education": [{
@@ -135,7 +135,7 @@
   },
   {
     "language": "German",
-    "fluency": "C2"
+    "fluency": "Native Speaker"
   }],
   "projects": [{
     "name": "Wyatt",
