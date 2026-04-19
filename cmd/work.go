@@ -43,6 +43,7 @@ var workCmd = &cobra.Command{
 
 func init() {
 	rootCmd.AddCommand(workCmd)
+	rootCmd.AddCommand(achievementsCmd)
 	workCmd.AddCommand(achievementsCmd)
 }
 

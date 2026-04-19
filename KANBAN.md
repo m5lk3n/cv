@@ -11,10 +11,6 @@
 
 ## To do
 
-### Commands
-
-- [ ] achievement(s) as top-level command (?)
-- [ ] about / summary (?)
 
 ### Makefile
 
@@ -28,6 +24,7 @@
 
 ### Commands
 
+- [ ] about / summary
 - [ ] experience / work
   - [ ] achievements
 - [ ] skills
@@ -55,3 +52,4 @@
 
 - [x] add favicon
 - [x] support clickable URLs
+- [x] register `achievement(s)` as top-level command for `work achievement(s)`

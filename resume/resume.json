@@ -10,7 +10,7 @@
     "email": "hello@michael-klein.info",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Lead Cloud Architect | GCP, AWS, Platform Engineering, CloudOps | 20+ years of experience in IT",
+    "summary": "Lead Cloud Architect | GCP, AWS, Platform Engineering, CloudOps | 20+ years of experience in IT (US & Europe)",
     "location": {
       "address": "",
       "postalCode": "",
@@ -33,7 +33,7 @@
     "summary": "",
     "highlights": [
       "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup",
-      "Instead of paying €1 to Google Cloud, I make sure our actual spend is ~60 cents",
+      "Instead of paying €1 to Google Cloud, I make sure our actual pay is ~60 cents",
       "I've helped to adopt GCP from 0 to > €4m p.a., saving ~50% compared to on-premises",
       "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270k additional saving in 2023 and ~350k in 2024",
       "I helped to increase our overall 2024 production by 2% (~€50M)",
@@ -151,6 +151,7 @@
     "url": "https://wyatt.lttl.dev/"
   }],
   "x-mk": {
+    "about": "I am a Lead Cloud Architect and Engineer with over 20 years of experience in IT, specializing in Google Cloud Platform (GCP), AWS, Platform Engineering, and CloudOps. I have a proven track record of designing and implementing cloud solutions that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at bridging the gap between technology and business needs to deliver impactful results.",
     "quotes": [ {
       "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
       "author": "Incubus, \"Drive\""

@@ -105,6 +105,7 @@ type Work struct {
 }
 
 type XMK struct {
+	About  string  `json:"about"`
 	Quotes []Quote `json:"quotes"`
 	FAQs   []FAQ   `json:"faqs"`
 }
