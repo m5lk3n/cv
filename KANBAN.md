@@ -2,7 +2,7 @@
 
 ## Open
 
-- [ ] support `resume.json`?
+- [ ] support/publish `resume.json`?
 
 ## Backlog
 
@@ -13,16 +13,8 @@
 
 ### Commands
 
-- [ ] achievement(s) top-level command (?)
+- [ ] achievement(s) as top-level command (?)
 - [ ] about / summary (?)
-
-#### Extended
-
-- [ ] faq
-  - [ ] recruiter
-  - [ ] sales
-- [ ] misc (?)
-  - [ ] Why Saturn yellow?
 
 ### Makefile
 
@@ -53,6 +45,11 @@
   - [x] "The only winning move is not to play." (WarGames)
   - [ ] "Remember, you'll die." (unknown)
   - [ ] "The world doesn't need more opinions." (unknown)
+- [ ] faq
+  - [ ] recruiter
+  - [ ] sales
+  - [ ] misc (?)
+    - [ ] Why Saturn yellow?
 
 ### Done
 

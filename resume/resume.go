@@ -106,11 +106,17 @@ type Work struct {
 
 type XMK struct {
 	Quotes []Quote `json:"quotes"`
+	FAQs   []FAQ   `json:"faqs"`
 }
 
 type Quote struct {
 	Text   string `json:"text"`
 	Author string `json:"author"`
+}
+
+type FAQ struct {
+	Question string `json:"question"`
+	Answer   string `json:"answer"`
 }
 
 func Load() (Resume, error) {
