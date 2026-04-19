@@ -103,7 +103,7 @@
 
     function linkify(text) {
       return escapeHtml(text).replace(
-        /(https?:\/\/[^\s<]+)/g,
+        /(https?:\/\/[^\s<]+[^\s<.,;:!?)}\]'"])/g,
         '<a href="$1" target="_blank" rel="noopener">$1</a>'
       );
     }
