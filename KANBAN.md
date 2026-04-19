@@ -2,23 +2,21 @@
 
 ## Open
 
-- [ ] support/publish `resume.json`?
-
-## Backlog
-
-- [ ] download resume as PDF
-- [ ] entry page to choose between static and dynamic
+- [ ] Add configuration?
+  - [ ] Background color
+  - [ ] Site link
 
 ## To do
 
-
-### Makefile
-
-- [ ] add deploy target
-
-### Documentation
-
+- [ ] download resume as PDF
+- [ ] entry page to choose between static and dynamic
+- [ ] add deploy target to Makefile
+- [ ] add license
 - [ ] update `README.md`
+- [ ] publish on JSON resume's registry
+- [ ] fix links
+- [ ] create email alias(es)
+- [ ] improve wording
 
 ## Doing
 
@@ -51,5 +49,6 @@
 ### Done
 
 - [x] add favicon
+- [x] add link to GitHub repo
 - [x] support clickable URLs
 - [x] register `achievement(s)` as top-level command for `work achievement(s)`
