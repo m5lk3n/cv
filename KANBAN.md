@@ -4,7 +4,7 @@
 
 - [ ] Add configuration?
   - [ ] Background color
-  - [ ] Site link
+  - [ ] Site link/title
 
 ## To do
 

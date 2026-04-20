@@ -10,7 +10,7 @@ import (
 
 var rootCmd = &cobra.Command{
 	Use:   "mk",
-	Short: "mk cv tool v0.1.0", // FIXME: make this dynamic based on the actual version
+	Short: "Michael Klein's CV",
 	CompletionOptions: cobra.CompletionOptions{
 		DisableDefaultCmd: true,
 	},
