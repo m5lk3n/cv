@@ -8,11 +8,16 @@ import (
 //go:embed resume.json
 var resumeData []byte
 
+type Meta struct {
+	LastModified string `json:"lastModified"`
+}
+
 type Resume struct {
 	Basics       Basics        `json:"basics"`
 	Certificates []Certificate `json:"certificates"`
 	Education    []Education   `json:"education"`
 	Languages    []Language    `json:"languages"`
+	Meta         Meta          `json:"meta"`
 	Projects     []Project     `json:"projects"`
 	Skills       []Skill       `json:"skills"`
 	Volunteer    []Volunteer   `json:"volunteer"`

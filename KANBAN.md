@@ -8,6 +8,7 @@
 
 ## To do
 
+- [ ] validate `resume/resume.json` against https://github.com/jsonresume/resume-schema/tree/master
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add deploy target to Makefile

@@ -1,7 +1,8 @@
 {
   "meta": {
     "format": "https://jsonresume.org/schema/",
-    "theme": "developer-mono"
+    "theme": "developer-mono",
+    "lastModified": "2026-04-04T00:00:00Z"
   },
   "basics": {
     "name": "Michael Klein",
