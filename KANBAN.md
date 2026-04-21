@@ -2,20 +2,23 @@
 
 ## Open
 
-- [ ] Add configuration?
-  - [ ] Background color
-  - [ ] Site link/title
+- [ ] add configuration?
+  - [ ] background color
+  - [ ] foreground color
+  - [ ] site link/title
 
 ## To do
 
+- [ ] prep repo https://github.com/m5lk3n/cv
 - [ ] validate `resume/resume.json` against https://github.com/jsonresume/resume-schema/tree/master
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add deploy target to Makefile
 - [ ] add license
 - [ ] update `README.md`
-- [ ] publish on JSON resume's registry
+- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
 - [ ] fix links
+- [ ] fix package name
 - [ ] address FIXMEs
 - [ ] create email alias(es)
 - [ ] improve wording
@@ -45,8 +48,6 @@
 - [ ] faq
   - [ ] recruiter
   - [ ] sales
-  - [ ] misc (?)
-    - [ ] Why Saturn yellow?
 
 ### Done
 
