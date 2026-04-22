@@ -38,8 +38,8 @@
 - [ ] version
   - [ ] embed semver in binary, read version from there
 - [x] education
-- [ ] language(s)
-- [ ] volunteering
+- [x] language(s)
+- [x] volunteering
 - [ ] quotes
   - [x] "Whatever tomorrow brings, I'll be there. With open arms and open eyes" (Incubus, Drive)
   - [x] "The only winning move is not to play." (WarGames)
