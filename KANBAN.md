@@ -6,13 +6,12 @@
   - [ ] background color
   - [ ] foreground color
   - [ ] site link/title
+- [ ] validate `resume/resume.json` against https://github.com/jsonresume/resume-schema/tree/master
 
 ## To do
 
-- [ ] favicon.png should be the resume.json's basic.image (implement a fallback)
-- [ ] remove `resume.json` from repo
+- [ ] favicon.png should be the resume.json's basic.image (use app favicon as fallback)
 - [ ] prep repo https://github.com/m5lk3n/cv
-- [ ] validate `resume/resume.json` against https://github.com/jsonresume/resume-schema/tree/master
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add deploy target to Makefile
@@ -22,7 +21,6 @@
 - [ ] fix links
 - [ ] fix package name
 - [ ] address FIXMEs
-- [ ] create email alias(es)
 - [ ] improve wording
 
 ## Doing
