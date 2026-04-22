@@ -118,10 +118,15 @@
     }
 
     function linkify(text) {
-      return escapeHtml(text).replace(
-        /(https?:\/\/[^\s<]+[^\s<.,;:!?)}\]'"])/g,
-        '<a href="$1" target="_blank" rel="noopener">$1</a>'
-      );
+      return escapeHtml(text)
+        .replace(
+          /(https?:\/\/[^\s<]+[^\s<.,;:!?)}\]'"])/g,
+          '<a href="$1" target="_blank" rel="noopener">$1</a>'
+        )
+        .replace(
+          /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
+          '<a href="mailto:$1">$1</a>'
+        );
     }
 
     function appendOutput(text) {

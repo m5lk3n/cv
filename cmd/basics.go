@@ -34,7 +34,7 @@ var basicsCmd = &cobra.Command{
 			fmt.Fprintf(w, "  Web: %s\n", b.URL)
 		}
 		if b.Summary != "" {
-			fmt.Fprintf(w, "  %s\n", b.Summary)
+			fmt.Fprintf(w, "  Summary: %s\n", b.Summary)
 		}
 		loc := b.Location
 		var parts []string

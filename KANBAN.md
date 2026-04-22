@@ -33,8 +33,8 @@
 - [ ] skills
 - [ ] certification(s) (license(s) as alias?)
 - [ ] projects
-- [ ] basics
-  - [ ] pages / links / online / social
+- [x] basics
+  - [x] pages / links / online / social
 - [ ] version
   - [ ] embed semver in binary, read version from there
 - [ ] education

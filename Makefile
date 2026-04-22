@@ -26,7 +26,7 @@ build-cli:
 build-wasm:
 	GOOS=js GOARCH=wasm go build -o web/mk.wasm
 
-## run-web: run the WebAssembly module in a web server
-.PHONY: run-web
-run-web: needs-python3 build-wasm
+## run-localhost: build, deploy, and run the WebAssembly module on a local web server
+.PHONY: run-localhost
+run-localhost: needs-python3 build-wasm
 	python3 -m http.server -d web
