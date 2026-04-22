@@ -175,6 +175,12 @@
         return;
       }
 
+      if (cmd === "reset") {
+        output.innerHTML = "";
+        appendOutput(mkRun("mk help"));
+        return;
+      }
+
       appendOutput("$ " + cmd + "\n");
       if (!ready) {
         appendOutput("wasm not loaded yet\n");

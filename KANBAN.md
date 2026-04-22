@@ -9,6 +9,8 @@
 
 ## To do
 
+- [ ] favicon.png should be the resume.json's basic.image (implement a fallback)
+- [ ] remove `resume.json` from repo
 - [ ] prep repo https://github.com/m5lk3n/cv
 - [ ] validate `resume/resume.json` against https://github.com/jsonresume/resume-schema/tree/master
 - [ ] download resume as PDF

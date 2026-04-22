@@ -8,7 +8,7 @@
     "name": "Michael Klein",
     "label": "Cloud Platform Architect and Engineer",
     "image": "https://michael-klein.info/images/mk.png",
-    "email": "hello@michael-klein.info",
+    "email": "m5l.k3n@gmail.com",
     "phone": "",
     "url": "https://michael-klein.info/",
     "summary": "Cloud Architect | GCP, AWS, Platform Engineering, CloudOps | 20+ years of experience in IT (US & Europe)",
@@ -23,6 +23,11 @@
       "network": "LinkedIn",
       "username": "m5lk3n",
       "url": "https://www.linkedin.com/in/m5lk3n/"
+    },
+    {
+      "network": "GitHub",
+      "username": "m5lk3n",
+      "url": "https://github.com/m5lk3n"
     }]
   },
   "work": [{
@@ -153,6 +158,7 @@
   }],
   "x-mk": {
     "about": "I am a Lead Cloud Architect and Engineer with over 20 years of experience in IT, specializing in Google Cloud Platform (GCP), AWS, Platform Engineering, and CloudOps. I have a proven track record of designing and implementing cloud solutions that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at bridging the gap between technology and business needs to deliver impactful results.",
+    "hashtags": ["#cloudarchitect", "#gcp", "#aws", "#platformengineering", "#cloudops"],
     "quotes": [ {
       "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
       "author": "Incubus, \"Drive\""

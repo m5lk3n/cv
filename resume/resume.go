@@ -110,9 +110,10 @@ type Work struct {
 }
 
 type XMK struct {
-	About  string  `json:"about"`
-	Quotes []Quote `json:"quotes"`
-	FAQs   []FAQ   `json:"faqs"`
+	About    string   `json:"about"`
+	Hashtags []string `json:"hashtags"`
+	Quotes   []Quote  `json:"quotes"`
+	FAQs     []FAQ    `json:"faqs"`
 }
 
 type Quote struct {
