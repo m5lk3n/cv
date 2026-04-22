@@ -101,7 +101,9 @@
     "studyType": "Summer School",
     "startDate": "07/1998",
     "endDate": "08/1998",
-    "score": "Undergraduate Credits"
+    "courses": [
+      "Software Design and Implementation Using C++"
+    ]
   },
   {
     "institution": "University of Applied Sciences Kaiserlautern",
@@ -109,7 +111,7 @@
     "area": "Computer Science",
     "studyType": "\"Diplom-Informatiker (FH)\"",
     "startDate": "10/1996",
-    "endDate": "12/2000",
+    "endDate": "11/2000",
     "score": "4.0"
    }
   ],

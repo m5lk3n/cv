@@ -37,7 +37,7 @@
   - [x] pages / links / online / social
 - [ ] version
   - [ ] embed semver in binary, read version from there
-- [ ] education
+- [x] education
 - [ ] language(s)
 - [ ] volunteering
 - [ ] quotes
