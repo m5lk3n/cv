@@ -9,9 +9,9 @@ import (
 )
 
 var languagesCmd = &cobra.Command{
-	Use:   "languages",
+	Use:     "languages",
 	Aliases: []string{"language", "langs", "lang"},
-	Short: "Display languages",
+	Short:   "Display languages",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
 		if err != nil {

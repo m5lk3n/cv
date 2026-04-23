@@ -20,11 +20,21 @@ help:
 needs-python3:
 	@command -v python3 >/dev/null 2>&1 || { echo >&2 "Python 3 is required but it's not installed. Aborting."; exit 1; }
 
+needs-jq:
+	@command -v jq >/dev/null 2>&1 || { echo >&2 "jq is required but it's not installed. Aborting."; exit 1; }
+
 ## clean: remove generated binaries
 .PHONY: clean
 clean:
 	rm -f mk
 	rm -f web/mk.wasm
+
+## tidy: tidy up the codebase by formatting Go files, tidying Go modules, and formatting JSON in the resume file
+.PHONY: tidy
+tidy: needs-jq
+	gofmt -s -w .
+	go mod tidy
+	jq . resume/resume.json > resume/resume.json.tmp && mv resume/resume.json.tmp resume/resume.json
 
 ## build-cli: build the command-line interface
 .PHONY: build-cli

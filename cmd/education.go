@@ -10,9 +10,9 @@ import (
 )
 
 var educationCmd = &cobra.Command{
-	Use:   "education",
+	Use:     "education",
 	Aliases: []string{"edu"},
-	Short: "Display education history",
+	Short:   "Display education history",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
 		if err != nil {

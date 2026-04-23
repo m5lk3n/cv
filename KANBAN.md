@@ -20,19 +20,18 @@
 
 ## To do
 
-- format JSON
 - [ ] prep repo https://github.com/m5lk3n/cv
+- [ ] fix package name
+- [ ] fix links
+- [ ] improve wording
+- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
 - [ ] download resume as PDF
 - [ ] entry page to choose between static and dynamic
 - [ ] add deploy target to Makefile
-- [ ] add license
-- [ ] update `README.md`
-- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
-- [ ] fix links
-- [ ] fix package name
-- [ ] improve wording
 
 ## Doing
+
+- [ ] complete `README.md`
 
 ### Done
 
@@ -58,3 +57,4 @@
   - [x] faq
   - [x] projects
 - [x] address FIXMEs
+- [x] add license

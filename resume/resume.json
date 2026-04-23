@@ -19,272 +19,299 @@
       "countryCode": "NL",
       "region": "Zuid-Holland"
     },
-    "profiles": [{
-      "network": "LinkedIn",
-      "username": "m5lk3n",
-      "url": "https://www.linkedin.com/in/m5lk3n/"
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "m5lk3n",
+        "url": "https://www.linkedin.com/in/m5lk3n/"
+      },
+      {
+        "network": "GitHub",
+        "username": "m5lk3n",
+        "url": "https://github.com/m5lk3n"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "EPO",
+      "position": "Lead Cloud Architect",
+      "url": "https://epo.org/",
+      "startDate": "09/2010",
+      "endDate": "Present",
+      "summary": "",
+      "highlights": [
+        "As Lead Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
+        "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup as well as the operational processes and guardrails",
+        "I built the core GCP team and helped to grow it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
+        "I helped to adopt GCP from 0 to > €4M p.a., saving ~50% compared to on-premises",
+        "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
+        "I helped to increase our overall 2024 production output by 2% (~€50M)",
+        "I'm the sole developer of `cecli`, the missing `gcloud browsers` command",
+        "As Architect, Common Build Services, I reduced CI capacity by ~20%, keeping the quantity to ~800 nightly builds and thousands of builds per day",
+        "I help to introduce Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability"
+      ]
     },
     {
-      "network": "GitHub",
-      "username": "m5lk3n",
-      "url": "https://github.com/m5lk3n"
-    }]
-  },
-  "work": [{
-    "name": "EPO",
-    "position": "Lead Cloud Architect",
-    "url": "https://epo.org/",
-    "startDate": "09/2010",
-    "endDate": "Present",
-    "summary": "",
-    "highlights": [
-      "As Lead Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
-      "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup as well as the operational processes and guardrails",
-      "I built the core GCP team and helped to grow it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
-      "I helped to adopt GCP from 0 to > €4M p.a., saving ~50% compared to on-premises",
-      "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
-      "I helped to increase our overall 2024 production output by 2% (~€50M)",
-      "I'm the sole developer of `cecli`, the missing `gcloud browsers` command",
-      "As Architect, Common Build Services, I reduced CI capacity by ~20%, keeping the quantity to ~800 nightly builds and thousands of builds per day",
-      "I help to introduce Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability"
-    ]
-  },
-  {
-    "name": "IDS Scheer (later acquired by Software AG, now SAG ARIS GmbH)",
-    "position": "Development Manager",
-    "url": "https://aris.com/",
-    "startDate": "09/2003",
-    "endDate": "08/2010",
-    "summary": "",
-    "highlights": [
-      "As Development Manager for Oracle BPA Suite, I achieved ~140% ROI in 3 years",
-      "I built up an office and a development outpost for 5 FTEs abroad, in the US",
-      "As Team Manager Web Development, I saved a 7 digit figure deal from customer drop-out",
-      "I mentored a thesis"
-    ]
-  },
-  {
-    "name": "Insiders Technologies",
-    "position": "Software Engineer",
-    "url": "https://insiders-technologies.com/en/",
-    "startDate": "01/2001",
-    "endDate": "08/2003",
-    "summary": "",
-    "highlights": [
-      "In my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"]
-  }],
-  "volunteer": [{
-    "organization": "Waldmohr Fire Department",
-    "position": "Volunteer Firefighter",
-    "url": "https://www.feuerwehr-waldmohr.de/",
-    "startDate": "10/1988",
-    "endDate": "01/2019",
-    "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
-    "highlights": [
-      "I was a junior cadet between 1988 and 1990",
-      "I was a firefighter from 1990 to 2019",
-      "I became a state-certified incident commander and group leader",
-      "I was the creator and developer of the organization's website between 1998 and 2006",
-      "I participated in 100+ incidents"
-    ]
-  }],
-  "education": [{
-    "institution": "University of Hagen",
-    "url": "https://www.fernuni-hagen.de/english/",
-    "area": "Computer Science",
-    "studyType": "Master of Science (M.Sc.)",
-    "startDate": "10/2012",
-    "endDate": "05/2016",
-    "score": "4.0"
-  },
-  {
-    "institution": "Clemson University",
-    "url": "https://www.clemson.edu/",
-    "area": "Computer Science",
-    "studyType": "Summer School",
-    "startDate": "07/1998",
-    "endDate": "08/1998",
-    "courses": [
-      "Software Design and Implementation Using C++"
-    ]
-  },
-  {
-    "institution": "University of Applied Sciences Kaiserlautern",
-    "url": "https://hs-kl.de/en/",
-    "area": "Computer Science",
-    "studyType": "\"Diplom-Informatiker (FH)\"",
-    "startDate": "10/1996",
-    "endDate": "11/2000",
-    "score": "4.0"
-   }
-  ],
-  "certificates": [{
-    "name": "STACKIT Certified STACKIT Cloud Engineer",
-    "issuer": "STACKIT",
-    "date": "01/2026"
+      "name": "IDS Scheer (later acquired by Software AG, now SAG ARIS GmbH)",
+      "position": "Development Manager",
+      "url": "https://aris.com/",
+      "startDate": "09/2003",
+      "endDate": "08/2010",
+      "summary": "",
+      "highlights": [
+        "As Development Manager for Oracle BPA Suite, I achieved ~140% ROI in 3 years",
+        "I built up an office and a development outpost for 5 FTEs abroad, in the US",
+        "As Team Manager Web Development, I saved a 7 digit figure deal from customer drop-out",
+        "I mentored a thesis"
+      ]
     },
     {
-    "name": "Google Cloud Certified Gen AI Leader",
-    "date": "05/2025",
-    "issuer": "Google Cloud",
-    "url": "https://www.credly.com/badges/6944339f-e1c9-4198-8982-fd1f56592c4f"
-  },
-  {
-    "name": "Google Cloud Certified Professional Cloud Developer",
-    "date": "04/2024",
-    "issuer": "Google Cloud",
-    "url": "https://www.credly.com/badges/a80ac1bd-44ad-4894-bd2c-1a29ad890234"
-  },
-  {
-    "name": "Google Cloud Certified Professional Cloud Architect",
-    "date": "11/2022",
-    "issuer": "Google Cloud",
-    "url": "https://www.credly.com/badges/3f6aa0c1-f191-4be4-bad6-63a8c6a31331"
-  },
-  {
-    "name": "AWS Certified Developer Associate (DVA)",
-    "issuer": "Amazon Web Services",
-    "date": "07/2022",
-    "url": "https://www.credly.com/badges/138fae49-d784-4341-8ef6-82201001593e"
-  },
-  {
-    "name": "Certified Rancher Operator: Level One",
-    "issuer": "Rancher",
-    "date": "07/2020"
-  },
-  {
-    "name": "Google Cloud Certified Professional Cloud Architect",
-    "issuer": "Google Cloud",
-    "date": "06/2020",
-    "url": "https://www.credly.com/badges/8decd8f0-ad76-4390-af05-1a3b4e04b672"
-  },
-  {
-    "name": "Certified Kubernetes Administrator (CKA)",
-    "issuer": "The Linux Foundation",
-    "date": "08/2019",
-    "url":"https://www.credly.com/badges/d23a51a4-c835-4e49-b31a-f0d27c8f5f6e"
-  },
-  {
-    "name": "AWS Certified Solutions Architect (SAA)",
-    "issuer": "Amazon Web Services",
-    "date": "12/2018",
-    "url":"https://www.credly.com/badges/dcc795c5-349e-4de1-9744-2606aad038ba"
-  },
-  {
-    "name": "Certified Scrum Product Owner (CSPO)",
-    "issuer": "Scrum Alliance",
-    "date": "09/2017"
-  },
-  {
-    "name": "Certified CloudBees Jenkins Engineer (CCJE)",
-    "issuer": "CloudBees",
-    "date": "07/2017",
-    "url":"https://certificates.cloudbees.com/00dc2nlk#acc.4v3RZ6Ba"
-  },
-  {
-    "name": "ITIL Foundation Level",
-    "issuer": "APMG International",
-    "date": "11/2012"
-  }
-],
-"publications": [{
-    "name": "The Sovereign Cloud Fail-Over Pattern",
-    "publisher": "Medium",
-    "releaseDate": "2025-10-24",
-    "url": "https://m5lk3n.medium.com/the-sovereign-cloud-fail-over-pattern-6f7d8d809054",
-    "summary": "Failure happens: Fail over or recover to the Sovereign Part of a Cloud Platform. A Cloud Infrastructure Design Pattern."
-  },
-  {
-    "name": "Geofencing in Flutter",
-    "publisher": "Medium",
-    "releaseDate": "2025-01-20",
-    "url": "https://m5lk3n.medium.com/geofencing-in-flutter-f610cb212964",
-    "summary": "What Geofence limitations exist and how to work around them in Flutter."
-  },  
-  {
-    "name": "Dynamic (and Secure) Google Maps API Key in Flutter",
-    "publisher": "Medium",
-    "releaseDate": "2025-01-18",
-    "url": "https://m5lk3n.medium.com/dynamic-and-secure-google-maps-api-key-in-flutter-2e7df6c70bd4",
-    "summary": "How not to hard-code and distribute a Google Maps API Key in your App."
-  }
-],
-  "skills": [{
-    "name": "Google Cloud Platform (GCP)"
-  },
-  {
-    "name": "Platform Engineering"
-  },
-  {
-    "name": "Cloud Operations (CloudOps)"
-  },
-  {
-    "name": "Cloud Infrastructure"
-  },
-  {
-    "name": "Team Management"
-  }
+      "name": "Insiders Technologies",
+      "position": "Software Engineer",
+      "url": "https://insiders-technologies.com/en/",
+      "startDate": "01/2001",
+      "endDate": "08/2003",
+      "summary": "",
+      "highlights": [
+        "In my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"
+      ]
+    }
   ],
-  "languages": [{
-    "language": "English",
-    "fluency": "C2"
-  },
-  {
-    "language": "German",
-    "fluency": "Native Speaker"
-  }],
-  "references": [{
-    "name": "LinkedIn Recommendations",
-    "reference": "https://www.linkedin.com/in/m5lk3n/details/recommendations/"
-  }],
-  "projects": [{
-    "name": "Wyatt",
-    "startDate": "10/2024",
-    "endDate": "02/2025",
-    "description": "A location- and time-based reminder app for Android and iOS.",
-    "highlights": [
-      "I implemented the app using Flutter, enabling cross-platform development",
-      "I integrated Geofencing and Google Maps",
-      "I published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
-      "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of Geofencing in the app"  
-    ],
-    "url": "https://wyatt.lttl.dev/"
-  },
-  {
-    "name": "Agility",
-    "startDate": "01/2021",
-    "endDate": "04/2021",
-    "description": "A cloud-native implementation of how to measure agility using Kubernetes Deployment Frequency.",
-    "url": "https://github.com/m5lk3n/agility",
-    "highlights": [
-      "Inspired by the book \"Accelerate - The Science Behind DevOps: Building and Scaling High Performing Technology Organizations\" (Forsgren, Humble, and Kim), I implemented this project to illustrate the concept of the KPI Deployment Frequency (DF) (or Throughput)",
-      "I implemented the project using Golang and Kubernetes, demonstrating how to measure agility through Kubernetes Deployment Frequency",
-      "I integrated Prometheus and Grafana for monitoring and visualization of deployment metrics"
-    ]
-  }
-],
+  "volunteer": [
+    {
+      "organization": "Waldmohr Fire Department",
+      "position": "Volunteer Firefighter",
+      "url": "https://www.feuerwehr-waldmohr.de/",
+      "startDate": "10/1988",
+      "endDate": "01/2019",
+      "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
+      "highlights": [
+        "I was a junior cadet between 1988 and 1990",
+        "I was a firefighter from 1990 to 2019",
+        "I became a state-certified incident commander and group leader",
+        "I was the creator and developer of the organization's website between 1998 and 2006",
+        "I participated in 100+ incidents"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Hagen",
+      "url": "https://www.fernuni-hagen.de/english/",
+      "area": "Computer Science",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "10/2012",
+      "endDate": "05/2016",
+      "score": "4.0"
+    },
+    {
+      "institution": "Clemson University",
+      "url": "https://www.clemson.edu/",
+      "area": "Computer Science",
+      "studyType": "Summer School",
+      "startDate": "07/1998",
+      "endDate": "08/1998",
+      "courses": [
+        "Software Design and Implementation Using C++"
+      ]
+    },
+    {
+      "institution": "University of Applied Sciences Kaiserlautern",
+      "url": "https://hs-kl.de/en/",
+      "area": "Computer Science",
+      "studyType": "\"Diplom-Informatiker (FH)\"",
+      "startDate": "10/1996",
+      "endDate": "11/2000",
+      "score": "4.0"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "STACKIT Certified STACKIT Cloud Engineer",
+      "issuer": "STACKIT",
+      "date": "01/2026"
+    },
+    {
+      "name": "Google Cloud Certified Gen AI Leader",
+      "date": "05/2025",
+      "issuer": "Google Cloud",
+      "url": "https://www.credly.com/badges/6944339f-e1c9-4198-8982-fd1f56592c4f"
+    },
+    {
+      "name": "Google Cloud Certified Professional Cloud Developer",
+      "date": "04/2024",
+      "issuer": "Google Cloud",
+      "url": "https://www.credly.com/badges/a80ac1bd-44ad-4894-bd2c-1a29ad890234"
+    },
+    {
+      "name": "Google Cloud Certified Professional Cloud Architect",
+      "date": "11/2022",
+      "issuer": "Google Cloud",
+      "url": "https://www.credly.com/badges/3f6aa0c1-f191-4be4-bad6-63a8c6a31331"
+    },
+    {
+      "name": "AWS Certified Developer Associate (DVA)",
+      "issuer": "Amazon Web Services",
+      "date": "07/2022",
+      "url": "https://www.credly.com/badges/138fae49-d784-4341-8ef6-82201001593e"
+    },
+    {
+      "name": "Certified Rancher Operator: Level One",
+      "issuer": "Rancher",
+      "date": "07/2020"
+    },
+    {
+      "name": "Google Cloud Certified Professional Cloud Architect",
+      "issuer": "Google Cloud",
+      "date": "06/2020",
+      "url": "https://www.credly.com/badges/8decd8f0-ad76-4390-af05-1a3b4e04b672"
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "issuer": "The Linux Foundation",
+      "date": "08/2019",
+      "url": "https://www.credly.com/badges/d23a51a4-c835-4e49-b31a-f0d27c8f5f6e"
+    },
+    {
+      "name": "AWS Certified Solutions Architect (SAA)",
+      "issuer": "Amazon Web Services",
+      "date": "12/2018",
+      "url": "https://www.credly.com/badges/dcc795c5-349e-4de1-9744-2606aad038ba"
+    },
+    {
+      "name": "Certified Scrum Product Owner (CSPO)",
+      "issuer": "Scrum Alliance",
+      "date": "09/2017"
+    },
+    {
+      "name": "Certified CloudBees Jenkins Engineer (CCJE)",
+      "issuer": "CloudBees",
+      "date": "07/2017",
+      "url": "https://certificates.cloudbees.com/00dc2nlk#acc.4v3RZ6Ba"
+    },
+    {
+      "name": "ITIL Foundation Level",
+      "issuer": "APMG International",
+      "date": "11/2012"
+    }
+  ],
+  "publications": [
+    {
+      "name": "The Sovereign Cloud Fail-Over Pattern",
+      "publisher": "Medium",
+      "releaseDate": "2025-10-24",
+      "url": "https://m5lk3n.medium.com/the-sovereign-cloud-fail-over-pattern-6f7d8d809054",
+      "summary": "Failure happens: Fail over or recover to the Sovereign Part of a Cloud Platform. A Cloud Infrastructure Design Pattern."
+    },
+    {
+      "name": "Geofencing in Flutter",
+      "publisher": "Medium",
+      "releaseDate": "2025-01-20",
+      "url": "https://m5lk3n.medium.com/geofencing-in-flutter-f610cb212964",
+      "summary": "What Geofence limitations exist and how to work around them in Flutter."
+    },
+    {
+      "name": "Dynamic (and Secure) Google Maps API Key in Flutter",
+      "publisher": "Medium",
+      "releaseDate": "2025-01-18",
+      "url": "https://m5lk3n.medium.com/dynamic-and-secure-google-maps-api-key-in-flutter-2e7df6c70bd4",
+      "summary": "How not to hard-code and distribute a Google Maps API Key in your App."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Google Cloud Platform (GCP)"
+    },
+    {
+      "name": "Platform Engineering"
+    },
+    {
+      "name": "Cloud Operations (CloudOps)"
+    },
+    {
+      "name": "Cloud Infrastructure"
+    },
+    {
+      "name": "Team Management"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "C2"
+    },
+    {
+      "language": "German",
+      "fluency": "Native Speaker"
+    }
+  ],
+  "references": [
+    {
+      "name": "LinkedIn Recommendations",
+      "reference": "https://www.linkedin.com/in/m5lk3n/details/recommendations/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Wyatt",
+      "startDate": "10/2024",
+      "endDate": "02/2025",
+      "description": "A location- and time-based reminder app for Android and iOS.",
+      "highlights": [
+        "I implemented the app using Flutter, enabling cross-platform development",
+        "I integrated Geofencing and Google Maps",
+        "I published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
+        "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of Geofencing in the app"
+      ],
+      "url": "https://wyatt.lttl.dev/"
+    },
+    {
+      "name": "Agility",
+      "startDate": "01/2021",
+      "endDate": "04/2021",
+      "description": "A cloud-native implementation of how to measure agility using Kubernetes Deployment Frequency.",
+      "url": "https://github.com/m5lk3n/agility",
+      "highlights": [
+        "Inspired by the book \"Accelerate - The Science Behind DevOps: Building and Scaling High Performing Technology Organizations\" (Forsgren, Humble, and Kim), I implemented this project to illustrate the concept of the KPI Deployment Frequency (DF) (or Throughput)",
+        "I implemented the project using Golang and Kubernetes, demonstrating how to measure agility through Kubernetes Deployment Frequency",
+        "I integrated Prometheus and Grafana for monitoring and visualization of deployment metrics"
+      ]
+    }
+  ],
   "x-mk": {
     "about": "I am a Cloud Architect and Engineer with over 20 years of experience in IT (Silicon Valley & Europe), specializing in Google Cloud Platform (GCP), Platform Engineering, and CloudOps. I have a proven track record of design and implementation that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at actually building systems and related processes.",
-    "hashtags": ["#cloudarchitect", "#cloudengineer", "#googlecloud", "#gcp", "#platformengineering", "#cloudops"],
-    "quotes": [ {
-      "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
-      "author": "Incubus, \"Drive\""
-    },
-    {
-      "text": "The only winning move is not to play.",
-      "author": "Joshua, \"WarGames\""
-    }],
-    "faqs": [{
-      "question": "Can you send me your CV/resume?",
-      "answer": "No, it's right here."
-    },
-    {
-      "question": "What do you expect from a recruiter?",
-      "answer": "Read. The. Profile. (Let's call it RTFP.) Any questions? Please ask."
-    },
-    {
-      "question": "Do you hate recruiters?",
-      "answer": "Absolutely not. However, I have a hard time when positions are to be filled with the right people and I'm obviously not. Again, RTFP. Thanks!"
-    }]
+    "hashtags": [
+      "#cloudarchitect",
+      "#cloudengineer",
+      "#googlecloud",
+      "#gcp",
+      "#platformengineering",
+      "#cloudops"
+    ],
+    "quotes": [
+      {
+        "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
+        "author": "Incubus, \"Drive\""
+      },
+      {
+        "text": "The only winning move is not to play.",
+        "author": "Joshua, \"WarGames\""
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can you send me your CV/resume?",
+        "answer": "No, it's right here."
+      },
+      {
+        "question": "What do you expect from a recruiter?",
+        "answer": "Read. The. Profile. (Let's call it RTFP.) Any questions? Please ask."
+      },
+      {
+        "question": "Do you hate recruiters?",
+        "answer": "Absolutely not. However, I have a hard time when positions are to be filled with the right people and I'm obviously not. Again, RTFP. Thanks!"
+      }
+    ]
   }
 }
