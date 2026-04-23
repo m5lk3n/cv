@@ -1,3 +1,13 @@
+VERSION    := $(shell git describe --tags --abbrev=0)
+COMMIT     := $(shell git rev-parse --short HEAD)
+BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
+BUILT_BY   := $(shell echo $$USER)
+
+LDFLAGS := -X 'lttl.dev/mk/app.Version=$(VERSION)' \
+           -X 'lttl.dev/mk/app.Commit=$(COMMIT)' \
+           -X 'lttl.dev/mk/app.BuildTime=$(BUILD_TIME)' \
+           -X 'lttl.dev/mk/app.BuiltBy=$(BUILT_BY)'
+
 ## help: print this help message
 .PHONY: help
 help:
@@ -19,12 +29,12 @@ clean:
 ## build-cli: build the command-line interface
 .PHONY: build-cli
 build-cli:
-	go build -o mk
+	go build -o mk -ldflags="$(LDFLAGS)"
 
 ## build-wasm: build the WebAssembly module
 .PHONY: build-wasm
 build-wasm:
-	GOOS=js GOARCH=wasm go build -o web/mk.wasm
+	GOOS=js GOARCH=wasm go build -o web/mk.wasm -ldflags="$(LDFLAGS)"
 
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost

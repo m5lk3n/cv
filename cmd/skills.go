@@ -10,8 +10,9 @@ import (
 )
 
 var skillsCmd = &cobra.Command{
-	Use:   "skills",
-	Short: "Display skills",
+	Use:     "skills",
+	Aliases: []string{"skill"},
+	Short:   "Display skills",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
 		if err != nil {

@@ -19,6 +19,8 @@ type Resume struct {
 	Languages    []Language    `json:"languages"`
 	Meta         Meta          `json:"meta"`
 	Projects     []Project     `json:"projects"`
+	Publications []Publication `json:"publications"`
+	References   []Reference   `json:"references"`
 	Skills       []Skill       `json:"skills"`
 	Volunteer    []Volunteer   `json:"volunteer"`
 	Work         []Work        `json:"work"`
@@ -91,6 +93,19 @@ type Certificate struct {
 	Date   string `json:"date"`
 	Issuer string `json:"issuer"`
 	URL    string `json:"url"`
+}
+
+type Publication struct {
+	Name        string `json:"name"`
+	Publisher   string `json:"publisher"`
+	ReleaseDate string `json:"releaseDate"`
+	URL         string `json:"url"`
+	Summary     string `json:"summary"`
+}
+
+type Reference struct {
+	Name      string `json:"name"`
+	Reference string `json:"reference"`
 }
 
 type Skill struct {

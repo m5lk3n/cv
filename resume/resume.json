@@ -11,7 +11,7 @@
     "email": "m5l.k3n@gmail.com",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Google Cloud, Platform Engineering, CloudOps | 20+ years of experience in IT (US & Europe)",
+    "summary": "Google Cloud, Platform Engineering, CloudOps | 20+ years of experience in IT (Silicon Valley & Europe)",
     "location": {
       "address": "",
       "postalCode": "",
@@ -38,24 +38,27 @@
     "endDate": "Present",
     "summary": "",
     "highlights": [
-      "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup",
-      "Instead of paying €1 to Google Cloud, I make sure our actual pay is ~60 cents",
-      "I've helped to adopt GCP from 0 to > €4m p.a., saving ~50% compared to on-premises",
-      "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270k additional saving in 2023 and ~350k in 2024",
-      "I helped to increase our overall 2024 production by 2% (~€50M)",
-      "I'm the sole developer of `cecli` - the missing `gcloud browsers` command"
+      "As Lead Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
+      "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup as well as the operational processes and guardrails",
+      "I built the core GCP team and helped to grow it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
+      "I helped to adopt GCP from 0 to > €4M p.a., saving ~50% compared to on-premises",
+      "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
+      "I helped to increase our overall 2024 production output by 2% (~€50M)",
+      "I'm the sole developer of `cecli`, the missing `gcloud browsers` command",
+      "As Architect, Common Build Services, I reduced CI capacity by ~20%, keeping the quantity to ~800 nightly builds and thousands of builds per day",
+      "I help to introduce Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability"
     ]
   },
   {
-    "name": "IDS",
+    "name": "IDS Scheer (later acquired by Software AG, now SAG ARIS GmbH)",
     "position": "Development Manager",
-    "url": "",
+    "url": "https://aris.com/",
     "startDate": "09/2003",
     "endDate": "08/2010",
     "summary": "",
     "highlights": [
       "As Development Manager for Oracle BPA Suite, I achieved ~140% ROI in 3 years",
-      "I built up an office and a development outpost for 5 FTEs in the US",
+      "I built up an office and a development outpost for 5 FTEs abroad, in the US",
       "As Team Manager Web Development, I saved a 7 digit figure deal from customer drop-out",
       "I mentored a thesis"
     ]
@@ -63,12 +66,12 @@
   {
     "name": "Insiders Technologies",
     "position": "Software Engineer",
-    "url": "",
-    "startDate": "01/2000",
+    "url": "https://insiders-technologies.com/en/",
+    "startDate": "01/2001",
     "endDate": "08/2003",
     "summary": "",
     "highlights": [
-      "I developed a working prototype of a web-based search system in 6 weeks, which was demoed at the world's largest IT trade fair, CeBIT"]
+      "In my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"]
   }],
   "volunteer": [{
     "organization": "Waldmohr Fire Department",
@@ -184,22 +187,44 @@
     "date": "11/2012"
   }
 ],
+"publications": [{
+    "name": "The Sovereign Cloud Fail-Over Pattern",
+    "publisher": "Medium",
+    "releaseDate": "2025-10-24",
+    "url": "https://m5lk3n.medium.com/the-sovereign-cloud-fail-over-pattern-6f7d8d809054",
+    "summary": "Failure happens: Fail over or recover to the Sovereign Part of a Cloud Platform. A Cloud Infrastructure Design Pattern."
+  },
+  {
+    "name": "Geofencing in Flutter",
+    "publisher": "Medium",
+    "releaseDate": "2025-01-20",
+    "url": "https://m5lk3n.medium.com/geofencing-in-flutter-f610cb212964",
+    "summary": "What Geofence limitations exist and how to work around them in Flutter."
+  },  
+  {
+    "name": "Dynamic (and Secure) Google Maps API Key in Flutter",
+    "publisher": "Medium",
+    "releaseDate": "2025-01-18",
+    "url": "https://m5lk3n.medium.com/dynamic-and-secure-google-maps-api-key-in-flutter-2e7df6c70bd4",
+    "summary": "How not to hard-code and distribute a Google Maps API Key in your App."
+  }
+],
   "skills": [{
-    "name": "Google Cloud Platform",
-    "level": "",
-    "keywords": [
-      "Platform Engineering",
-      "Cloud Infrastructure",
-      "Infrastructure as Code (IaC)",
-      "Cloud Native Adoption",
-      "Software Delivery (CI/CD)",
-      "CloudOps",
-      "FinOps",
-      "Containerization",
-      "Container Orchestration",
-      "Kubernetes"
-    ]
-  }],
+    "name": "Google Cloud Platform (GCP)"
+  },
+  {
+    "name": "Platform Engineering"
+  },
+  {
+    "name": "Cloud Operations (CloudOps)"
+  },
+  {
+    "name": "Cloud Infrastructure"
+  },
+  {
+    "name": "Team Management"
+  }
+  ],
   "languages": [{
     "language": "English",
     "fluency": "C2"
@@ -207,6 +232,10 @@
   {
     "language": "German",
     "fluency": "Native Speaker"
+  }],
+  "references": [{
+    "name": "LinkedIn Recommendations",
+    "reference": "https://www.linkedin.com/in/m5lk3n/details/recommendations/"
   }],
   "projects": [{
     "name": "Wyatt",
@@ -217,13 +246,26 @@
       "I implemented the app using Flutter, enabling cross-platform development",
       "I integrated Geofencing and Google Maps",
       "I published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
-      "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of geofencing in the app"  
+      "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of Geofencing in the app"  
     ],
     "url": "https://wyatt.lttl.dev/"
-  }],
+  },
+  {
+    "name": "Agility",
+    "startDate": "01/2021",
+    "endDate": "04/2021",
+    "description": "A cloud-native implementation of how to measure agility using Kubernetes Deployment Frequency.",
+    "url": "https://github.com/m5lk3n/agility",
+    "highlights": [
+      "Inspired by the book \"Accelerate - The Science Behind DevOps: Building and Scaling High Performing Technology Organizations\" (Forsgren, Humble, and Kim), I implemented this project to illustrate the concept of the KPI Deployment Frequency (DF) (or Throughput)",
+      "I implemented the project using Golang and Kubernetes, demonstrating how to measure agility through Kubernetes Deployment Frequency",
+      "I integrated Prometheus and Grafana for monitoring and visualization of deployment metrics"
+    ]
+  }
+],
   "x-mk": {
-    "about": "I am a Lead Cloud Architect and Engineer with over 20 years of experience in IT, specializing in Google Cloud Platform (GCP), AWS, Platform Engineering, and CloudOps. I have a proven track record of designing and implementing cloud solutions that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at bridging the gap between technology and business needs to deliver impactful results.",
-    "hashtags": ["#cloudarchitect", "#gcp", "#aws", "#platformengineering", "#cloudops"],
+    "about": "I am a Cloud Architect and Engineer with over 20 years of experience in IT (Silicon Valley & Europe), specializing in Google Cloud Platform (GCP), Platform Engineering, and CloudOps. I have a proven track record of design and implementation that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at actually building systems and related processes.",
+    "hashtags": ["#cloudarchitect", "#cloudengineer", "#googlecloud", "#gcp", "#platformengineering", "#cloudops"],
     "quotes": [ {
       "text": "Whatever tomorrow brings, I'll be there. With open arms and open eyes.",
       "author": "Incubus, \"Drive\""
@@ -238,7 +280,11 @@
     },
     {
       "question": "What do you expect from a recruiter?",
-      "answer": "Read. The. Resume. Any questions? Please ask."
+      "answer": "Read. The. Profile. (Let's call it RTFP.) Any questions? Please ask."
+    },
+    {
+      "question": "Do you hate recruiters?",
+      "answer": "Absolutely not. However, I have a hard time when positions are to be filled with the right people and I'm obviously not. Again, RTFP. Thanks!"
     }]
   }
 }

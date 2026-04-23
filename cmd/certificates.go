@@ -10,7 +10,7 @@ import (
 
 var certificatesCmd = &cobra.Command{
 	Use:     "certificates",
-	Aliases: []string{"certs", "cert", "certificate", "certifications", "certification"},
+	Aliases: []string{"certifications", "certs", "cert", "certificate", "certification", "licenses", "license", "lic"},
 	Short:   "Display certificates",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
