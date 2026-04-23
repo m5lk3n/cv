@@ -2,7 +2,7 @@
   "meta": {
     "format": "https://jsonresume.org/schema/",
     "theme": "developer-mono",
-    "lastModified": "2026-04-04T00:00:00Z"
+    "lastModified": "2026-05-04T00:00:00Z"
   },
   "basics": {
     "name": "Michael Klein",
@@ -116,11 +116,74 @@
    }
   ],
   "certificates": [{
+    "name": "STACKIT Certified STACKIT Cloud Engineer",
+    "issuer": "STACKIT",
+    "date": "01/2026"
+    },
+    {
     "name": "Google Cloud Certified Gen AI Leader",
     "date": "05/2025",
     "issuer": "Google Cloud",
     "url": "https://www.credly.com/badges/6944339f-e1c9-4198-8982-fd1f56592c4f"
-  }],
+  },
+  {
+    "name": "Google Cloud Certified Professional Cloud Developer",
+    "date": "04/2024",
+    "issuer": "Google Cloud",
+    "url": "https://www.credly.com/badges/a80ac1bd-44ad-4894-bd2c-1a29ad890234"
+  },
+  {
+    "name": "Google Cloud Certified Professional Cloud Architect",
+    "date": "11/2022",
+    "issuer": "Google Cloud",
+    "url": "https://www.credly.com/badges/3f6aa0c1-f191-4be4-bad6-63a8c6a31331"
+  },
+  {
+    "name": "AWS Certified Developer Associate (DVA)",
+    "issuer": "Amazon Web Services",
+    "date": "07/2022",
+    "url": "https://www.credly.com/badges/138fae49-d784-4341-8ef6-82201001593e"
+  },
+  {
+    "name": "Certified Rancher Operator: Level One",
+    "issuer": "Rancher",
+    "date": "07/2020"
+  },
+  {
+    "name": "Google Cloud Certified Professional Cloud Architect",
+    "issuer": "Google Cloud",
+    "date": "06/2020",
+    "url": "https://www.credly.com/badges/8decd8f0-ad76-4390-af05-1a3b4e04b672"
+  },
+  {
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "issuer": "The Linux Foundation",
+    "date": "08/2019",
+    "url":"https://www.credly.com/badges/d23a51a4-c835-4e49-b31a-f0d27c8f5f6e"
+  },
+  {
+    "name": "AWS Certified Solutions Architect (SAA)",
+    "issuer": "Amazon Web Services",
+    "date": "12/2018",
+    "url":"https://www.credly.com/badges/dcc795c5-349e-4de1-9744-2606aad038ba"
+  },
+  {
+    "name": "Certified Scrum Product Owner (CSPO)",
+    "issuer": "Scrum Alliance",
+    "date": "09/2017"
+  },
+  {
+    "name": "Certified CloudBees Jenkins Engineer (CCJE)",
+    "issuer": "CloudBees",
+    "date": "07/2017",
+    "url":"https://certificates.cloudbees.com/00dc2nlk#acc.4v3RZ6Ba"
+  },
+  {
+    "name": "ITIL Foundation Level",
+    "issuer": "APMG International",
+    "date": "11/2012"
+  }
+],
   "skills": [{
     "name": "Google Cloud Platform",
     "level": "",
