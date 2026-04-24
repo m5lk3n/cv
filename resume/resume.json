@@ -1,7 +1,7 @@
 {
   "meta": {
     "format": "https://jsonresume.org/schema/",
-    "theme": "developer-mono",
+    "theme": "even",
     "lastModified": "2026-05-04T00:00:00Z"
   },
   "basics": {
@@ -222,23 +222,40 @@
   "skills": [
     {
       "name": "Google Cloud Platform (GCP)",
-      "level": "Master"
+      "keywords": [
+        "Foundational Design and Implementation",
+        "FinOps",
+        "Kubernetes Engine (GKE)",
+        "Cloud Run",
+        "Cloud Functions"
+      ]
     },
     {
       "name": "Platform Engineering",
-      "level": "Master"
+      "keywords": [
+        "Developer Self-Service"
+      ]
     },
     {
-      "name": "Cloud Operations (CloudOps)",
-      "level": "Master"
+      "name": "Cloud Operations",
+      "keywords": [
+        "CloudOps Processes"
+      ]
     },
     {
       "name": "Cloud Infrastructure",
-      "level": "Master"
+      "keywords": [
+        "Infrastructure Design Patterns",
+        "Infrastructure as Code (IaC)"
+      ]
     },
     {
       "name": "Team Management",
-      "level": "Master"
+      "keywords": [
+        "Leadership",
+        "Mentoring",
+        "Collaboration"
+      ]
     }
   ],
   "languages": [

@@ -1,4 +1,5 @@
-mk
-web/mk.wasm
+.claude
 .env
 dist
+mk
+web/mk.wasm
