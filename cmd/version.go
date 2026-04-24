@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"lttl.dev/mk/app"
+	"lttl.dev/mk/buildinfo"
 	"lttl.dev/mk/resume"
 )
 
@@ -14,12 +14,12 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Print version number and resume's last modified date",
 	Run: func(cmd *cobra.Command, args []string) {
-		buildTime := app.BuildTime
+		buildTime := buildinfo.BuildTime
 		if t, err := time.Parse(time.RFC3339, buildTime); err == nil {
 			buildTime = t.Format("January 2, 2006 at 15:04 MST")
 		}
-		version := fmt.Sprintf("App built on %s by %s", buildTime, app.BuiltBy)
-		version += fmt.Sprintf("\nApp v%s (%s)", app.Version, app.Commit)
+		version := fmt.Sprintf("App built on %s by %s", buildTime, buildinfo.BuiltBy)
+		version += fmt.Sprintf("\nApp v%s (%s)", buildinfo.Version, buildinfo.Commit)
 		r, err := resume.Load()
 		if err == nil && r.Meta.LastModified != "" {
 			if t, err := time.Parse(time.RFC3339, r.Meta.LastModified); err == nil {

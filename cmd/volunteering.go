@@ -23,7 +23,7 @@ var volunteeringCmd = &cobra.Command{
 				fmt.Fprintln(w)
 			}
 			fmt.Fprintf(w, "%s — %s\n", v.Organization, v.Position)
-			fmt.Fprintf(w, "  %s to %s\n", v.StartDate, v.EndDate)
+			fmt.Fprintf(w, "  %s to %s\n", formatDate(v.StartDate), formatDate(v.EndDate))
 			if v.URL != "" {
 				fmt.Fprintf(w, "  %s\n", v.URL)
 			}

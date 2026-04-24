@@ -1,4 +1,4 @@
-# <img src="web/favicon.png" alt="Icon" height="20"> My CV & Tool
+# <img src="web/favicon.png" alt="Icon" height="24"> My CV & Tool
 
 ![Go](https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white)
 ![Tool License](https://img.shields.io/badge/License-MIT-green) (App)

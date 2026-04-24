@@ -24,7 +24,7 @@ var educationCmd = &cobra.Command{
 				fmt.Fprintln(w)
 			}
 			fmt.Fprintf(w, "%s — %s (%s)\n", edu.Institution, edu.Area, edu.StudyType)
-			fmt.Fprintf(w, "  %s to %s\n", edu.StartDate, edu.EndDate)
+			fmt.Fprintf(w, "  %s to %s\n", formatDate(edu.StartDate), formatDate(edu.EndDate))
 			if edu.URL != "" {
 				fmt.Fprintf(w, "  %s\n", edu.URL)
 			}

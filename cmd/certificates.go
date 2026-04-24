@@ -27,7 +27,7 @@ var certificatesCmd = &cobra.Command{
 				fmt.Fprintf(w, "  Issuer: %s\n", c.Issuer)
 			}
 			if c.Date != "" {
-				fmt.Fprintf(w, "  Date: %s\n", c.Date)
+				fmt.Fprintf(w, "  Date: %s\n", formatDate(c.Date))
 			}
 			if c.URL != "" {
 				fmt.Fprintf(w, "  %s\n", c.URL)

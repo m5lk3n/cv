@@ -27,7 +27,7 @@ var publicationsCmd = &cobra.Command{
 				fmt.Fprintf(w, "  Publisher: %s\n", p.Publisher)
 			}
 			if p.ReleaseDate != "" {
-				fmt.Fprintf(w, "  Date: %s\n", p.ReleaseDate)
+				fmt.Fprintf(w, "  Date: %s\n", formatDate(p.ReleaseDate))
 			}
 			if p.URL != "" {
 				fmt.Fprintf(w, "  %s\n", p.URL)

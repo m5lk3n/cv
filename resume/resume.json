@@ -37,7 +37,7 @@
       "name": "EPO",
       "position": "Lead Cloud Architect",
       "url": "https://epo.org/",
-      "startDate": "09/2010",
+      "startDate": "2010-09",
       "endDate": "Present",
       "summary": "",
       "highlights": [
@@ -56,8 +56,8 @@
       "name": "IDS Scheer (later acquired by Software AG, now SAG ARIS GmbH)",
       "position": "Development Manager",
       "url": "https://aris.com/",
-      "startDate": "09/2003",
-      "endDate": "08/2010",
+      "startDate": "2003-09",
+      "endDate": "2010-08",
       "summary": "",
       "highlights": [
         "As Development Manager for Oracle BPA Suite, I achieved ~140% ROI in 3 years",
@@ -70,8 +70,8 @@
       "name": "Insiders Technologies",
       "position": "Software Engineer",
       "url": "https://insiders-technologies.com/en/",
-      "startDate": "01/2001",
-      "endDate": "08/2003",
+      "startDate": "2001-01",
+      "endDate": "2003-08",
       "summary": "",
       "highlights": [
         "In my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"
@@ -83,8 +83,8 @@
       "organization": "Waldmohr Fire Department",
       "position": "Volunteer Firefighter",
       "url": "https://www.feuerwehr-waldmohr.de/",
-      "startDate": "10/1988",
-      "endDate": "01/2019",
+      "startDate": "1988-10",
+      "endDate": "2019-01",
       "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
       "highlights": [
         "I was a junior cadet between 1988 and 1990",
@@ -101,8 +101,8 @@
       "url": "https://www.fernuni-hagen.de/english/",
       "area": "Computer Science",
       "studyType": "Master of Science (M.Sc.)",
-      "startDate": "10/2012",
-      "endDate": "05/2016",
+      "startDate": "2012-10",
+      "endDate": "2016-05",
       "score": "4.0"
     },
     {
@@ -110,8 +110,8 @@
       "url": "https://www.clemson.edu/",
       "area": "Computer Science",
       "studyType": "Summer School",
-      "startDate": "07/1998",
-      "endDate": "08/1998",
+      "startDate": "1998-07",
+      "endDate": "1998-08",
       "courses": [
         "Software Design and Implementation Using C++"
       ]
@@ -121,8 +121,8 @@
       "url": "https://hs-kl.de/en/",
       "area": "Computer Science",
       "studyType": "\"Diplom-Informatiker (FH)\"",
-      "startDate": "10/1996",
-      "endDate": "11/2000",
+      "startDate": "1996-10",
+      "endDate": "2000-11",
       "score": "4.0"
     }
   ],
@@ -130,91 +130,91 @@
     {
       "name": "STACKIT Certified STACKIT Cloud Engineer",
       "issuer": "STACKIT",
-      "date": "01/2026"
+      "date": "2026-01"
     },
     {
       "name": "Google Cloud Certified Gen AI Leader",
-      "date": "05/2025",
+      "date": "2025-05",
       "issuer": "Google Cloud",
       "url": "https://www.credly.com/badges/6944339f-e1c9-4198-8982-fd1f56592c4f"
     },
     {
       "name": "Google Cloud Certified Professional Cloud Developer",
-      "date": "04/2024",
+      "date": "2024-04",
       "issuer": "Google Cloud",
       "url": "https://www.credly.com/badges/a80ac1bd-44ad-4894-bd2c-1a29ad890234"
     },
     {
       "name": "Google Cloud Certified Professional Cloud Architect",
-      "date": "11/2022",
+      "date": "2022-11",
       "issuer": "Google Cloud",
       "url": "https://www.credly.com/badges/3f6aa0c1-f191-4be4-bad6-63a8c6a31331"
     },
     {
       "name": "AWS Certified Developer Associate (DVA)",
       "issuer": "Amazon Web Services",
-      "date": "07/2022",
+      "date": "2022-07",
       "url": "https://www.credly.com/badges/138fae49-d784-4341-8ef6-82201001593e"
     },
     {
       "name": "Certified Rancher Operator: Level One",
       "issuer": "Rancher",
-      "date": "07/2020"
+      "date": "2020-07"
     },
     {
       "name": "Google Cloud Certified Professional Cloud Architect",
       "issuer": "Google Cloud",
-      "date": "06/2020",
+      "date": "2020-06",
       "url": "https://www.credly.com/badges/8decd8f0-ad76-4390-af05-1a3b4e04b672"
     },
     {
       "name": "Certified Kubernetes Administrator (CKA)",
       "issuer": "The Linux Foundation",
-      "date": "08/2019",
+      "date": "2019-08",
       "url": "https://www.credly.com/badges/d23a51a4-c835-4e49-b31a-f0d27c8f5f6e"
     },
     {
       "name": "AWS Certified Solutions Architect (SAA)",
       "issuer": "Amazon Web Services",
-      "date": "12/2018",
+      "date": "2018-12",
       "url": "https://www.credly.com/badges/dcc795c5-349e-4de1-9744-2606aad038ba"
     },
     {
       "name": "Certified Scrum Product Owner (CSPO)",
       "issuer": "Scrum Alliance",
-      "date": "09/2017"
+      "date": "2017-09"
     },
     {
       "name": "Certified CloudBees Jenkins Engineer (CCJE)",
       "issuer": "CloudBees",
-      "date": "07/2017",
+      "date": "2017-07",
       "url": "https://certificates.cloudbees.com/00dc2nlk#acc.4v3RZ6Ba"
     },
     {
       "name": "ITIL Foundation Level",
       "issuer": "APMG International",
-      "date": "11/2012"
+      "date": "2012-11"
     }
   ],
   "publications": [
     {
       "name": "The Sovereign Cloud Fail-Over Pattern",
       "publisher": "Medium",
-      "releaseDate": "2025-10-24",
+      "releaseDate": "2025-10",
       "url": "https://m5lk3n.medium.com/the-sovereign-cloud-fail-over-pattern-6f7d8d809054",
       "summary": "Failure happens: Fail over or recover to the Sovereign Part of a Cloud Platform. A Cloud Infrastructure Design Pattern."
     },
     {
       "name": "Geofencing in Flutter",
       "publisher": "Medium",
-      "releaseDate": "2025-01-20",
+      "releaseDate": "2025-01",
       "url": "https://m5lk3n.medium.com/geofencing-in-flutter-f610cb212964",
       "summary": "What Geofence limitations exist and how to work around them in Flutter."
     },
     {
       "name": "Dynamic (and Secure) Google Maps API Key in Flutter",
       "publisher": "Medium",
-      "releaseDate": "2025-01-18",
+      "releaseDate": "2025-01",
       "url": "https://m5lk3n.medium.com/dynamic-and-secure-google-maps-api-key-in-flutter-2e7df6c70bd4",
       "summary": "How not to hard-code and distribute a Google Maps API Key in your App."
     }
@@ -255,8 +255,8 @@
   "projects": [
     {
       "name": "Wyatt",
-      "startDate": "10/2024",
-      "endDate": "02/2025",
+      "startDate": "2024-10",
+      "endDate": "2025-02",
       "description": "A location- and time-based reminder app for Android and iOS.",
       "highlights": [
         "I implemented the app using Flutter, enabling cross-platform development",
@@ -268,8 +268,8 @@
     },
     {
       "name": "Agility",
-      "startDate": "01/2021",
-      "endDate": "04/2021",
+      "startDate": "2021-01",
+      "endDate": "2021-04",
       "description": "A cloud-native implementation of how to measure agility using Kubernetes Deployment Frequency.",
       "url": "https://github.com/m5lk3n/agility",
       "highlights": [
