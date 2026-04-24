@@ -226,13 +226,14 @@
         "Foundational Design and Implementation",
         "FinOps",
         "Kubernetes Engine (GKE)",
-        "Cloud Run",
-        "Cloud Functions"
+        "Serverless (Cloud Run, Cloud Functions)"
       ]
     },
     {
       "name": "Platform Engineering",
       "keywords": [
+        "Developer Collaboration",
+        "CI/CD",
         "Developer Self-Service"
       ]
     },
@@ -252,7 +253,7 @@
     {
       "name": "Team Management",
       "keywords": [
-        "Leadership",
+        "Hiring and Team Building",
         "Mentoring",
         "Collaboration"
       ]

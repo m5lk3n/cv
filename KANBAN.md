@@ -21,16 +21,17 @@
 ## To do
 
 - [ ] prep repo https://github.com/m5lk3n/cv
+- [ ] https://cv.michael-klein.info/
+- [ ] entry page to choose between static and dynamic
 - [ ] fix package name
 - [ ] fix links
 - [ ] improve wording
-- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
-- [ ] download resume as PDF
-- [ ] entry page to choose between static and dynamic
-- [ ] add deploy target to Makefile
 
 ## Doing
 
+- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
+- [ ] download resume as PDF
+- [ ] add deploy target to Makefile
 - [ ] complete `README.md`
 
 ### Done
