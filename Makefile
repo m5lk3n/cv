@@ -50,3 +50,9 @@ build-wasm:
 .PHONY: run-localhost
 run-localhost: needs-python3 build-wasm
 	python3 -m http.server -d web
+
+## deploy: write resume.json without the x-mk section to dist/resume.json
+.PHONY: deploy
+deploy: needs-jq
+	mkdir -p dist
+	jq 'del(."x-mk")' resume/resume.json > dist/resume.json
