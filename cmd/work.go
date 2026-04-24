@@ -23,7 +23,7 @@ var workCmd = &cobra.Command{
 				fmt.Fprintln(w)
 			}
 			fmt.Fprintf(w, "%s — %s\n", job.Name, job.Position)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(job.StartDate), formatDate(job.EndDate))
+			fmt.Fprintf(w, "  %s to %s\n", formatDate(job.StartDate), formatEndDate(job.EndDate))
 			if job.URL != "" {
 				fmt.Fprintf(w, "  %s\n", job.URL)
 			}

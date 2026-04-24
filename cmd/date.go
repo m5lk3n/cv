@@ -16,3 +16,12 @@ func formatDate(s string) string {
 	}
 	return s
 }
+
+// formatEndDate formats an end date like formatDate, but renders an
+// empty value as "Present" for ongoing entries.
+func formatEndDate(s string) string {
+	if s == "" {
+		return "Present"
+	}
+	return formatDate(s)
+}

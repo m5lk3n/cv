@@ -23,7 +23,7 @@ var projectsCmd = &cobra.Command{
 				fmt.Fprintln(w)
 			}
 			fmt.Fprintf(w, "%s\n", p.Name)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(p.StartDate), formatDate(p.EndDate))
+			fmt.Fprintf(w, "  %s to %s\n", formatDate(p.StartDate), formatEndDate(p.EndDate))
 			if p.URL != "" {
 				fmt.Fprintf(w, "  %s\n", p.URL)
 			}
