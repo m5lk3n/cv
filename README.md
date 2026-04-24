@@ -17,6 +17,10 @@ My CV, served as a <a href="https://github.com/spf13/cobra">Cobra</a> CLI in Go.
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
+### Limitation
+
+Only English output is supported.
+
 ## 📸 Screenshots
 
 :construction_worker:

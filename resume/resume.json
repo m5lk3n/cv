@@ -200,40 +200,45 @@
     {
       "name": "The Sovereign Cloud Fail-Over Pattern",
       "publisher": "Medium",
-      "releaseDate": "2025-10",
+      "releaseDate": "2025-10-24",
       "url": "https://m5lk3n.medium.com/the-sovereign-cloud-fail-over-pattern-6f7d8d809054",
       "summary": "Failure happens: Fail over or recover to the Sovereign Part of a Cloud Platform. A Cloud Infrastructure Design Pattern."
     },
     {
       "name": "Geofencing in Flutter",
       "publisher": "Medium",
-      "releaseDate": "2025-01",
+      "releaseDate": "2025-01-20",
       "url": "https://m5lk3n.medium.com/geofencing-in-flutter-f610cb212964",
       "summary": "What Geofence limitations exist and how to work around them in Flutter."
     },
     {
       "name": "Dynamic (and Secure) Google Maps API Key in Flutter",
       "publisher": "Medium",
-      "releaseDate": "2025-01",
+      "releaseDate": "2025-01-18",
       "url": "https://m5lk3n.medium.com/dynamic-and-secure-google-maps-api-key-in-flutter-2e7df6c70bd4",
       "summary": "How not to hard-code and distribute a Google Maps API Key in your App."
     }
   ],
   "skills": [
     {
-      "name": "Google Cloud Platform (GCP)"
+      "name": "Google Cloud Platform (GCP)",
+      "level": "Master"
     },
     {
-      "name": "Platform Engineering"
+      "name": "Platform Engineering",
+      "level": "Master"
     },
     {
-      "name": "Cloud Operations (CloudOps)"
+      "name": "Cloud Operations (CloudOps)",
+      "level": "Master"
     },
     {
-      "name": "Cloud Infrastructure"
+      "name": "Cloud Infrastructure",
+      "level": "Master"
     },
     {
-      "name": "Team Management"
+      "name": "Team Management",
+      "level": "Master"
     }
   ],
   "languages": [
