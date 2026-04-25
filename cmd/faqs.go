@@ -18,7 +18,7 @@ var faqsCmd = &cobra.Command{
 			return err
 		}
 		w := cmd.OutOrStdout()
-		for i, f := range r.XMK.FAQs {
+		for i, f := range r.XCV.FAQs {
 			if i > 0 {
 				fmt.Fprintln(w)
 			}

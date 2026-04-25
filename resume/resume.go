@@ -24,7 +24,7 @@ type Resume struct {
 	Skills       []Skill       `json:"skills"`
 	Volunteer    []Volunteer   `json:"volunteer"`
 	Work         []Work        `json:"work"`
-	XMK          XMK           `json:"x-mk"`
+	XCV          XCV           `json:"x-cv"`
 }
 
 type Basics struct {
@@ -124,7 +124,7 @@ type Work struct {
 	Highlights []string `json:"highlights"`
 }
 
-type XMK struct {
+type XCV struct {
 	Hashtags []string `json:"hashtags"`
 	Quotes   []Quote  `json:"quotes"`
 	FAQs     []FAQ    `json:"faqs"`

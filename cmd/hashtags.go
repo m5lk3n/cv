@@ -18,7 +18,7 @@ var hashtagsCmd = &cobra.Command{
 		if err != nil {
 			return err
 		}
-		fmt.Fprintln(cmd.OutOrStdout(), strings.Join(r.XMK.Hashtags, " "))
+		fmt.Fprintln(cmd.OutOrStdout(), strings.Join(r.XCV.Hashtags, " "))
 		return nil
 	},
 }

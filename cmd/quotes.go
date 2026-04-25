@@ -18,7 +18,7 @@ var quotesCmd = &cobra.Command{
 			return err
 		}
 		w := cmd.OutOrStdout()
-		for _, q := range r.XMK.Quotes {
+		for _, q := range r.XCV.Quotes {
 			fmt.Fprintf(w, "\"%s\"\n", q.Text)
 			if q.Author != "" {
 				fmt.Fprintf(w, "  — %s\n", q.Author)

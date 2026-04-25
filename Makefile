@@ -38,11 +38,13 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
-## clean: remove generated binaries
+## clean: remove generated files
 .PHONY: clean
 clean:
+	rm -rf dist
 	rm -f mk
 	rm -f web/mk.wasm
+	rm -f web/resume.pdf
 
 ## tidy: format Go files, tidy Go modules, and format resume.json
 .PHONY: tidy
@@ -75,7 +77,7 @@ run-localhost: needs-python3 build-web
 .PHONY: publish-to-jsonresume
 publish-to-jsonresume: needs-jq needs-gh
 	@mkdir -p dist
-	@jq 'del(."x-mk")' resume/resume.json > dist/resume.json
+	@jq 'del(."x-cv")' resume/resume.json > dist/resume.json
 	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
 	echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"

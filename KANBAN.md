@@ -11,6 +11,7 @@
     - [x] "The only winning move is not to play." (WarGames)
     - [ ] "Remember, you'll die." (unknown)
     - [ ] "The world doesn't need more opinions." (unknown)
+- [ ] check out https://github.com/igolaizola/webcli
 
 ## Open
 
@@ -26,7 +27,6 @@
 - [ ] prep repo https://github.com/m5lk3n/cv
 - [ ] entry page to choose between static and dynamic
 - [ ] fix package name
-- [ ] rename `x-mk` to `x-cv`
 - [ ] fix links incl. hardcodings like https://registry.jsonresume.org/m5lk3n in `index.html`
 - [ ] improve wording
 
@@ -35,7 +35,7 @@
 - [ ] publish `resume.json` under https://registry.jsonresume.org/
   - [x] using `Makefile`
   - [ ] using GitHub workflow (see https://github.com/thomasdavis/resume)
-- [ ] complete `README.md`
+- [ ] complete `README.md`, also include screenshots
 
 ### Done
 
