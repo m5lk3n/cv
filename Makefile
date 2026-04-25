@@ -93,3 +93,8 @@ export-pdf: needs-gh needs-chromium
 publish-to-web: build-web
 	rsync -vz --delete --recursive web/ "${DEPLOY_TARGET}"
 	@echo "-=> Check file permissions under ${DEPLOY_TARGET}"
+
+## publish: build, export PDF, publish to JSONResume and web
+.PHONY: publish
+publish: tidy publish-to-jsonresume publish-to-web
+	@echo "-=> Resume published to JSONResume and web"

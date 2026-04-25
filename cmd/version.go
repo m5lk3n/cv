@@ -18,8 +18,7 @@ var versionCmd = &cobra.Command{
 		if t, err := time.Parse(time.RFC3339, buildTime); err == nil {
 			buildTime = t.Format("January 2, 2006 at 15:04 MST")
 		}
-		version := fmt.Sprintf("App built on %s by %s", buildTime, buildinfo.BuiltBy)
-		version += fmt.Sprintf("\nApp v%s (%s)", buildinfo.Version, buildinfo.Commit)
+		version := fmt.Sprintf("CV app v%s (%s) built on %s by %s", buildinfo.Version, buildinfo.Commit, buildTime, buildinfo.BuiltBy)
 		r, err := resume.Load()
 		if err == nil && r.Meta.LastModified != "" {
 			if t, err := time.Parse(time.RFC3339, r.Meta.LastModified); err == nil {
