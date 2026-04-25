@@ -28,3 +28,6 @@ The resume content in `resume/resume.json` is NOT covered by the MIT license.
 It is personal data and is All Rights Reserved by Michael Klein. You may not
 reuse, republish, or redistribute its contents — whether verbatim or modified —
 as your own or anyone else's CV without explicit written permission.
+
+Third-party components bundled in this repository (e.g. `web/wasm_exec.js`
+from the Go project) retain their original licenses. See `THIRD_PARTY_LICENSES`.

@@ -3,14 +3,7 @@
 ## Backlog
 
 - [ ] support additional themes?
-- [ ] clarify license/distribution `web/wasm_exec.js` 
 - [ ] favicon.png should be the resume.json's basic.image (use app favicon as fallback)
-- [ ] commands
-  - [ ] quotes
-    - [x] "Whatever tomorrow brings, I'll be there. With open arms and open eyes" (Incubus, Drive)
-    - [x] "The only winning move is not to play." (WarGames)
-    - [ ] "Remember, you'll die." (unknown)
-    - [ ] "The world doesn't need more opinions." (unknown)
 - [ ] check out https://github.com/igolaizola/webcli
 
 ## Open
@@ -23,27 +16,24 @@
 
 ## To do
 
-- [ ] add `.env.example`
-- [ ] prep repo https://github.com/m5lk3n/cv
 - [ ] entry page to choose between static and dynamic
-- [ ] fix package name
 - [ ] fix links incl. hardcodings like https://registry.jsonresume.org/m5lk3n in `index.html`
+- [ ] add `.env.example`
 - [ ] improve wording
+- [ ] complete `README.md`, also include screenshots
+  - [ ] add `screenshots/animated.gif`
 
 ## Doing
 
-- [ ] publish `resume.json` under https://registry.jsonresume.org/
-  - [x] using `Makefile`
-  - [ ] using GitHub workflow (see https://github.com/thomasdavis/resume)
-- [ ] complete `README.md`, also include screenshots
-  - [ ] add `screenshots/animated.gif`
+- [ ] prep repo https://github.com/m5lk3n/cv
+- [ ] fix package name
 
 ### Done
 
 - [x] add favicon
 - [x] add link to GitHub repo
 - [x] support clickable URLs
-- [ ] commands
+- [x] commands
   - [x] version
     - [x] embed semver in binary, read version from there
   - [x] about / summary
@@ -62,8 +52,11 @@
   - [x] faq
   - [x] projects
 - [x] address FIXMEs
-- [x] add license
+- [x] add licenses
 - [x] https://cv.michael-klein.info/
 - [x] resume as downloadable PDF
 - [x] add link to published resume under registry.jsonresume.org
 - [x] add `publish-to-web` target to Makefile
+- [x] publish `resume.json` under https://registry.jsonresume.org/
+  - [x] using `Makefile`
+  - [ ] ~~using GitHub workflow (see https://github.com/thomasdavis/resume)~~
