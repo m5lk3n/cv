@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"lttl.dev/mk/buildinfo"
-	"lttl.dev/mk/resume"
+	"lttl.dev/cv/buildinfo"
+	"lttl.dev/cv/resume"
 )
 
 var versionCmd = &cobra.Command{

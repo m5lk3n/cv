@@ -9,8 +9,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "mk",
-	Short: "Michael Klein's CV",
+	Use:   "cv",
+	Short: "Michael Klein's CV", // FIXME: hardcoded name
 	CompletionOptions: cobra.CompletionOptions{
 		DisableDefaultCmd: true,
 	},
@@ -28,8 +28,8 @@ func RunCommand(input string) string {
 	if len(args) == 0 {
 		return ""
 	}
-	// Strip leading "mk" if the user typed it.
-	if args[0] == "mk" {
+	// Strip leading "cv" if the user typed it.
+	if args[0] == "cv" {
 		args = args[1:]
 	}
 

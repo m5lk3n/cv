@@ -12,10 +12,10 @@ COMMIT     := $(shell git rev-parse --short HEAD)
 BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 BUILT_BY   := $(shell echo $$USER)
 
-LDFLAGS := -X 'lttl.dev/mk/buildinfo.Version=$(VERSION)' \
-           -X 'lttl.dev/mk/buildinfo.Commit=$(COMMIT)' \
-           -X 'lttl.dev/mk/buildinfo.BuildTime=$(BUILD_TIME)' \
-           -X 'lttl.dev/mk/buildinfo.BuiltBy=$(BUILT_BY)'
+LDFLAGS := -X 'lttl.dev/cv/buildinfo.Version=$(VERSION)' \
+           -X 'lttl.dev/cv/buildinfo.Commit=$(COMMIT)' \
+           -X 'lttl.dev/cv/buildinfo.BuildTime=$(BUILD_TIME)' \
+           -X 'lttl.dev/cv/buildinfo.BuiltBy=$(BUILT_BY)'
 
 ## help: print this help message
 .PHONY: help
@@ -42,8 +42,8 @@ needs-chromium:
 .PHONY: clean
 clean:
 	rm -rf dist
-	rm -f mk
-	rm -f web/mk.wasm
+	rm -f cv
+	rm -f web/cv.wasm
 	rm -f web/resume.pdf
 
 ## tidy: format Go files, tidy Go modules, and format resume.json
@@ -56,12 +56,12 @@ tidy: needs-jq
 ## build-cli: build the command-line interface
 .PHONY: build-cli
 build-cli:
-	go build -o mk -ldflags="$(LDFLAGS)"
+	go build -o cv -ldflags="$(LDFLAGS)"
 
 ## build-wasm: build the WebAssembly module
 .PHONY: build-wasm
 build-wasm:
-	GOOS=js GOARCH=wasm go build -o web/mk.wasm -ldflags="$(LDFLAGS)"
+	GOOS=js GOARCH=wasm go build -o web/cv.wasm -ldflags="$(LDFLAGS)"
 
 ## build-web: build the WebAssembly module and export the PDF for web usage
 .PHONY: build-web

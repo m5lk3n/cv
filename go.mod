@@ -1,4 +1,4 @@
-module lttl.dev/mk
+module lttl.dev/cv
 
 go 1.26.1
 

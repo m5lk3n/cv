@@ -5,11 +5,11 @@ package main
 import (
 	"syscall/js"
 
-	"lttl.dev/mk/cmd"
+	"lttl.dev/cv/cmd"
 )
 
 func main() {
-	js.Global().Set("mkRun", js.FuncOf(func(this js.Value, args []js.Value) any {
+	js.Global().Set("cvRun", js.FuncOf(func(this js.Value, args []js.Value) any {
 		if len(args) == 0 {
 			return ""
 		}

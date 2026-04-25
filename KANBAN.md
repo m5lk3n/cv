@@ -19,6 +19,7 @@
 - [ ] entry page to choose between static and dynamic
 - [ ] fix links incl. hardcodings like https://registry.jsonresume.org/m5lk3n in `index.html`
 - [ ] add `.env.example`
+- [ ] FIXMEs
 - [ ] improve wording
 - [ ] complete `README.md`, also include screenshots
   - [ ] add `screenshots/animated.gif`
@@ -26,7 +27,6 @@
 ## Doing
 
 - [ ] prep repo https://github.com/m5lk3n/cv
-- [ ] fix package name
 
 ### Done
 

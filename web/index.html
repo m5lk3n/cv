@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noai, noimageai">
   <link rel="icon" type="image/png" href="favicon.png">
-  <title>Michael Klein's CV</title>
+  <title>Michael Klein's CV</title> <!-- FIXME: hardcoded name -->
   <style>
     body {
       background-color: #1D2226;
@@ -110,7 +110,7 @@
     </div>
   </div>
   <script src="wasm_exec.js"></script>
-  <a class="json-link" href="https://registry.jsonresume.org/m5lk3n" target="_blank" rel="noopener" aria-label="View resume on JSON Resume registry">
+  <a class="json-link" href="https://registry.jsonresume.org/m5lk3n" target="_blank" rel="noopener" aria-label="View resume on JSON Resume registry"> <!-- FIXME: hardcoded GitHub username -->
     <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0H4zm5.5 1.5v2A1.5 1.5 0 0 0 11 5h2v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/><text x="8" y="13" font-size="5" font-family="monospace" font-weight="bold" text-anchor="middle">{ }</text></svg>
   </a>
   <a class="pdf-link" href="resume.pdf" target="_blank" rel="noopener" aria-label="Download resume as PDF">
@@ -122,10 +122,10 @@
   <script>
     const go = new Go();
     let ready = false;
-    WebAssembly.instantiateStreaming(fetch("mk.wasm"), go.importObject).then((result) => {
+    WebAssembly.instantiateStreaming(fetch("cv.wasm"), go.importObject).then((result) => {
       go.run(result.instance);
       ready = true;
-      appendOutput(mkRun("mk help"));
+      appendOutput(cvRun("cv help"));
     });
 
     const output = document.getElementById("output");
@@ -201,7 +201,7 @@
 
       if (cmd === "reset") {
         output.innerHTML = "";
-        appendOutput(mkRun("mk help"));
+        appendOutput(cvRun("cv help"));
         return;
       }
 
@@ -210,7 +210,7 @@
         appendOutput("wasm not loaded yet\n");
         return;
       }
-      const result = mkRun(cmd);
+      const result = cvRun(cmd);
       if (result) appendOutput(result);
       output.scrollTop = output.scrollHeight;
     });

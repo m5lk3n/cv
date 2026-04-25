@@ -2,7 +2,7 @@
 
 package main
 
-import "lttl.dev/mk/cmd"
+import "lttl.dev/cv/cmd"
 
 func main() {
 	cmd.Execute()

@@ -6,7 +6,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"lttl.dev/mk/resume"
+	"lttl.dev/cv/resume"
 )
 
 var basicsCmd = &cobra.Command{

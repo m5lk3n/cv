@@ -45,10 +45,10 @@ Only English tool output is supported.
 
 One Go module, two entry points, one shared command tree:
 
-- [main.go](main.go) builds a native CLI; [main_wasm.go](main_wasm.go) builds a WebAssembly module that exposes `mkRun(cmd)` to JavaScript. Build tags (`!js || !wasm` vs. `js && wasm`) pick the right entry per target.
+- [main.go](main.go) builds a native CLI; [main_wasm.go](main_wasm.go) builds a WebAssembly module that exposes `cvRun(cmd)` to JavaScript. Build tags (`!js || !wasm` vs. `js && wasm`) pick the right entry per target.
 - [cmd/](cmd/) holds the [Cobra](https://github.com/spf13/cobra) command tree — one file per CV section ([basics.go](cmd/basics.go), [work.go](cmd/work.go), [education.go](cmd/education.go), …). [root.go](cmd/root.go) exposes `Execute()` for the CLI and `RunCommand(input)` for the WASM build, which captures stdout/stderr into a buffer so the browser terminal can render it.
 - [resume/](resume/) defines the [JSON Resume](https://jsonresume.org/) schema as Go structs and embeds [resume.json](resume/resume.json) at compile time via `//go:embed`. The data ships inside the binary — no filesystem reads at runtime, which is what makes the WASM build self-contained.
-- [web/](web/) is the browser shell: [index.html](web/index.html) renders a terminal UI and wires keystrokes to `mkRun`; [wasm_exec.js](web/wasm_exec.js) is Go's standard WASM runtime loader; `mk.wasm` is the compiled artifact.
+- [web/](web/) is the browser shell: [index.html](web/index.html) renders a terminal UI and wires keystrokes to `cvRun`; [wasm_exec.js](web/wasm_exec.js) is Go's standard WASM runtime loader; `cv.wasm` is the compiled artifact.
 
 ```text
 .
@@ -62,7 +62,7 @@ One Go module, two entry points, one shared command tree:
 │   └── resume.json   # CV content (All Rights Reserved)
 └── web/              # Browser terminal hosting the WASM build
     ├── index.html
-    ├── mk.wasm       # Generated using Makefile
+    ├── cv.wasm       # Generated using Makefile
     ├── report.pdf    # Generated using Makefile
     └── wasm_exec.js
 ```
@@ -95,8 +95,8 @@ git clone https://github.com/m5lk3n/cv.git
 ### Build
 
 ```sh
-make build-cli       # native binary  → ./mk
-make build-wasm      # WebAssembly    → web/mk.wasm
+make build-cli       # native binary  → ./cv
+make build-wasm      # WebAssembly    → web/cv.wasm
 ```
 
 ### Run
@@ -104,10 +104,10 @@ make build-wasm      # WebAssembly    → web/mk.wasm
 #### CLI
 
 ```sh
-./mk                 # list available subcommands
-./mk basics
-./mk work
-./mk education
+./cv                 # list available subcommands
+./cv basics
+./cv work
+./cv education
 # etc.
 ```
 
@@ -117,13 +117,13 @@ make build-wasm      # WebAssembly    → web/mk.wasm
 make run-localhost
 ```
 
-Open http://localhost:8000 and type commands like `mk basics` at the prompt.
+Open http://localhost:8000 and type commands like `cv basics` at the prompt.
 
 ### Develop
 
 ```sh
 make tidy            # gofmt, go mod tidy, format resume.json
-make clean           # remove ./mk and web/mk.wasm
+make clean           # remove ./cv and web/cv.wasm
 make help            # list all targets
 ```
 
