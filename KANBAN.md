@@ -22,8 +22,8 @@
 
 ## To do
 
+- [ ] add `.env.example`
 - [ ] prep repo https://github.com/m5lk3n/cv
-- [ ] https://cv.michael-klein.info/
 - [ ] entry page to choose between static and dynamic
 - [ ] fix package name
 - [ ] rename `x-mk` to `x-cv`
@@ -35,7 +35,6 @@
 - [ ] publish `resume.json` under https://registry.jsonresume.org/
   - [x] using `Makefile`
   - [ ] using GitHub workflow (see https://github.com/thomasdavis/resume)
-- [ ] add `deploy-to-web` target to Makefile
 - [ ] complete `README.md`
 
 ### Done
@@ -63,5 +62,7 @@
   - [x] projects
 - [x] address FIXMEs
 - [x] add license
+- [x] https://cv.michael-klein.info/
 - [x] resume as downloadable PDF
 - [x] add link to published resume under registry.jsonresume.org
+- [x] add `publish-to-web` target to Makefile

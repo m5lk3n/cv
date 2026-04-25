@@ -1,15 +1,21 @@
-include .env
-export
+ifneq (,$(wildcard ./.env))
+    include .env
+    export
+endif
+
+ifeq (,$(wildcard ./.env))
+$(error .env file not found. Please create .env (or copy .env.example))
+endif
 
 VERSION    := $(shell git describe --tags --abbrev=0)
 COMMIT     := $(shell git rev-parse --short HEAD)
 BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 BUILT_BY   := $(shell echo $$USER)
 
-LDFLAGS := -X 'lttl.dev/mk/app.Version=$(VERSION)' \
-           -X 'lttl.dev/mk/app.Commit=$(COMMIT)' \
-           -X 'lttl.dev/mk/app.BuildTime=$(BUILD_TIME)' \
-           -X 'lttl.dev/mk/app.BuiltBy=$(BUILT_BY)'
+LDFLAGS := -X 'lttl.dev/mk/buildinfo.Version=$(VERSION)' \
+           -X 'lttl.dev/mk/buildinfo.Commit=$(COMMIT)' \
+           -X 'lttl.dev/mk/buildinfo.BuildTime=$(BUILD_TIME)' \
+           -X 'lttl.dev/mk/buildinfo.BuiltBy=$(BUILT_BY)'
 
 ## help: print this help message
 .PHONY: help
@@ -55,9 +61,14 @@ build-cli:
 build-wasm:
 	GOOS=js GOARCH=wasm go build -o web/mk.wasm -ldflags="$(LDFLAGS)"
 
+## build-web: build the WebAssembly module and export the PDF for web usage
+.PHONY: build-web
+build-web: build-wasm export-pdf
+	@echo "-=> WebAssembly module built and PDF exported to web/resume.pdf"
+
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost
-run-localhost: needs-python3 build-wasm export-pdf
+run-localhost: needs-python3 build-web
 	@python3 -m http.server -d web
 
 ## publish-to-jsonresume: make the resume available under registry.jsonresume.org
@@ -74,3 +85,9 @@ publish-to-jsonresume: needs-jq needs-gh
 export-pdf: needs-gh needs-chromium
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
 	chromium --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
+
+## publish-to-web: build and make the web directory available online
+.PHONY: publish-to-web
+publish-to-web: build-web
+	rsync -vz --delete --recursive web/ "${DEPLOY_TARGET}"
+	@echo "-=> Check file permissions under ${DEPLOY_TARGET}"
