@@ -36,6 +36,7 @@
   - [x] using `Makefile`
   - [ ] using GitHub workflow (see https://github.com/thomasdavis/resume)
 - [ ] complete `README.md`, also include screenshots
+  - [ ] add `screenshots/animated.gif`
 
 ### Done
 

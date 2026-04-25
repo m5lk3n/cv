@@ -1,12 +1,20 @@
-# <img src="web/favicon.png" alt="Icon" height="24"> My CV & Tool
+<h1 align="center"><img src="web/favicon.png" alt="Icon" height="24"> My CV & CV Tool</h1>
 
-![Go](https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white)
-![Tool License](https://img.shields.io/badge/License-MIT-green) (App)
-![!CV License](https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey) (CV)
+<p align="center">
+<img src="https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white"/>
+<img src="https://img.shields.io/badge/License-MIT-green"/> (App)
+<img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV)
+</p>
 
+<!--p align="center">
+<img src="screenshots/animated.gif" alt="Animated demo of CV usage" width="600"/>
+</p-->
+
+<p align="center">
 My CV, served as a <a href="https://github.com/spf13/cobra">Cobra</a> CLI in Go. The same binary compiles to WebAssembly so the CV runs in a browser terminal.
-
+<br />
 <a href="https://cv.michael-klein.info/"><strong>Browse CV »</strong></a>
+</p>
 
 ## ✨ Features
 
@@ -19,7 +27,7 @@ My CV, served as a <a href="https://github.com/spf13/cobra">Cobra</a> CLI in Go.
 
 ### Limitation
 
-Only English output is supported.
+Only English tool output is supported.
 
 ## 📸 Screenshots
 
@@ -88,7 +96,7 @@ git clone https://github.com/m5lk3n/cv.git
 
 ```sh
 make build-cli       # native binary  → ./mk
-make build-wasm      # WebAssembly   → web/mk.wasm
+make build-wasm      # WebAssembly    → web/mk.wasm
 ```
 
 ### Run
