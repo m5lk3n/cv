@@ -66,7 +66,7 @@ build-wasm:
 ## build-web: build the WebAssembly module and export the PDF for web usage
 .PHONY: build-web
 build-web: build-wasm export-pdf
-	@echo "-=> WebAssembly module built and PDF exported to web/resume.pdf"
+	@echo "WebAssembly module built and PDF exported to web/resume.pdf"
 
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost
