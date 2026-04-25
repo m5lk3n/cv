@@ -1,5 +1,6 @@
 .claude
 .env
+.vscode
 dist
 mk
 web/mk.wasm

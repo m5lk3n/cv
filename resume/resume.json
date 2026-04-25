@@ -11,7 +11,7 @@
     "email": "m5l.k3n@gmail.com",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Google Cloud, Platform Engineering, CloudOps | 20+ years of experience in IT (Silicon Valley & Europe)",
+    "summary": "Cloud Architect and Engineer with over 20 years of experience in IT (Silicon Valley & Europe) who likes to actually build things. Specialized in Google Cloud Platform (GCP), Platform Engineering, and CloudOps.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -74,7 +74,7 @@
       "endDate": "2003-08",
       "summary": "",
       "highlights": [
-        "In my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"
+        "During my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"
       ]
     }
   ],
@@ -223,7 +223,8 @@
     {
       "name": "Google Cloud Platform (GCP)",
       "keywords": [
-        "Foundational Design and Implementation",
+        "Foundational Design",
+        "Foundational Implementation",
         "FinOps",
         "Kubernetes Engine (GKE)",
         "Serverless (Cloud Run, Cloud Functions)"
@@ -303,7 +304,6 @@
     }
   ],
   "x-mk": {
-    "about": "I am a Cloud Architect and Engineer with over 20 years of experience in IT (Silicon Valley & Europe), specializing in Google Cloud Platform (GCP), Platform Engineering, and CloudOps. I have a proven track record of design and implementation that drive business value and optimize costs. With a strong background in both technical and leadership roles, I excel at actually building systems and related processes.",
     "hashtags": [
       "#cloudarchitect",
       "#cloudengineer",
