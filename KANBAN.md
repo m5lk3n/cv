@@ -24,14 +24,17 @@
 - [ ] https://cv.michael-klein.info/
 - [ ] entry page to choose between static and dynamic
 - [ ] fix package name
+- [ ] rename `x-mk` to `x-cv`
 - [ ] fix links
 - [ ] improve wording
 
 ## Doing
 
-- [ ] publish on JSON resume's registry (see also https://github.com/thomasdavis/resume)
+- [ ] publish `resume.json` under https://registry.jsonresume.org/
+  - [x] using `Makefile`
+  - [ ] using GitHub workflow (see https://github.com/thomasdavis/resume)
 - [ ] download resume as PDF
-- [ ] add deploy target to Makefile
+- [ ] add `deploy-to-web` target to Makefile
 - [ ] complete `README.md`
 
 ### Done

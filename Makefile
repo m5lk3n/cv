@@ -1,3 +1,6 @@
+include .env
+export
+
 VERSION    := $(shell git describe --tags --abbrev=0)
 COMMIT     := $(shell git rev-parse --short HEAD)
 BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
@@ -23,13 +26,16 @@ needs-python3:
 needs-jq:
 	@command -v jq >/dev/null 2>&1 || { echo >&2 "jq is required but it's not installed. Aborting."; exit 1; }
 
+needs-gh:
+	@command -v gh >/dev/null 2>&1 || { echo >&2 "gh is required but it's not installed. Aborting."; exit 1; }
+
 ## clean: remove generated binaries
 .PHONY: clean
 clean:
 	rm -f mk
 	rm -f web/mk.wasm
 
-## tidy: tidy up the codebase by formatting Go files, tidying Go modules, and formatting JSON in the resume file
+## tidy: format Go files, tidy Go modules, and format resume.json
 .PHONY: tidy
 tidy: needs-jq
 	gofmt -s -w .
@@ -51,8 +57,11 @@ build-wasm:
 run-localhost: needs-python3 build-wasm
 	python3 -m http.server -d web
 
-## deploy: write resume.json without the x-mk section to dist/resume.json
-.PHONY: deploy
-deploy: needs-jq
+## publish-to-jsonresume: make the resume available under registry.jsonresume.org
+.PHONY: publish-to-jsonresume
+publish-to-jsonresume: needs-jq needs-gh
 	mkdir -p dist
 	jq 'del(."x-mk")' resume/resume.json > dist/resume.json
+	gh gist edit $(GIST_ID) -f resume.json dist/resume.json
+	GITHUB_USERNAME=$$(gh api user --jq .login)
+	echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"

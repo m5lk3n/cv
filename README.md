@@ -67,6 +67,15 @@ To get a local copy up and running, follow these simple steps.
 - Go 1.26+
 - Optional: Python 3 (for the local web server)
 - Optional: `jq` (for `make tidy`)
+- Optional: [`gh`](https://cli.github.com/) (for `make publish-to-jsonresume`, authenticated via `gh auth login`)
+
+`make publish-to-jsonresume` publishes [resume/resume.json](resume/resume.json) (with the `x-mk` section stripped) to a GitHub gist, making the CV available under `https://registry.jsonresume.org/<your-github-user>`. The gist ID is read from a `.env` file at the repo root:
+
+```sh
+GIST_ID=<your-gist-id>
+```
+
+`.env` is gitignored — create your own before running `make deploy`.
 
 ### Installation
 

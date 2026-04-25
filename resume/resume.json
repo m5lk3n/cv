@@ -35,13 +35,13 @@
   "work": [
     {
       "name": "EPO",
-      "position": "Lead Cloud Architect",
+      "position": "Cloud Architect",
       "url": "https://epo.org/",
       "startDate": "2010-09",
       "endDate": "",
       "summary": "",
       "highlights": [
-        "As Lead Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
+        "As Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
         "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup as well as the operational processes and guardrails",
         "I built the core GCP team and helped to grow it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
         "I helped to adopt GCP from 0 to > €4M p.a., saving ~50% compared to on-premises",
