@@ -57,7 +57,7 @@ build-wasm:
 
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost
-run-localhost: needs-python3 build-wasm
+run-localhost: needs-python3 build-wasm export-pdf
 	@python3 -m http.server -d web
 
 ## publish-to-jsonresume: make the resume available under registry.jsonresume.org
@@ -66,11 +66,11 @@ publish-to-jsonresume: needs-jq needs-gh
 	@mkdir -p dist
 	@jq 'del(."x-mk")' resume/resume.json > dist/resume.json
 	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
-	@GITHUB_USERNAME=$$(gh api user --jq .login)
-	@echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"
+	@GITHUB_USERNAME=$$(gh api user --jq .login); \
+	echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"
 
 ## export-pdf: export the resume as a PDF using headless Chromium
 .PHONY: export-pdf
 export-pdf: needs-gh needs-chromium
-	@GITHUB_USERNAME=$$(gh api user --jq .login)
-	@chromium --headless --no-pdf-header-footer --print-to-pdf=dist/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
+	@GITHUB_USERNAME=$$(gh api user --jq .login); \
+	chromium --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME

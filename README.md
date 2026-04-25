@@ -54,8 +54,9 @@ One Go module, two entry points, one shared command tree:
 │   └── resume.json   # CV content (All Rights Reserved)
 └── web/              # Browser terminal hosting the WASM build
     ├── index.html
-    ├── wasm_exec.js
-    └── mk.wasm
+    ├── mk.wasm       # Generated using Makefile
+    ├── report.pdf    # Generated using Makefile
+    └── wasm_exec.js
 ```
 
 ## 🚀 Getting Started
