@@ -21,13 +21,16 @@ help:
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' | sed -e 's/^/ /'
 
 needs-python3:
-	@command -v python3 >/dev/null 2>&1 || { echo >&2 "Python 3 is required but it's not installed. Aborting."; exit 1; }
+	@command -v python3 >/dev/null 2>&1 || { echo >&2 "python3 is required but it's not installed. Aborting."; exit 1; }
 
 needs-jq:
 	@command -v jq >/dev/null 2>&1 || { echo >&2 "jq is required but it's not installed. Aborting."; exit 1; }
 
 needs-gh:
 	@command -v gh >/dev/null 2>&1 || { echo >&2 "gh is required but it's not installed. Aborting."; exit 1; }
+
+needs-chromium:
+	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
 ## clean: remove generated binaries
 .PHONY: clean
@@ -55,13 +58,19 @@ build-wasm:
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost
 run-localhost: needs-python3 build-wasm
-	python3 -m http.server -d web
+	@python3 -m http.server -d web
 
 ## publish-to-jsonresume: make the resume available under registry.jsonresume.org
 .PHONY: publish-to-jsonresume
 publish-to-jsonresume: needs-jq needs-gh
-	mkdir -p dist
-	jq 'del(."x-mk")' resume/resume.json > dist/resume.json
-	gh gist edit $(GIST_ID) -f resume.json dist/resume.json
-	GITHUB_USERNAME=$$(gh api user --jq .login)
-	echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"
+	@mkdir -p dist
+	@jq 'del(."x-mk")' resume/resume.json > dist/resume.json
+	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
+	@GITHUB_USERNAME=$$(gh api user --jq .login)
+	@echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"
+
+## export-pdf: export the resume as a PDF using headless Chromium
+.PHONY: export-pdf
+export-pdf: needs-gh needs-chromium
+	@GITHUB_USERNAME=$$(gh api user --jq .login)
+	@chromium --headless --no-pdf-header-footer --print-to-pdf=dist/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
