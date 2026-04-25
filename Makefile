@@ -80,7 +80,7 @@ publish-to-jsonresume: needs-jq needs-gh
 	@jq 'del(."x-cv")' resume/resume.json > dist/resume.json
 	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
-	echo "Updated resume available under https://registry.jsonresume.org/$$GITHUB_USERNAME"
+	@echo "Updated CV published under https://registry.jsonresume.org/$$GITHUB_USERNAME"
 
 ## export-pdf: export the resume as a PDF using headless Chromium
 .PHONY: export-pdf
@@ -91,10 +91,9 @@ export-pdf: needs-gh needs-chromium
 ## publish-to-web: build and make the web directory available online
 .PHONY: publish-to-web
 publish-to-web: build-web
-	rsync -vz --delete --recursive web/ "${DEPLOY_TARGET}"
-	@echo "-=> Check file permissions under ${DEPLOY_TARGET}"
+	rsync -vz --delete --recursive --chown=caddy:caddy web/ "${DEPLOY_TARGET}"
+	@echo "Updated CV app version published to web"
 
 ## publish: build, export PDF, publish to JSONResume and web
 .PHONY: publish
 publish: tidy publish-to-jsonresume publish-to-web
-	@echo "-=> Resume published to JSONResume and web"
