@@ -20,7 +20,7 @@ My CV, via command line interface or via a browser terminal.
 <br />
 <a href="https://cv.michael-klein.info/resume.pdf">Download PDF</a>
 ·
-<a href="https://registry.jsonresume.org/m5lk3n">View on JSON Registry</a>
+<a href="https://registry.jsonresume.org/m5lk3n">View on JSON Resume registry</a>
 </p>
 
 ## ✨ Features
