@@ -2,18 +2,25 @@
 
 <p align="center">
 <img src="https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white"/>
-<img src="https://img.shields.io/badge/License-MIT-green"/> (App)
-<img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV)
+<img src="https://img.shields.io/badge/License-MIT-green"/> (CV app)
+<img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV data)
 </p>
 
-<!--p align="center">
-<img src="screenshots/animated.gif" alt="Animated demo of CV usage" width="600"/>
-</p-->
+<p align="center">
+<img src="screenshot.png" alt="CV CLI and WebCLI" width="600"/>
+<br />
+<small>Left: WebCLI version<br/>Right: CLI flavor</small>
+</p>
 
 <p align="center">
-My CV, served as a <a href="https://github.com/spf13/cobra">Cobra</a> CLI in Go. The same binary compiles to WebAssembly so the CV runs in a browser terminal.
+My CV, via command line interface or via a browser terminal.
 <br />
 <a href="https://cv.michael-klein.info/"><strong>Browse CV »</strong></a>
+<br />
+<br />
+<a href="https://registry.jsonresume.org/m5lk3n">View on JSON Resume</a>
+·
+<a href="https://cv.michael-klein.info/resume.pdf">Download PDF</a>
 </p>
 
 ## ✨ Features
@@ -21,17 +28,13 @@ My CV, served as a <a href="https://github.com/spf13/cobra">Cobra</a> CLI in Go.
 - [x] **JSON Resume**: Follows [this](https://jsonresume.org/) open-source initiative for a JSON-based standard for resumes.
 - [x] **WebAssembly**: The same Go source compiles to a native CLI and a browser-side WASM module — one command tree, two targets.
 - [x] **Single binary, no runtime I/O**: CV data is embedded at compile time via `//go:embed`, so the binary (and the WASM artifact) are self-contained.
-- [x] **Cobra CLI**: One subcommand per CV section ([basics](cmd/basics.go), [work](cmd/work.go), [education](cmd/education.go), [skills](cmd/skills.go), [projects](cmd/projects.go), [certificates](cmd/certificates.go), [languages](cmd/languages.go), [publications](cmd/publications.go), [references](cmd/references.go), [volunteering](cmd/volunteering.go), …).
+- [x] **[Cobra](https://github.com/spf13/cobra) CLI**: One subcommand per CV section ([basics](cmd/basics.go), [work](cmd/work.go), [education](cmd/education.go), [skills](cmd/skills.go), [projects](cmd/projects.go), [certificates](cmd/certificates.go), [languages](cmd/languages.go), [publications](cmd/publications.go), [references](cmd/references.go), [volunteering](cmd/volunteering.go), …).
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
 ### Limitation
 
 Only English tool output is supported.
-
-## 📸 Screenshots
-
-:construction_worker:
 
 ## 🛠 Built With/On
 

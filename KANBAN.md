@@ -6,25 +6,15 @@
 - [ ] favicon.png should be the resume.json's basic.image (use app favicon as fallback)
 - [ ] check out https://github.com/igolaizola/webcli
 
-## Open
-
-- [ ] add configuration?
-  - [ ] background color
-  - [ ] foreground color
-  - [ ] links
-  - [ ] site link/title
-
 ## To do
 
 - [ ] entry page to choose between static and dynamic
-- [ ] improve CV wording
-- [ ] complete `README.md`, also include screenshots
-  - [ ] add `screenshots/animated.gif`
 
 ## Doing
 
-- [ ] fix hardcodings
-- [ ] add `.env.example`
+- [ ] improve CV wording
+- [ ] complete `README.md`
+  - [x] add screenshot(s)
 
 ### Done
 
@@ -59,3 +49,5 @@
   - [x] using `Makefile`
   - [ ] ~~using GitHub workflow (see https://github.com/thomasdavis/resume)~~
 - [x] move repo to https://github.com/m5lk3n/cv
+- [x] fix hardcodings
+- [x] add `.env.example`
