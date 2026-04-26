@@ -1,4 +1,4 @@
-# FAQs
+# FAQ
 
 Q) If I deployed the web folder to a web server, would the `resume.json` in the wasm become available in search engines?
 
