@@ -83,7 +83,7 @@ publish-to-jsonresume: needs-jq needs-gh
 	@jq 'del(."x-cv")' resume/resume.json > dist/resume.json
 	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
-	@echo "Updated CV published under https://registry.jsonresume.org/$$GITHUB_USERNAME"
+	echo "Updated CV published under https://registry.jsonresume.org/$$GITHUB_USERNAME"
 
 ## export-pdf: export the resume as a PDF using headless Chromium
 .PHONY: export-pdf
