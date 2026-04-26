@@ -2,6 +2,7 @@
 
 ## Backlog
 
+- [ ] animated pointer to PDF download?
 - [ ] support additional themes?
 - [ ] favicon.png could be the resume.json's basic.image (use app favicon as fallback)
 - [ ] check out https://github.com/igolaizola/webcli
@@ -11,6 +12,8 @@
 - [ ] entry screen to choose between static incl. download and WebCLI
 
 ## Doing
+
+- n/a
 
 ### Done
 

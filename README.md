@@ -9,7 +9,7 @@
 <p align="center">
 <img src="screenshot.png" alt="CV CLI and WebCLI" width="600"/>
 <br />
-<small>Left: WebCLI version<br/>Right: CLI flavor</small>
+<small>Left: CLI flavor<br />Right: WebCLI version</small>
 </p>
 
 <p align="center">
