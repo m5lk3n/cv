@@ -3,16 +3,14 @@
 ## Backlog
 
 - [ ] support additional themes?
-- [ ] favicon.png should be the resume.json's basic.image (use app favicon as fallback)
+- [ ] favicon.png could be the resume.json's basic.image (use app favicon as fallback)
 - [ ] check out https://github.com/igolaizola/webcli
 
 ## To do
 
-- [ ] entry page to choose between static and dynamic
+- [ ] entry screen to choose between static incl. download and WebCLI
 
 ## Doing
-
-- [ ] improve CV wording
 
 ### Done
 
@@ -51,3 +49,4 @@
 - [x] add `.env.example`
 - [x] complete `README.md`
   - [x] add screenshot(s)
+- [x] improve CV wording

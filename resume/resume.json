@@ -11,7 +11,7 @@
     "email": "m5l.k3n@gmail.com",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Cloud Architect and Engineer with over 20 years of experience in IT (Silicon Valley & Europe) who likes to actually build things. Specialized in Google Cloud Platform (GCP), Platform Engineering, and CloudOps.",
+    "summary": "Cloud Architect and Engineer with 20+ years across Silicon Valley and Europe, scaling Google Cloud Platform (GCP) from zero to €4M+ p.a. while cutting spend ~50% vs. on-prem. Hands-on across GCP, Platform Engineering, and CloudOps.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -39,17 +39,17 @@
       "url": "https://epo.org/",
       "startDate": "2010-09",
       "endDate": "",
-      "summary": "",
+      "summary": "Lead architect for the European Patent Office's GCP adoption — foundation, team build-out, CloudOps, and FinOps.",
       "highlights": [
-        "As Cloud Architect, I ensure cost efficiency: Instead of paying €1 to Google Cloud Platform (GCP), I make sure our actual pay is ~60 cents",
-        "I designed and built two Enterprise-grade GCP \"tenants\" incl. their foundational setup as well as the operational processes and guardrails",
-        "I built the core GCP team and helped to grow it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
-        "I helped to adopt GCP from 0 to > €4M p.a., saving ~50% compared to on-premises",
-        "I was directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
-        "I helped to increase our overall 2024 production output by 2% (~€50M)",
-        "I'm the sole developer of `cecli`, the missing `gcloud browsers` command",
-        "As Architect, Common Build Services, I reduced CI capacity by ~20%, keeping the quantity to ~800 nightly builds and thousands of builds per day",
-        "I was a key player to introduce Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability"
+        "Drove GCP adoption from 0 to > €4M p.a., saving ~50% compared to on-premises",
+        "As Cloud Architect, drive cost efficiency: ~40% effective discount on GCP list price through architectural design, custom pricing, and committed-use agreements (paying ~60 cents per €1 of list)",
+        "Designed and built two Enterprise-grade GCP organizations incl. their foundational setup as well as the operational processes and boundaries",
+        "Directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
+        "Helped to increase our overall 2024 production output by 2% (~€50M)",
+        "Built the core GCP team and grew it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
+        "Key player in introducing Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability",
+        "As Architect, Common Build Services, reduced CI capacity by ~20% while sustaining ~800 nightly builds and thousands of builds per day",
+        "Sole developer of `cecli`, the missing `gcloud browsers` command"
       ]
     },
     {
@@ -58,12 +58,12 @@
       "url": "https://aris.com/",
       "startDate": "2003-09",
       "endDate": "2010-08",
-      "summary": "",
+      "summary": "Development and team management roles for Oracle BPA Suite (an ARIS OEM product) and ARIS (Web) Development.",
       "highlights": [
-        "As Development Manager for Oracle BPA Suite (an ARIS OEM product), I achieved ~140% ROI in 3 years",
-        "I built up an office and a development outpost for 5 FTEs abroad, in the US",
-        "As Team Manager Web Development, I saved a 7 digit figure deal from customer drop-out",
-        "I mentored a thesis"
+        "As Development Manager for Oracle BPA Suite (an ARIS OEM product), achieved ~140% ROI in 3 years",
+        "Built up an office and a development outpost for 5 FTEs abroad, in the US",
+        "As Team Manager Web Development, recovered a 7-figure deal at risk of customer churn",
+        "Mentored a Master's thesis"
       ]
     },
     {
@@ -72,9 +72,9 @@
       "url": "https://insiders-technologies.com/en/",
       "startDate": "2001-01",
       "endDate": "2003-08",
-      "summary": "",
+      "summary": "Software engineer working on web-based information retrieval and search systems.",
       "highlights": [
-        "During my first 6 weeks, I developed a working prototype of a web-based search system, which was demoed at the world's largest IT trade fair, CeBIT"
+        "Within the first 6 weeks, developed a working prototype of a web-based search system, demoed at the world's largest IT trade fair, CeBIT"
       ]
     }
   ],
@@ -87,11 +87,9 @@
       "endDate": "2019-01",
       "summary": "I served as a volunteer firefighter for over 30 years, starting as a junior cadet and eventually becoming a state-certified incident commander and group leader. During my tenure, I participated in over 100 firefighting operations, contributing to the safety and well-being of the community. Additionally, I created and developed the organization's website, enhancing communication and outreach efforts.",
       "highlights": [
-        "I was a junior cadet between 1988 and 1990",
-        "I was a firefighter from 1990 to 2019",
-        "I became a state-certified incident commander and group leader",
-        "I was the creator and developer of the organization's website between 1998 and 2006",
-        "I participated in 100+ incidents"
+        "Became a state-certified incident commander and group leader",
+        "Participated in 100+ firefighting operations",
+        "Created and developed the organization's website between 1998 and 2006"
       ]
     }
   ],
@@ -283,10 +281,10 @@
       "endDate": "2025-02",
       "description": "A location- and time-based reminder app for Android and iOS.",
       "highlights": [
-        "I implemented the app using Flutter, enabling cross-platform development",
-        "I integrated Geofencing and Google Maps",
-        "I published the article \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, sharing insights and challenges faced during the project in regards to securely handling Google Maps API keys in Flutter applications",
-        "I published the article \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of Geofencing in the app"
+        "Implemented the app using Flutter, enabling cross-platform development",
+        "Integrated Geofencing and Google Maps",
+        "Published \"Dynamic (and Secure) Google Maps API Key in Flutter\" on Medium, covering API-key handling pitfalls in Flutter applications",
+        "Published \"Geofencing in Flutter\" on Medium, detailing the implementation and use cases of Geofencing in the app"
       ],
       "url": "https://wyatt.lttl.dev/"
     },
@@ -297,9 +295,9 @@
       "description": "A cloud-native implementation of how to measure agility using Kubernetes Deployment Frequency.",
       "url": "https://github.com/m5lk3n/agility",
       "highlights": [
-        "Inspired by the book \"Accelerate - The Science Behind DevOps: Building and Scaling High Performing Technology Organizations\" (Forsgren, Humble, and Kim), I implemented this project to illustrate the concept of the KPI Deployment Frequency (DF) (or Throughput)",
-        "I implemented the project using Golang and Kubernetes, demonstrating how to measure agility through Kubernetes Deployment Frequency",
-        "I integrated Prometheus and Grafana for monitoring and visualization of deployment metrics"
+        "Implemented this project to illustrate the Deployment Frequency (DF) KPI from Forsgren, Humble, and Kim's \"Accelerate\"",
+        "Built it using Golang and Kubernetes, demonstrating how to measure agility through Kubernetes Deployment Frequency",
+        "Integrated Prometheus and Grafana for monitoring and visualization of deployment metrics"
       ]
     }
   ],
