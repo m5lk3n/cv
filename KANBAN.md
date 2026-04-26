@@ -9,7 +9,7 @@
 
 ## Doing
 
-- [ ] add splash screen to choose between static and interactive version
+n/a
 
 ### Done
 
@@ -49,3 +49,4 @@
 - [x] complete `README.md`
   - [x] add screenshot(s)
 - [x] improve CV wording
+- [x] add splash screen to choose between static and interactive
