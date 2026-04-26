@@ -13,8 +13,6 @@
 ## Doing
 
 - [ ] improve CV wording
-- [ ] complete `README.md`
-  - [x] add screenshot(s)
 
 ### Done
 
@@ -51,3 +49,5 @@
 - [x] move repo to https://github.com/m5lk3n/cv
 - [x] fix hardcodings
 - [x] add `.env.example`
+- [x] complete `README.md`
+  - [x] add screenshot(s)

@@ -1,7 +1,7 @@
 <h1 align="center"><img src="web/favicon.png" alt="Icon" height="24"> My CV & CV (Web)CLI</h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white"/>
+<img src="https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go&logoColor=white"/>
 <img src="https://img.shields.io/badge/License-MIT-green"/> (CV app)
 <img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV data)
 </p>
@@ -28,7 +28,7 @@ My CV, via command line interface or via a browser terminal.
 - [x] **JSON Resume**: Follows [this](https://jsonresume.org/) open-source initiative for a JSON-based standard for resumes.
 - [x] **WebAssembly**: The same Go source compiles to a native CLI and a browser-side WASM module — one command tree, two targets.
 - [x] **Single binary, no runtime I/O**: CV data is embedded at compile time via `//go:embed`, so the binary (and the WASM artifact) are self-contained.
-- [x] **[Cobra](https://github.com/spf13/cobra) CLI**: One subcommand per CV section ([basics](cmd/basics.go), [work](cmd/work.go), [education](cmd/education.go), [skills](cmd/skills.go), [projects](cmd/projects.go), [certificates](cmd/certificates.go), [languages](cmd/languages.go), [publications](cmd/publications.go), [references](cmd/references.go), [volunteering](cmd/volunteering.go), …).
+- [x] **[Cobra](https://github.com/spf13/cobra) CLI**: One subcommand per CV section ([basics](cmd/basics.go), [work](cmd/work.go), [education](cmd/education.go), [skills](cmd/skills.go), [projects](cmd/projects.go), [certificates](cmd/certificates.go), [languages](cmd/languages.go), [publications](cmd/publications.go), [references](cmd/references.go), [volunteering](cmd/volunteering.go), …) plus extras like [about](cmd/about.go), [faqs](cmd/faqs.go), [hashtags](cmd/hashtags.go), [quotes](cmd/quotes.go), and [version](cmd/version.go).
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
@@ -65,8 +65,10 @@ One Go module, two entry points, one shared command tree:
 │   └── resume.json   # CV content (All Rights Reserved)
 └── web/              # Browser terminal hosting the WASM build
     ├── index.html
+    ├── favicon.png
+    ├── robots.txt
     ├── cv.wasm       # Generated using Makefile
-    ├── report.pdf    # Generated using Makefile
+    ├── resume.pdf    # Generated using Makefile
     └── wasm_exec.js
 ```
 
@@ -86,6 +88,8 @@ A ([Caddy](https://caddyserver.com/)) web server location where to store static 
 - Optional: Python 3 (for the local web server)
 - Optional: `jq` (for `make tidy`)
 - Optional: [`gh`](https://cli.github.com/) (for `make publish-to-jsonresume`, authenticated via `gh auth login`)
+- Optional: `chromium` (for `make export-pdf` / `make build-web`)
+- Optional: `rsync` (for `make publish-to-web`)
 
 `make publish-to-jsonresume` publishes [resume/resume.json](resume/resume.json) (with the `x-cv` section stripped) to a GitHub gist, making the CV available under `https://registry.jsonresume.org/<your-github-user>`. The gist ID is read from a `.env` file at the repo root (`.env.example`'s `GIST_ID` for details):
 
@@ -104,8 +108,9 @@ git clone https://github.com/m5lk3n/cv.git
 ### Build
 
 ```sh
-make build-cli       # native binary  → ./cv
-make build-wasm      # WebAssembly    → web/cv.wasm
+make build-cli       # native binary           → ./cv
+make build-wasm      # WebAssembly             → web/cv.wasm
+make build-web       # WebAssembly + PDF       → web/cv.wasm, web/resume.pdf
 ```
 
 ### Run
@@ -132,7 +137,7 @@ Open http://localhost:8000 and type commands like `cv basics` at the prompt.
 
 ```sh
 make tidy            # gofmt, go mod tidy, format resume.json
-make clean           # remove ./cv and web/cv.wasm
+make clean           # remove ./cv, dist/, web/cv.wasm, web/resume.pdf
 make help            # list all targets
 ```
 
