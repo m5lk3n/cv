@@ -40,6 +40,7 @@
     }
     .prompt-line span {
       margin-right: 0.5ch;
+      color: #EAD637;
     }
     .input-wrap {
       flex: 1;
@@ -95,9 +96,95 @@
     .json-link:hover {
       opacity: 1;
     }
+    #splash {
+      position: fixed;
+      inset: 0;
+      background-color: #1D2226;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      z-index: 10;
+    }
+    .splash-content {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .splash-prompt {
+      color: #E9E9EA;
+    }
+    .splash-prompt span {
+      color: #EAD637;
+      margin-right: 0.5ch;
+    }
+    .splash-divider {
+      border: none;
+      border-top: 2px solid #EAD637;
+      margin: 0;
+    }
+    .splash-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .splash-option {
+      display: flex;
+      align-items: baseline;
+      gap: 1ch;
+      padding: 0.75rem 1rem;
+      background: transparent;
+      border: 1px solid #3a4147;
+      color: #E9E9EA;
+      font: inherit;
+      text-align: left;
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .splash-option:hover,
+    .splash-option:focus {
+      border-color: #EAD637;
+      background-color: #232A2F;
+      outline: none;
+    }
+    .splash-option .key {
+      color: #EAD637;
+      flex: 0 0 auto;
+    }
+    .splash-option .desc {
+      opacity: 0.6;
+      margin-left: auto;
+      padding-left: 1ch;
+    }
+    @media (max-width: 480px) {
+      .splash-option .desc {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
+  <div id="splash" role="dialog" aria-labelledby="splash-title">
+    <div class="splash-content">
+      <div class="splash-prompt" id="splash-title"><span>$</span>cv --view</div>
+      <hr class="splash-divider">
+      <div class="splash-options">
+        <button type="button" class="splash-option" id="splash-interactive" autofocus>
+          <span class="key">[1]</span>
+          <span>Interactive terminal</span>
+          <span class="desc">explore in the browser</span>
+        </button>
+        <a class="splash-option" id="splash-pdf" href="resume.pdf" download>
+          <span class="key">[2]</span>
+          <span>Download PDF</span>
+          <span class="desc">printable version</span>
+        </a>
+      </div>
+    </div>
+  </div>
   <div id="terminal">
     <div id="output"></div>
     <hr>
@@ -133,6 +220,31 @@
     const output = document.getElementById("output");
     const input = document.getElementById("input");
     const cursor = document.getElementById("cursor");
+    const splash = document.getElementById("splash");
+    const splashInteractive = document.getElementById("splash-interactive");
+    const splashPdf = document.getElementById("splash-pdf");
+
+    function dismissSplash() {
+      splash.remove();
+      input.focus();
+    }
+    splashInteractive.addEventListener("click", dismissSplash);
+    const splashOptions = [splashInteractive, splashPdf];
+    splash.addEventListener("keydown", (e) => {
+      if (e.key === "1") {
+        e.preventDefault();
+        dismissSplash();
+      } else if (e.key === "2") {
+        e.preventDefault();
+        splashPdf.click();
+      } else if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        const current = splashOptions.indexOf(document.activeElement);
+        const delta = e.key === "ArrowDown" ? 1 : -1;
+        const next = (current + delta + splashOptions.length) % splashOptions.length;
+        splashOptions[next].focus();
+      }
+    });
 
     function escapeHtml(text) {
       return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

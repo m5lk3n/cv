@@ -1,19 +1,15 @@
 # Kanban Board
 
-## Backlog
+## To do
 
 - [ ] animated pointer to PDF download?
 - [ ] support additional themes?
 - [ ] favicon.png could be the resume.json's basic.image (use app favicon as fallback)
 - [ ] check out https://github.com/igolaizola/webcli
 
-## To do
-
-- [ ] entry screen to choose between static incl. download and WebCLI
-
 ## Doing
 
-- n/a
+- [ ] add splash screen to choose between static and interactive version
 
 ### Done
 

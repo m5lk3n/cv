@@ -32,10 +32,6 @@ My CV, via command line interface or via a browser terminal.
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
-### Goals
-
-My goals of this projects were to open-source my CV, give it a CLI, and to use Go with WebAssembly for that which I hadn't used before.
-
 ### Limitation
 
 Only English tool output is supported.
@@ -146,6 +142,10 @@ make help            # list all targets
 ```
 
 The CV content lives in [resume/resume.json](resume/resume.json) and is rendered by the subcommands in [cmd/](cmd/).
+
+## 🎯 Goals
+
+My goals of this projects were to open-source my CV, give it a CLI, and to use Go with WebAssembly for that which I hadn't used before.
 
 ## ※ Disclaimer
 
