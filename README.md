@@ -1,4 +1,4 @@
-<h1 align="center"><img src="web/favicon.png" alt="Icon" height="24"> My CV & CV Tool</h1>
+<h1 align="center"><img src="web/favicon.png" alt="Icon" height="24"> My CV & CV (Web)CLI</h1>
 
 <p align="center">
 <img src="https://img.shields.io/badge/Go-1.26+-00ADDD8?logo=go&logoColor=white"/>
@@ -73,12 +73,18 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
+#### Web Server
+
+A ([Caddy](https://caddyserver.com/)) web server location where to store static files (e.g., https://cv.example.com) is required. Have a look at [Makefile](Makefile)'s `publish-to-web` and `.env.example`'s `DEPLOY_TARGET` for implementation details. It should be relatively straightforward to customize the deployment to another web server.
+
+#### Tooling
+
 - Go 1.26+
 - Optional: Python 3 (for the local web server)
 - Optional: `jq` (for `make tidy`)
 - Optional: [`gh`](https://cli.github.com/) (for `make publish-to-jsonresume`, authenticated via `gh auth login`)
 
-`make publish-to-jsonresume` publishes [resume/resume.json](resume/resume.json) (with the `x-cv` section stripped) to a GitHub gist, making the CV available under `https://registry.jsonresume.org/<your-github-user>`. The gist ID is read from a `.env` file at the repo root:
+`make publish-to-jsonresume` publishes [resume/resume.json](resume/resume.json) (with the `x-cv` section stripped) to a GitHub gist, making the CV available under `https://registry.jsonresume.org/<your-github-user>`. The gist ID is read from a `.env` file at the repo root (`.env.example`'s `GIST_ID` for details):
 
 ```sh
 GIST_ID=<your-gist-id>

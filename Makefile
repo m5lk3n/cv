@@ -7,15 +7,18 @@ ifeq (,$(wildcard ./.env))
 $(error .env file not found. Please create .env (or copy .env.example))
 endif
 
-VERSION    := $(shell git describe --tags --abbrev=0)
-COMMIT     := $(shell git rev-parse --short HEAD)
-BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
-BUILT_BY   := $(shell echo $$USER)
+VERSION          := $(shell git describe --tags --abbrev=0)
+COMMIT           := $(shell git rev-parse --short HEAD)
+BUILD_TIME       := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
+BUILT_BY         := $(shell echo $$USER)
+GITHUB_USERNAME  := $(shell gh api user --jq .login 2>/dev/null)
 
 LDFLAGS := -X 'lttl.dev/cv/buildinfo.Version=$(VERSION)' \
            -X 'lttl.dev/cv/buildinfo.Commit=$(COMMIT)' \
            -X 'lttl.dev/cv/buildinfo.BuildTime=$(BUILD_TIME)' \
-           -X 'lttl.dev/cv/buildinfo.BuiltBy=$(BUILT_BY)'
+           -X 'lttl.dev/cv/buildinfo.BuiltBy=$(BUILT_BY)' \
+           -X 'lttl.dev/cv/buildinfo.NameOnCV=$(NAME_ON_CV)' \
+           -X 'lttl.dev/cv/buildinfo.GitHubUsername=$(GITHUB_USERNAME)'
 
 ## help: print this help message
 .PHONY: help

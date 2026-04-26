@@ -6,11 +6,12 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
+	"lttl.dev/cv/buildinfo"
 )
 
 var rootCmd = &cobra.Command{
 	Use:   "cv",
-	Short: "Michael Klein's CV", // FIXME: hardcoded name
+	Short: buildinfo.NameOnCV + "'s CV",
 	CompletionOptions: cobra.CompletionOptions{
 		DisableDefaultCmd: true,
 	},
