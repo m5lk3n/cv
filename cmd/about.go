@@ -10,7 +10,7 @@ import (
 
 var aboutCmd = &cobra.Command{
 	Use:     "about",
-	Aliases: []string{"summary"},
+	Aliases: []string{"summary", "tldr", "info"},
 	Short:   "Display about summary",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		r, err := resume.Load()
