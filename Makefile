@@ -85,7 +85,7 @@ publish-to-jsonresume: needs-jq needs-gh
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
 	echo "Updated CV published under https://registry.jsonresume.org/$$GITHUB_USERNAME"
 
-## export-pdf: export the resume as a PDF using headless Chromium
+## export-pdf: export the registry's resume as a PDF using headless Chromium
 .PHONY: export-pdf
 export-pdf: needs-gh needs-chromium
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
