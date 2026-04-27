@@ -56,6 +56,11 @@ tidy: needs-jq
 	go mod tidy
 	jq . resume/resume.json > resume/resume.json.tmp && mv resume/resume.json.tmp resume/resume.json
 
+## test: run the Go test suite
+.PHONY: test
+test:
+	go test ./...
+
 ## build-cli: build the command-line interface
 .PHONY: build-cli
 build-cli:

@@ -7,7 +7,6 @@ import (
 	"github.com/spf13/cobra"
 
 	"lttl.dev/cv/buildinfo"
-	"lttl.dev/cv/resume"
 )
 
 var versionCmd = &cobra.Command{
@@ -19,7 +18,7 @@ var versionCmd = &cobra.Command{
 			buildTime = t.Format("January 2, 2006 at 15:04 MST")
 		}
 		version := fmt.Sprintf("CV app v%s (%s) built on %s by %s", buildinfo.Version, buildinfo.Commit, buildTime, buildinfo.BuiltBy)
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err == nil && r.Meta.LastModified != "" {
 			if t, err := time.Parse(time.RFC3339, r.Meta.LastModified); err == nil {
 				version += "\nCV data last modified on " + t.Format("January 2, 2006")

@@ -5,8 +5,6 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-
-	"lttl.dev/cv/resume"
 )
 
 var hashtagsCmd = &cobra.Command{
@@ -14,7 +12,7 @@ var hashtagsCmd = &cobra.Command{
 	Aliases: []string{"hashtag", "tags"},
 	Short:   "Display hashtags",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err != nil {
 			return err
 		}

@@ -5,8 +5,6 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-
-	"lttl.dev/cv/resume"
 )
 
 var skillsCmd = &cobra.Command{
@@ -14,7 +12,7 @@ var skillsCmd = &cobra.Command{
 	Aliases: []string{"skill"},
 	Short:   "Display skills",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err != nil {
 			return err
 		}

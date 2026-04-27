@@ -1,0 +1,124 @@
+{
+  "basics": {
+    "name": "Test User",
+    "label": "Test Engineer",
+    "image": "https://example.com/avatar.png",
+    "email": "test@example.com",
+    "phone": "+1-555-0100",
+    "url": "https://example.com",
+    "summary": "Test about summary line.",
+    "location": {
+      "address": "1 Main St",
+      "postalCode": "12345",
+      "city": "Testville",
+      "countryCode": "US",
+      "region": "TS"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "testuser",
+        "url": "https://github.com/testuser"
+      }
+    ]
+  },
+  "certificates": [
+    {
+      "name": "Test Cert",
+      "date": "2024-06",
+      "issuer": "Test Issuer",
+      "url": "https://example.com/cert"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Test University",
+      "url": "https://test-uni.edu",
+      "area": "Computer Science",
+      "studyType": "BSc",
+      "startDate": "2010-09",
+      "endDate": "2014-06",
+      "score": "4.0",
+      "courses": ["Algorithms", "Databases"]
+    }
+  ],
+  "languages": [
+    {"language": "English", "fluency": "Native"},
+    {"language": "Klingon", "fluency": "Beginner"}
+  ],
+  "meta": {
+    "lastModified": "2024-12-01T00:00:00Z"
+  },
+  "projects": [
+    {
+      "name": "Test Project",
+      "startDate": "2022-01",
+      "endDate": "2023-12",
+      "description": "Project description.",
+      "highlights": ["Did the test thing"],
+      "url": "https://example.com/proj"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Test Article",
+      "publisher": "Test Publisher",
+      "releaseDate": "2024-03-15",
+      "url": "https://example.com/pub",
+      "summary": "Pub summary."
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Recommends them highly."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Go",
+      "level": "Senior",
+      "keywords": ["concurrency", "testing"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Test Org",
+      "position": "Volunteer",
+      "url": "https://example.com/vol",
+      "startDate": "2018-01",
+      "endDate": "",
+      "summary": "Volunteer summary.",
+      "highlights": ["Helped out"]
+    }
+  ],
+  "work": [
+    {
+      "name": "Test Co",
+      "position": "Engineer",
+      "url": "https://example.com/co",
+      "startDate": "2020-01",
+      "endDate": "2023-12",
+      "summary": "Work summary.",
+      "highlights": ["Shipped stuff", "Built things"]
+    },
+    {
+      "name": "Older Co",
+      "position": "Junior Engineer",
+      "url": "",
+      "startDate": "2015-06",
+      "endDate": "2019-12",
+      "summary": "",
+      "highlights": ["Learned the ropes"]
+    }
+  ],
+  "x-cv": {
+    "hashtags": ["#testing", "#golang"],
+    "quotes": [
+      {"text": "Test all the things.", "author": "Anon"}
+    ],
+    "faqs": [
+      {"question": "Why test?", "answer": "Because bugs."}
+    ]
+  }
+}

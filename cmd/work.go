@@ -4,8 +4,6 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-
-	"lttl.dev/cv/resume"
 )
 
 var workCmd = &cobra.Command{
@@ -13,7 +11,7 @@ var workCmd = &cobra.Command{
 	Aliases: []string{"experience", "exp"},
 	Short:   "Display work experience",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err != nil {
 			return err
 		}
@@ -52,7 +50,7 @@ var achievementsCmd = &cobra.Command{
 	Aliases: []string{"achieved", "achievement"},
 	Short:   "List all work achievements",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err != nil {
 			return err
 		}

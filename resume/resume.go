@@ -141,7 +141,11 @@ type FAQ struct {
 }
 
 func Load() (Resume, error) {
+	return LoadFromBytes(resumeData)
+}
+
+func LoadFromBytes(data []byte) (Resume, error) {
 	var r Resume
-	err := json.Unmarshal(resumeData, &r)
+	err := json.Unmarshal(data, &r)
 	return r, err
 }

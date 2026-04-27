@@ -4,8 +4,6 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
-
-	"lttl.dev/cv/resume"
 )
 
 var certificatesCmd = &cobra.Command{
@@ -13,7 +11,7 @@ var certificatesCmd = &cobra.Command{
 	Aliases: []string{"certifications", "certs", "cert", "certificate", "certification", "licenses", "license", "lic"},
 	Short:   "Display certificates",
 	RunE: func(cmd *cobra.Command, args []string) error {
-		r, err := resume.Load()
+		r, err := loadResume()
 		if err != nil {
 			return err
 		}
