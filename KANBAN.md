@@ -10,7 +10,7 @@
 
 ## Doing
 
-- [ ] add tests
+n/a
 
 ### Done
 
@@ -51,3 +51,4 @@
   - [x] add screenshot(s)
 - [x] improve CV wording
 - [x] add splash screen to choose between static and interactive
+- [x] add tests

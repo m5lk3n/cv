@@ -17,6 +17,14 @@ func useTestResume(t *testing.T) {
 	if err != nil {
 		t.Fatalf("read testdata resume: %v", err)
 	}
+	useResumeBytes(t, data)
+}
+
+// useResumeBytes swaps loadResume to parse the supplied JSON for the duration
+// of the test. Use this for negative-path fixtures (missing sections, malformed
+// JSON, etc.).
+func useResumeBytes(t *testing.T, data []byte) {
+	t.Helper()
 	orig := loadResume
 	loadResume = func() (resume.Resume, error) {
 		return resume.LoadFromBytes(data)
@@ -272,3 +280,108 @@ func TestStripsLeadingCv(t *testing.T) {
 			withPrefix, withoutPrefix)
 	}
 }
+
+// assertNotContainsAny fails the test if any of substrings is present in out.
+func assertNotContainsAny(t *testing.T, out string, substrings ...string) {
+	t.Helper()
+	for _, s := range substrings {
+		if strings.Contains(out, s) {
+			t.Errorf("output unexpectedly contains %q.\n--- output ---\n%s\n--- end ---", s, out)
+		}
+	}
+}
+
+// Negative tests below: resume fixtures that omit sections or contain bad data.
+
+// TestMissingXCVSection covers a resume without an `x-cv` block. The commands
+// that read from `x-cv` (hashtags, quotes, faqs) must not crash and must not
+// surface fixture content.
+func TestMissingXCVSection(t *testing.T) {
+	// Same as testdata/resume.json but with no x-cv key.
+	useResumeBytes(t, []byte(`{
+		"basics": {"name": "No XCV", "label": "Tester"},
+		"work": [{"name": "Co", "position": "Eng", "startDate": "2020-01", "endDate": "2021-01"}]
+	}`))
+
+	if got := strings.TrimSpace(runCmd(t, "hashtags")); got != "" {
+		t.Errorf("hashtags: expected empty output, got %q", got)
+	}
+	if got := runCmd(t, "quotes"); got != "" {
+		t.Errorf("quotes: expected empty output, got %q", got)
+	}
+	if got := runCmd(t, "faqs"); got != "" {
+		t.Errorf("faqs: expected empty output, got %q", got)
+	}
+
+	// Sanity: a section that *is* present still renders.
+	assertContainsAll(t, runCmd(t, "work"), "Co — Eng")
+}
+
+// TestEmptyResume covers a resume that parses as valid JSON but has no
+// content. Every list-driven command should produce empty output.
+func TestEmptyResume(t *testing.T) {
+	useResumeBytes(t, []byte(`{}`))
+
+	emptyCmds := []string{
+		"work", "achievements", "work achievements",
+		"education", "skills", "languages", "projects",
+		"certificates", "publications", "references",
+		"volunteering", "quotes", "faqs",
+	}
+	for _, c := range emptyCmds {
+		if got := strings.TrimSpace(runCmd(t, c)); got != "" {
+			t.Errorf("%s: expected empty output for empty resume, got %q", c, got)
+		}
+	}
+
+	// `about` prints Summary followed by a newline, even when empty.
+	if got := runCmd(t, "about"); strings.TrimSpace(got) != "" {
+		t.Errorf("about: expected empty summary, got %q", got)
+	}
+
+	// `basics` always prints the "name — label" line; with no data it's just " — ".
+	out := runCmd(t, "basics")
+	assertNotContainsAny(t, out, "Email:", "Phone:", "Web:", "Location:", "GitHub:")
+}
+
+// TestInvalidResumeJSON covers a resume payload that fails to parse. Commands
+// must surface an error rather than crashing or printing fixture data.
+func TestInvalidResumeJSON(t *testing.T) {
+	useResumeBytes(t, []byte("this is not json"))
+
+	out := runCmd(t, "about")
+	if !strings.Contains(strings.ToLower(out), "error") &&
+		!strings.Contains(out, "invalid") {
+		t.Errorf("expected an error message for invalid JSON, got:\n%s", out)
+	}
+}
+
+// TestBasicsMissingProfilesAndLocation ensures optional sub-objects are
+// skipped when absent rather than printing empty placeholders.
+func TestBasicsMissingProfilesAndLocation(t *testing.T) {
+	useResumeBytes(t, []byte(`{
+		"basics": {"name": "Solo", "label": "Hermit", "email": "solo@example.com"}
+	}`))
+
+	out := runCmd(t, "basics")
+	assertContainsAll(t, out, "Solo — Hermit", "Email: solo@example.com")
+	assertNotContainsAny(t, out, "Location:", "Phone:", "Web:", "Image:")
+}
+
+// TestWorkEntryWithoutOptionalFields covers a work entry that has no URL,
+// summary, or highlights. Optional rows must be omitted entirely.
+func TestWorkEntryWithoutOptionalFields(t *testing.T) {
+	useResumeBytes(t, []byte(`{
+		"work": [{"name": "Bare Co", "position": "Eng", "startDate": "2020-01", "endDate": ""}]
+	}`))
+
+	out := runCmd(t, "work")
+	assertContainsAll(t, out, "Bare Co — Eng", "01/2020 to Present")
+	assertNotContainsAny(t, out, "Highlights:", "https://", "  Summary")
+
+	// achievements should print the company header but no bullets.
+	ach := runCmd(t, "achievements")
+	assertContainsAll(t, ach, "Bare Co:")
+	assertNotContainsAny(t, ach, "•")
+}
+
