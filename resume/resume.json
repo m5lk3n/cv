@@ -2,7 +2,7 @@
   "meta": {
     "format": "https://jsonresume.org/schema/",
     "theme": "even",
-    "lastModified": "2026-04-26T00:00:00Z"
+    "lastModified": "2026-04-27T00:00:00Z"
   },
   "basics": {
     "name": "Michael Klein",
@@ -39,17 +39,17 @@
       "url": "https://epo.org/",
       "startDate": "2010-09",
       "endDate": "",
-      "summary": "Lead architect for the European Patent Office's GCP adoption — foundation, team build-out, CloudOps, and FinOps.",
+      "summary": "Lead architect for the European Patent Office's Google Cloud adoption — foundation, team build-out, infrastructure automation, CloudOps, and FinOps.",
       "highlights": [
         "Drove GCP adoption from 0 to > €4M p.a., saving ~50% compared to on-premises",
         "As Cloud Architect, drive cost efficiency: ~40% effective discount on GCP list price through architectural design, custom pricing, and committed-use agreements (paying ~60 cents per €1 of list)",
         "Designed and built two Enterprise-grade GCP organizations incl. their foundational setup as well as the operational processes and boundaries",
         "Directly involved in the implementation of several GCP discount agreements, e.g., with ~€270K additional saving in 2023 and ~€350K in 2024",
+        "Sole developer of `cecli`, the missing `gcloud browsers` command",
         "Helped to increase our overall 2024 production output by 2% (~€50M)",
         "Built the core GCP team and grew it to 6 FTEs, including the hiring of 3 cloud architects and engineers",
         "Key player in introducing Enterprise-grade Kubernetes \"the hard way\", individually contributing to cluster- and application-level Observability",
-        "As Architect, Common Build Services, reduced CI capacity by ~20% while sustaining ~800 nightly builds and thousands of builds per day",
-        "Sole developer of `cecli`, the missing `gcloud browsers` command"
+        "As Architect, Common Build Services, reduced CI capacity by ~20% while sustaining ~800 nightly builds and thousands of builds per day"
       ]
     },
     {
@@ -58,12 +58,12 @@
       "url": "https://aris.com/",
       "startDate": "2003-09",
       "endDate": "2010-08",
-      "summary": "Development and team management roles for Oracle BPA Suite (an ARIS OEM product) and ARIS (Web) Development.",
+      "summary": "Development and team management roles for ARIS product and ARIS Web Development.",
       "highlights": [
         "As Development Manager for Oracle BPA Suite (an ARIS OEM product), achieved ~140% ROI in 3 years",
         "Built up an office and a development outpost for 5 FTEs abroad, in the US",
         "As Team Manager Web Development, recovered a 7-figure deal at risk of customer churn",
-        "Mentored a Master's thesis"
+        "Mentored a thesis"
       ]
     },
     {
