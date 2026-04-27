@@ -5,11 +5,12 @@
 - [ ] animated pointer to PDF download?
 - [ ] support additional themes?
 - [ ] favicon.png could be the resume.json's basic.image (use app favicon as fallback)
+- [ ] make it bubbletea TUI?
 - [ ] check out https://github.com/igolaizola/webcli
 
 ## Doing
 
-n/a
+- [ ] add tests
 
 ### Done
 
