@@ -145,9 +145,20 @@
       transition: border-color 0.2s, background-color 0.2s;
     }
     .splash-option:hover,
-    .splash-option:focus {
+    .splash-option:focus,
+    .splash-option:focus-within {
       border-color: #EAD637;
       background-color: #232A2F;
+      outline: none;
+    }
+    .splash-json-link {
+      color: inherit;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 1ch;
+    }
+    .splash-json-link:focus {
       outline: none;
     }
     .splash-option .key {
@@ -158,6 +169,19 @@
       opacity: 0.6;
       margin-left: auto;
       padding-left: 1ch;
+    }
+    .splash-theme {
+      background: #1D2226;
+      color: #E9E9EA;
+      border: 1px solid #3a4147;
+      font: inherit;
+      padding: 0.25rem 0.5rem;
+      cursor: pointer;
+    }
+    .splash-theme:hover,
+    .splash-theme:focus {
+      border-color: #EAD637;
+      outline: none;
     }
     @media (max-width: 480px) {
       .splash-option .desc {
@@ -182,11 +206,22 @@
           <span>Download PDF</span>
           <span class="desc">printable version</span>
         </a>
-        <a class="splash-option" id="splash-json" href="#" target="_blank" rel="noopener">
-          <span class="key">[3]</span>
-          <span>JSON Resume registry</span>
+        <div class="splash-option splash-option-json" id="splash-json-row">
+          <a class="splash-json-link" id="splash-json" href="#" target="_blank" rel="noopener">
+            <span class="key">[3]</span>
+            <span>Themed CV: </span>
+          </a>
+          <select id="splash-theme" class="splash-theme" aria-label="Theme">
+            <option value="">default</option>
+            <option value="architects-portfolio">architects-portfolio</option>
+            <option value="berlin-grid">berlin-grid</option>
+            <option value="developer-mono">developer-mono</option>
+            <option value="executive-slate">executive-slate</option>
+            <option value="nordic-minimal">nordic-minimal</option>
+            <option value="pumpkin">pumpkin</option>
+          </select>
           <span class="desc">browse online</span>
-        </a>
+        </div>
       </div>
     </div>
   </div>
@@ -214,13 +249,14 @@
   <script>
     const go = new Go();
     let ready = false;
+    let registryBaseUrl = "";
     WebAssembly.instantiateStreaming(fetch("cv.wasm"), go.importObject).then((result) => {
       go.run(result.instance);
       ready = true;
       document.title = cvName() + "'s CV";
-      const registryUrl = "https://registry.jsonresume.org/" + ghUsername();
-      document.getElementById("json-link").href = registryUrl;
-      document.getElementById("splash-json").href = registryUrl;
+      registryBaseUrl = "https://registry.jsonresume.org/" + ghUsername();
+      document.getElementById("json-link").href = registryBaseUrl;
+      updateSplashJsonHref();
       appendOutput(cvRun("cv help"));
     });
 
@@ -231,6 +267,28 @@
     const splashInteractive = document.getElementById("splash-interactive");
     const splashPdf = document.getElementById("splash-pdf");
     const splashJson = document.getElementById("splash-json");
+    const splashTheme = document.getElementById("splash-theme");
+    const splashJsonRow = document.getElementById("splash-json-row");
+
+    splashJsonRow.addEventListener("click", (e) => {
+      if (e.target === splashJson || splashJson.contains(e.target)) return;
+      if (e.target === splashTheme || splashTheme.contains(e.target)) return;
+      splashJson.click();
+    });
+
+    splashInteractive.addEventListener("mouseenter", () => splashInteractive.focus());
+    splashPdf.addEventListener("mouseenter", () => splashPdf.focus());
+    splashJsonRow.addEventListener("mouseenter", () => splashJson.focus());
+
+    function updateSplashJsonHref() {
+      if (!registryBaseUrl) return;
+      const theme = splashTheme.value;
+      splashJson.href = theme ? registryBaseUrl + "?theme=" + theme : registryBaseUrl;
+    }
+    splashTheme.addEventListener("change", updateSplashJsonHref);
+    ["click", "mousedown", "keydown"].forEach((evt) => {
+      splashTheme.addEventListener(evt, (e) => e.stopPropagation());
+    });
 
     function dismissSplash() {
       splash.remove();

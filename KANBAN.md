@@ -3,14 +3,13 @@
 ## To do
 
 - [ ] animated pointer to PDF download?
-- [ ] support additional themes?
-- [ ] favicon.png could be the resume.json's basic.image (use app favicon as fallback)
+- [ ] favicon.png could be the resume.json's `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?
 - [ ] check out https://github.com/igolaizola/webcli
 
 ## Doing
 
-n/a
+- [ ] show app version on splash screen
 
 ### Done
 
@@ -52,3 +51,4 @@ n/a
 - [x] improve CV wording
 - [x] add splash screen to choose between static and interactive
 - [x] add tests
+- [x] support additional themes
