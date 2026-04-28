@@ -26,6 +26,10 @@ func main() {
 		return buildinfo.GitHubUsername
 	}))
 
+	js.Global().Set("cvVersion", js.FuncOf(func(this js.Value, args []js.Value) any {
+		return buildinfo.Version
+	}))
+
 	// Keep the Go program alive.
 	select {}
 }

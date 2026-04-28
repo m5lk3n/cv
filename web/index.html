@@ -120,6 +120,12 @@
       color: #EAD637;
       margin-right: 0.5ch;
     }
+    .splash-prompt .comment {
+      color: #E9E9EA;
+      opacity: 0.5;
+      margin-left: 1ch;
+      margin-right: 0;
+    }
     .splash-divider {
       border: none;
       border-top: 2px solid #EAD637;
@@ -193,7 +199,7 @@
 <body>
   <div id="splash" role="dialog" aria-labelledby="splash-title">
     <div class="splash-content">
-      <div class="splash-prompt" id="splash-title"><span>$</span>cv --view</div>
+      <div class="splash-prompt" id="splash-title"><span>$</span>cv --view<span class="comment" id="splash-version"></span></div>
       <hr class="splash-divider">
       <div class="splash-options">
         <button type="button" class="splash-option" id="splash-interactive" autofocus>
@@ -256,6 +262,7 @@
       document.title = cvName() + "'s CV";
       registryBaseUrl = "https://registry.jsonresume.org/" + ghUsername();
       document.getElementById("json-link").href = registryBaseUrl;
+      document.getElementById("splash-version").textContent = "# v" + cvVersion();
       updateSplashJsonHref();
       appendOutput(cvRun("cv help"));
     });
