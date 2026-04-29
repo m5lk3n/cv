@@ -2,6 +2,7 @@
 
 ## To do
 
+- [ ] try to improve UX on smaller screens like on a smartphone
 - [ ] animated pointer to PDF download?
 - [ ] `favicon.png` could be the `resume.json`'s `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?

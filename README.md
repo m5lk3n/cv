@@ -32,9 +32,11 @@ My CV, via command line interface or via a browser terminal.
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
-### Limitation
+### Limitations
 
-Only English tool output is supported.
+- Only English tool output is supported.
+
+- The UX on smaller screens like smartphones needs improvement.
 
 ## 🛠 Built With/On
 
