@@ -1,0 +1,584 @@
+basePath: /
+definitions:
+  api.AboutEntity:
+    properties:
+      summary:
+        type: string
+    type: object
+  api.AchievementsEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/api.CompanyAchievements'
+        type: array
+    type: object
+  api.BasicsEntity:
+    properties:
+      email:
+        type: string
+      image:
+        type: string
+      label:
+        type: string
+      location:
+        $ref: '#/definitions/resume.Location'
+      name:
+        type: string
+      phone:
+        type: string
+      profiles:
+        items:
+          $ref: '#/definitions/resume.Profile'
+        type: array
+      summary:
+        type: string
+      url:
+        type: string
+    type: object
+  api.CertificatesEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Certificate'
+        type: array
+    type: object
+  api.CompanyAchievements:
+    properties:
+      highlights:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+    type: object
+  api.EducationEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Education'
+        type: array
+    type: object
+  api.ErrorResponse:
+    properties:
+      error:
+        type: string
+    type: object
+  api.FAQsEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.FAQ'
+        type: array
+    type: object
+  api.HashtagsEntity:
+    properties:
+      hashtags:
+        items:
+          type: string
+        type: array
+    type: object
+  api.LanguagesEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Language'
+        type: array
+    type: object
+  api.ProjectsEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Project'
+        type: array
+    type: object
+  api.PublicationsEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Publication'
+        type: array
+    type: object
+  api.QuotesEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Quote'
+        type: array
+    type: object
+  api.ReferencesEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Reference'
+        type: array
+    type: object
+  api.SkillsEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Skill'
+        type: array
+    type: object
+  api.VersionEntity:
+    properties:
+      buildTime:
+        type: string
+      builtBy:
+        type: string
+      commit:
+        type: string
+      lastModified:
+        type: string
+      version:
+        type: string
+    type: object
+  api.VolunteeringEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Volunteer'
+        type: array
+    type: object
+  api.WorkEntity:
+    properties:
+      items:
+        items:
+          $ref: '#/definitions/resume.Work'
+        type: array
+    type: object
+  resume.Certificate:
+    properties:
+      date:
+        type: string
+      issuer:
+        type: string
+      name:
+        type: string
+      url:
+        type: string
+    type: object
+  resume.Education:
+    properties:
+      area:
+        type: string
+      courses:
+        items:
+          type: string
+        type: array
+      endDate:
+        type: string
+      institution:
+        type: string
+      score:
+        type: string
+      startDate:
+        type: string
+      studyType:
+        type: string
+      url:
+        type: string
+    type: object
+  resume.FAQ:
+    properties:
+      answer:
+        type: string
+      question:
+        type: string
+    type: object
+  resume.Language:
+    properties:
+      fluency:
+        type: string
+      language:
+        type: string
+    type: object
+  resume.Location:
+    properties:
+      address:
+        type: string
+      city:
+        type: string
+      countryCode:
+        type: string
+      postalCode:
+        type: string
+      region:
+        type: string
+    type: object
+  resume.Profile:
+    properties:
+      network:
+        type: string
+      url:
+        type: string
+      username:
+        type: string
+    type: object
+  resume.Project:
+    properties:
+      description:
+        type: string
+      endDate:
+        type: string
+      highlights:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      startDate:
+        type: string
+      url:
+        type: string
+    type: object
+  resume.Publication:
+    properties:
+      name:
+        type: string
+      publisher:
+        type: string
+      releaseDate:
+        type: string
+      summary:
+        type: string
+      url:
+        type: string
+    type: object
+  resume.Quote:
+    properties:
+      author:
+        type: string
+      text:
+        type: string
+    type: object
+  resume.Reference:
+    properties:
+      name:
+        type: string
+      reference:
+        type: string
+    type: object
+  resume.Skill:
+    properties:
+      keywords:
+        items:
+          type: string
+        type: array
+      level:
+        type: string
+      name:
+        type: string
+    type: object
+  resume.Volunteer:
+    properties:
+      endDate:
+        type: string
+      highlights:
+        items:
+          type: string
+        type: array
+      organization:
+        type: string
+      position:
+        type: string
+      startDate:
+        type: string
+      summary:
+        type: string
+      url:
+        type: string
+    type: object
+  resume.Work:
+    properties:
+      endDate:
+        type: string
+      highlights:
+        items:
+          type: string
+        type: array
+      name:
+        type: string
+      position:
+        type: string
+      startDate:
+        type: string
+      summary:
+        type: string
+      url:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: HTTP API exposing CV content (about, basics, work, etc.) as JSON.
+  title: CV API
+  version: "1.0"
+paths:
+  /about:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.AboutEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: About summary
+      tags:
+      - about
+  /achievements:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.AchievementsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: All work achievements grouped by company
+      tags:
+      - work
+  /basics:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.BasicsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Basics including contact info
+      tags:
+      - basics
+  /certificates:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.CertificatesEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Certificates
+      tags:
+      - certificates
+  /education:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.EducationEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Education history
+      tags:
+      - education
+  /faqs:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.FAQsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: FAQs
+      tags:
+      - faqs
+  /hashtags:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.HashtagsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Hashtags
+      tags:
+      - hashtags
+  /languages:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.LanguagesEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Languages
+      tags:
+      - languages
+  /projects:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ProjectsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Projects
+      tags:
+      - projects
+  /publications:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.PublicationsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Publications
+      tags:
+      - publications
+  /quotes:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.QuotesEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Quotes
+      tags:
+      - quotes
+  /references:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.ReferencesEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: References / recommendations
+      tags:
+      - references
+  /skills:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.SkillsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Skills
+      tags:
+      - skills
+  /version:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.VersionEntity'
+      summary: Version and resume last-modified date
+      tags:
+      - version
+  /volunteering:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.VolunteeringEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Volunteering experience
+      tags:
+      - volunteering
+  /work:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.WorkEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: Work experience
+      tags:
+      - work
+  /work/achievements:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/api.AchievementsEntity'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/api.ErrorResponse'
+      summary: All work achievements grouped by company
+      tags:
+      - work
+swagger: "2.0"

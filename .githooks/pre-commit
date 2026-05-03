@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Regenerates Swagger docs and aborts the commit if the result diverges from
+# what is staged, forcing the contributor to stage the up-to-date output.
+set -euo pipefail
+
+# Skip when no annotation-bearing files (or the docs themselves) are touched.
+if ! git diff --cached --name-only | grep -qE '^(api/|cvapi/|docs/)'; then
+	exit 0
+fi
+
+make --silent generate-apidoc >/dev/null
+
+if ! git diff --quiet -- docs/; then
+	echo "Swagger docs are out of date." >&2
+	echo "Run 'make generate-apidoc' and 'git add docs/' before committing." >&2
+	git --no-pager diff --stat -- docs/ >&2
+	exit 1
+fi

@@ -41,11 +41,26 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
+needs-swag:
+	@command -v swag >/dev/null 2>&1 || { echo >&2 "swag is required but it's not installed (use `go install github.com/swaggo/swag/cmd/swag@latest` to install it). Aborting."; exit 1; }
+
+.PHONY: assets
+assets: api/favicon.png
+
+api/favicon.png: web/favicon.png
+	cp web/favicon.png api/favicon.png
+
+## install-githooks: point git at the versioned hooks under .githooks
+.PHONY: install-githooks
+install-githooks:
+	git config core.hooksPath .githooks
+	@echo "Git hooks path set to .githooks"
+
 ## clean: remove generated files
 .PHONY: clean
 clean:
 	rm -rf dist
-	rm -f cv
+	rm -rf bin
 	rm -f web/cv.wasm
 	rm -f web/resume.pdf
 
@@ -64,7 +79,19 @@ test:
 ## build-cli: build the command-line interface
 .PHONY: build-cli
 build-cli:
-	go build -o cv -ldflags="$(LDFLAGS)"
+	@mkdir -p bin
+	go build -o bin/cv -ldflags="$(LDFLAGS)"
+
+## build-api: build the HTTP API server and regenerate Swagger docs
+.PHONY: build-api
+build-api: assets generate-apidoc
+	@mkdir -p bin
+	go build -o bin/cvapi -ldflags="$(LDFLAGS)" ./cvapi
+
+## generate-apidoc: regenerate Swagger docs
+.PHONY: generate-apidoc
+generate-apidoc: needs-swag
+	swag init -g cvapi/main.go -d . -o docs --parseInternal
 
 ## build-wasm: build the WebAssembly module
 .PHONY: build-wasm
@@ -94,7 +121,7 @@ publish-to-jsonresume: needs-jq needs-gh
 .PHONY: export-pdf
 export-pdf: needs-gh needs-chromium
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
-	chromium --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
+	chromium --log-level=3 --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
 
 ## publish-to-web: build and make the web directory available online
 .PHONY: publish-to-web

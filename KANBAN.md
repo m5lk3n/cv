@@ -3,6 +3,7 @@
 ## To do
 
 - [ ] try to improve UX on smaller screens like on a smartphone
+- [ ] consolidate API entities and structs from `resume/resume.go` into a single model
 - [ ] animated pointer to PDF download?
 - [ ] `favicon.png` could be the `resume.json`'s `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?
@@ -10,7 +11,8 @@
 
 ## Doing
 
-n/a
+- [ ] add `publish-api` target to Makefile, using via `deploy/` scripting
+- [ ] containerize `cvapi`
 
 ### Done
 
@@ -54,3 +56,4 @@ n/a
 - [x] add tests
 - [x] support additional themes
 - [x] embed app version in splash screen
+- [x] add API
