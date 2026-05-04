@@ -100,7 +100,7 @@ publish-to-jsonresume: needs-jq needs-gh
 .PHONY: export-pdf
 export-pdf: needs-gh needs-chromium
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
-	chromium --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
+	chromium --log-level=3 --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
 
 ## publish-to-web: build and make the web directory available online
 .PHONY: publish-to-web
