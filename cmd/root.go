@@ -38,6 +38,8 @@ func RunCommand(input string) string {
 	rootCmd.SetOut(buf)
 	rootCmd.SetErr(buf)
 	rootCmd.SetArgs(args)
-	rootCmd.Execute()
+	if err := rootCmd.Execute(); err != nil {
+		return err.Error()
+	}
 	return buf.String()
 }
