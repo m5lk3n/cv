@@ -21,7 +21,7 @@ var versionCmd = &cobra.Command{
 		r, err := loadResume()
 		if err == nil && r.Meta.LastModified != "" {
 			if t, err := time.Parse(time.RFC3339, r.Meta.LastModified); err == nil {
-				version += "\nCV data last modified on " + t.Format("January 2, 2006")
+				version += "\nCV data last modified on " + t.Format("January 2, 2006 at 15:04 MST")
 			}
 		}
 		fmt.Fprintln(cmd.OutOrStdout(), version)

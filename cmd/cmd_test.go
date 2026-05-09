@@ -384,4 +384,3 @@ func TestWorkEntryWithoutOptionalFields(t *testing.T) {
 	assertContainsAll(t, ach, "Bare Co:")
 	assertNotContainsAny(t, ach, "•")
 }
-
