@@ -42,9 +42,10 @@ As a prerequisite for the `Caddyfile` below, place this `404.html` in the matchi
 
 What it does?
 
+- Adds usual file serving
 - Blocks common exploit paths
 - Reduces fingerprinting value
-- Adds security headers (with strong but safe defaults)
+- Adds security headers
 
 ```
 (blocked_paths) {
@@ -80,8 +81,8 @@ What it does?
         Permissions-Policy "interest-cohort=()"
         Content-Security-Policy `
             default-src 'self';
-            script-src 'self';
-            style-src 'self';
+            script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval';
+            style-src 'self' 'unsafe-inline';
             img-src 'self' data:;
             font-src 'self';
             connect-src 'self';
