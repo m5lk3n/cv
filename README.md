@@ -153,6 +153,8 @@ My goals of this projects were to open-source my CV, give it a CLI, and to use G
 
 I prompted Claude Opus 4.6, 4.7, and Claude Sonnet 4.6 to implement this project. However, I had learned and used almost all technologies used in this project before, without the help of AI.
 
+In addition to that, I used `gpt-5.2-chat` to analyze log files and to derive [web server setup improvements](CADDY.md) from that.
+
 ## 📄 License
 
 The code and tooling in this repository are released under the [MIT License](LICENSE).
