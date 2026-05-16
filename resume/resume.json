@@ -2,7 +2,7 @@
   "meta": {
     "format": "https://jsonresume.org/schema/",
     "theme": "even",
-    "lastModified": "2026-05-09T09:02:31Z"
+    "lastModified": "2026-05-16T06:12:26Z"
   },
   "basics": {
     "name": "Michael Klein",
@@ -89,7 +89,7 @@
       "highlights": [
         "Became a state-certified incident commander and group leader",
         "Participated in 100+ firefighting operations",
-        "Created and developed the organization's website between 1998 and 2006"
+        "Created, developed, and maintained the organization's website between 1998 and 2006"
       ]
     }
   ],
@@ -172,7 +172,7 @@
       "url": "https://www.credly.com/badges/d23a51a4-c835-4e49-b31a-f0d27c8f5f6e"
     },
     {
-      "name": "AWS Certified Solutions Architect (SAA)",
+      "name": "AWS Certified Solutions Architect Associate (SAA)",
       "issuer": "Amazon Web Services",
       "date": "2018-12",
       "url": "https://www.credly.com/badges/dcc795c5-349e-4de1-9744-2606aad038ba"

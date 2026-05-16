@@ -23,6 +23,10 @@ My CV, via command line interface or via a browser terminal.
 <a href="https://registry.jsonresume.org/m5lk3n">View on JSON Resume registry</a>
 </p>
 
+<p align="center">
+<img src="cv.gif" alt="CV CLI usage illustrated" width="1000"/>
+</p>
+
 ## ✨ Features
 
 - [x] **JSON Resume**: Follows [this](https://jsonresume.org/) open-source initiative for a JSON-based standard for resumes.

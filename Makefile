@@ -47,6 +47,9 @@ needs-govulncheck:
 needs-gosec:
 	@command -v gosec >/dev/null 2>&1 || { echo >&2 "gosec is required but it's not installed. Aborting."; exit 1; }
 
+needs-vhs:
+	@command -v vhs >/dev/null 2>&1 || { echo >&2 "vhs is required but it's not installed. Aborting."; exit 1; }
+
 ## clean: remove generated files
 .PHONY: clean
 clean:
@@ -117,3 +120,8 @@ publish: tidy publish-to-jsonresume publish-to-web
 check-security: needs-govulncheck needs-gosec
 	govulncheck ./...
 	gosec ./...
+
+## record: record a terminal session using vhs for demo purposes
+.PHONY: record
+record: needs-vhs build-cli
+	vhs cv.tape
