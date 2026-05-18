@@ -149,6 +149,14 @@
       text-decoration: none;
       cursor: pointer;
       transition: border-color 0.2s, background-color 0.2s;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .splash-option::-webkit-scrollbar {
+      display: none;
+    }
+    .splash-option > * {
+      flex-shrink: 0;
     }
     .splash-option:hover,
     .splash-option:focus,
@@ -188,11 +196,6 @@
     .splash-theme:focus {
       border-color: #EAD637;
       outline: none;
-    }
-    @media (max-width: 480px) {
-      .splash-option .desc {
-        display: none;
-      }
     }
   </style>
 </head>
