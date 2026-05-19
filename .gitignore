@@ -1,7 +1,8 @@
 .claude
 .env
 .vscode
-dist
 cv
+dist
+log
 web/cv.wasm
 web/resume.pdf
