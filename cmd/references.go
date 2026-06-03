@@ -18,11 +18,11 @@ var referencesCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, ref := range r.References {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s\n", ref.Name)
+			_, _ = fmt.Fprintf(w, "%s\n", ref.Name)
 			if ref.Reference != "" {
-				fmt.Fprintf(w, "  %s\n", ref.Reference)
+				_, _ = fmt.Fprintf(w, "  %s\n", ref.Reference)
 			}
 		}
 		return nil

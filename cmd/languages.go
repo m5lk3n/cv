@@ -17,7 +17,7 @@ var languagesCmd = &cobra.Command{
 		}
 		w := cmd.OutOrStdout()
 		for _, lang := range r.Languages {
-			fmt.Fprintf(w, "%s — %s\n", lang.Language, lang.Fluency)
+			_, _ = fmt.Fprintf(w, "%s — %s\n", lang.Language, lang.Fluency)
 		}
 		return nil
 	},

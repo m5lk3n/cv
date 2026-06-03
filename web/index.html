@@ -34,6 +34,9 @@
     #output a {
       color: inherit;
     }
+    .cmd-line {
+      color: #EAD637;
+    }
     .prompt-line {
       display: flex;
       align-items: center;
@@ -52,7 +55,7 @@
       border: none;
       outline: none;
       background: transparent;
-      color: #E9E9EA;
+      color: #EAD637;
       font: inherit;
       caret-color: transparent;
     }
@@ -114,7 +117,7 @@
       gap: 1rem;
     }
     .splash-prompt {
-      color: #E9E9EA;
+      color: #EAD637;
     }
     .splash-prompt span {
       color: #EAD637;
@@ -407,7 +410,7 @@
         return;
       }
 
-      appendOutput("$ " + cmd + "\n");
+      output.innerHTML += '<span class="cmd-line">' + escapeHtml("$ " + cmd) + '</span>\n';
       if (!ready) {
         appendOutput("wasm not loaded yet\n");
         return;

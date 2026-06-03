@@ -18,20 +18,20 @@ var volunteeringCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, v := range r.Volunteer {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s — %s\n", v.Organization, v.Position)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(v.StartDate), formatEndDate(v.EndDate))
+			_, _ = fmt.Fprintf(w, "%s — %s\n", v.Organization, v.Position)
+			_, _ = fmt.Fprintf(w, "  %s to %s\n", formatDate(v.StartDate), formatEndDate(v.EndDate))
 			if v.URL != "" {
-				fmt.Fprintf(w, "  %s\n", v.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", v.URL)
 			}
 			if v.Summary != "" {
-				fmt.Fprintf(w, "  %s\n", v.Summary)
+				_, _ = fmt.Fprintf(w, "  %s\n", v.Summary)
 			}
 			if len(v.Highlights) > 0 {
-				fmt.Fprintln(w, "  Highlights:")
+				_, _ = fmt.Fprintln(w, "  Highlights:")
 				for _, h := range v.Highlights {
-					fmt.Fprintf(w, "    • %s\n", h)
+					_, _ = fmt.Fprintf(w, "    • %s\n", h)
 				}
 			}
 		}

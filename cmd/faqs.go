@@ -18,10 +18,10 @@ var faqsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, f := range r.XCV.FAQs {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "Q: %s\n", f.Question)
-			fmt.Fprintf(w, "A: %s\n", f.Answer)
+			_, _ = fmt.Fprintf(w, "Q: %s\n", f.Question)
+			_, _ = fmt.Fprintf(w, "A: %s\n", f.Answer)
 		}
 		return nil
 	},

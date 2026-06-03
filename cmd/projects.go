@@ -18,20 +18,20 @@ var projectsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, p := range r.Projects {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s\n", p.Name)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(p.StartDate), formatEndDate(p.EndDate))
+			_, _ = fmt.Fprintf(w, "%s\n", p.Name)
+			_, _ = fmt.Fprintf(w, "  %s to %s\n", formatDate(p.StartDate), formatEndDate(p.EndDate))
 			if p.URL != "" {
-				fmt.Fprintf(w, "  %s\n", p.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", p.URL)
 			}
 			if p.Description != "" {
-				fmt.Fprintf(w, "  %s\n", p.Description)
+				_, _ = fmt.Fprintf(w, "  %s\n", p.Description)
 			}
 			if len(p.Highlights) > 0 {
-				fmt.Fprintln(w, "  Highlights:")
+				_, _ = fmt.Fprintln(w, "  Highlights:")
 				for _, h := range p.Highlights {
-					fmt.Fprintf(w, "    • %s\n", h)
+					_, _ = fmt.Fprintf(w, "    • %s\n", h)
 				}
 			}
 		}

@@ -24,7 +24,7 @@ var versionCmd = &cobra.Command{
 				version += "\nCV data last modified on " + t.Format("January 2, 2006 at 15:04 MST")
 			}
 		}
-		fmt.Fprintln(cmd.OutOrStdout(), version)
+		_, _ = fmt.Fprintln(cmd.OutOrStdout(), version)
 	},
 }
 

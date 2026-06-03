@@ -19,15 +19,15 @@ var skillsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, s := range r.Skills {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s", s.Name)
+			_, _ = fmt.Fprintf(w, "%s", s.Name)
 			if s.Level != "" {
-				fmt.Fprintf(w, " (%s)", s.Level)
+				_, _ = fmt.Fprintf(w, " (%s)", s.Level)
 			}
-			fmt.Fprintln(w)
+			_, _ = fmt.Fprintln(w)
 			if len(s.Keywords) > 0 {
-				fmt.Fprintf(w, "  %s\n", strings.Join(s.Keywords, ", "))
+				_, _ = fmt.Fprintf(w, "  %s\n", strings.Join(s.Keywords, ", "))
 			}
 		}
 		return nil

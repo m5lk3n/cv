@@ -18,17 +18,17 @@ var certificatesCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, c := range r.Certificates {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s\n", c.Name)
+			_, _ = fmt.Fprintf(w, "%s\n", c.Name)
 			if c.Issuer != "" {
-				fmt.Fprintf(w, "  Issuer: %s\n", c.Issuer)
+				_, _ = fmt.Fprintf(w, "  Issuer: %s\n", c.Issuer)
 			}
 			if c.Date != "" {
-				fmt.Fprintf(w, "  Date: %s\n", formatDate(c.Date))
+				_, _ = fmt.Fprintf(w, "  Date: %s\n", formatDate(c.Date))
 			}
 			if c.URL != "" {
-				fmt.Fprintf(w, "  %s\n", c.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", c.URL)
 			}
 		}
 		return nil

@@ -18,20 +18,20 @@ var workCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, job := range r.Work {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s — %s\n", job.Name, job.Position)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(job.StartDate), formatEndDate(job.EndDate))
+			_, _ = fmt.Fprintf(w, "%s — %s\n", job.Name, job.Position)
+			_, _ = fmt.Fprintf(w, "  %s to %s\n", formatDate(job.StartDate), formatEndDate(job.EndDate))
 			if job.URL != "" {
-				fmt.Fprintf(w, "  %s\n", job.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", job.URL)
 			}
 			if job.Summary != "" {
-				fmt.Fprintf(w, "  %s\n", job.Summary)
+				_, _ = fmt.Fprintf(w, "  %s\n", job.Summary)
 			}
 			if len(job.Highlights) > 0 {
-				fmt.Fprintln(w, "  Highlights:")
+				_, _ = fmt.Fprintln(w, "  Highlights:")
 				for _, h := range job.Highlights {
-					fmt.Fprintf(w, "    • %s\n", h)
+					_, _ = fmt.Fprintf(w, "    • %s\n", h)
 				}
 			}
 		}
@@ -57,11 +57,11 @@ var achievementsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, job := range r.Work {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s:\n", job.Name)
+			_, _ = fmt.Fprintf(w, "%s:\n", job.Name)
 			for _, h := range job.Highlights {
-				fmt.Fprintf(w, "  • %s\n", h)
+				_, _ = fmt.Fprintf(w, "  • %s\n", h)
 			}
 		}
 		return nil

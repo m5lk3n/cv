@@ -16,7 +16,7 @@ var aboutCmd = &cobra.Command{
 			return err
 		}
 		w := cmd.OutOrStdout()
-		fmt.Fprintln(w, r.Basics.Summary)
+		_, _ = fmt.Fprintln(w, r.Basics.Summary)
 		return nil
 	},
 }

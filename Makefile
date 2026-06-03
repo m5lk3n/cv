@@ -41,6 +41,9 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
+needs-golangci-lint:
+	@command -v golangci-lint >/dev/null 2>&1 || { echo >&2 "golangci-lint is required but it's not installed. Aborting."; exit 1; }
+
 needs-govulncheck:
 	@command -v govulncheck >/dev/null 2>&1 || { echo >&2 "govulncheck is required but it's not installed. Aborting."; exit 1; }
 
@@ -115,9 +118,10 @@ publish-to-web: build-web
 .PHONY: publish
 publish: tidy publish-to-jsonresume publish-to-web
 
-## check-security: run govulncheck and gosec to check for security vulnerabilities
+## check-security: run golangci-lint, govulncheck and gosec to check for security vulnerabilities
 .PHONY: check-security
-check-security: needs-govulncheck needs-gosec
+check-security: needs-golangci-lint needs-govulncheck needs-gosec
+	golangci-lint run ./...
 	govulncheck ./...
 	gosec ./...
 

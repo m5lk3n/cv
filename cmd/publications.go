@@ -18,20 +18,20 @@ var publicationsCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, p := range r.Publications {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s\n", p.Name)
+			_, _ = fmt.Fprintf(w, "%s\n", p.Name)
 			if p.Publisher != "" {
-				fmt.Fprintf(w, "  Publisher: %s\n", p.Publisher)
+				_, _ = fmt.Fprintf(w, "  Publisher: %s\n", p.Publisher)
 			}
 			if p.ReleaseDate != "" {
-				fmt.Fprintf(w, "  Date: %s\n", formatReleaseDate(p.ReleaseDate))
+				_, _ = fmt.Fprintf(w, "  Date: %s\n", formatReleaseDate(p.ReleaseDate))
 			}
 			if p.URL != "" {
-				fmt.Fprintf(w, "  %s\n", p.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", p.URL)
 			}
 			if p.Summary != "" {
-				fmt.Fprintf(w, "  %s\n", p.Summary)
+				_, _ = fmt.Fprintf(w, "  %s\n", p.Summary)
 			}
 		}
 		return nil

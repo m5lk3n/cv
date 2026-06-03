@@ -19,18 +19,18 @@ var educationCmd = &cobra.Command{
 		w := cmd.OutOrStdout()
 		for i, edu := range r.Education {
 			if i > 0 {
-				fmt.Fprintln(w)
+				_, _ = fmt.Fprintln(w)
 			}
-			fmt.Fprintf(w, "%s — %s (%s)\n", edu.Institution, edu.Area, edu.StudyType)
-			fmt.Fprintf(w, "  %s to %s\n", formatDate(edu.StartDate), formatEndDate(edu.EndDate))
+			_, _ = fmt.Fprintf(w, "%s — %s (%s)\n", edu.Institution, edu.Area, edu.StudyType)
+			_, _ = fmt.Fprintf(w, "  %s to %s\n", formatDate(edu.StartDate), formatEndDate(edu.EndDate))
 			if edu.URL != "" {
-				fmt.Fprintf(w, "  %s\n", edu.URL)
+				_, _ = fmt.Fprintf(w, "  %s\n", edu.URL)
 			}
 			if edu.Score != "" {
-				fmt.Fprintf(w, "  GPA: %s\n", edu.Score)
+				_, _ = fmt.Fprintf(w, "  GPA: %s\n", edu.Score)
 			}
 			if len(edu.Courses) > 0 {
-				fmt.Fprintf(w, "  Courses: %s\n", strings.Join(edu.Courses, ", "))
+				_, _ = fmt.Fprintf(w, "  Courses: %s\n", strings.Join(edu.Courses, ", "))
 			}
 		}
 		return nil
