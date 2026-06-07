@@ -41,6 +41,9 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
+needs-rsync:
+	@command -v rsync >/dev/null 2>&1 || { echo >&2 "rsync is required but it's not installed. Aborting."; exit 1; }
+
 needs-golangci-lint:
 	@command -v golangci-lint >/dev/null 2>&1 || { echo >&2 "golangci-lint is required but it's not installed. Aborting."; exit 1; }
 
@@ -86,11 +89,13 @@ build-wasm:
 ## build-web: build the WebAssembly module and export the PDF for web usage
 .PHONY: build-web
 build-web: build-wasm export-pdf
+	@echo ""
 	@echo "WebAssembly module built and PDF exported to web/resume.pdf"
 
 ## run-localhost: build, deploy, and run the WebAssembly module on a local web server
 .PHONY: run-localhost
 run-localhost: needs-python3 build-web
+	@echo ""
 	@python3 -m http.server -d web
 
 ## publish-to-jsonresume: make the resume available under registry.jsonresume.org
@@ -99,6 +104,7 @@ publish-to-jsonresume: needs-jq needs-gh
 	@mkdir -p dist
 	@jq 'del(."x-cv")' resume/resume.json > dist/resume.json
 	@gh gist edit $(GIST_ID) -f resume.json dist/resume.json
+	@echo ""
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
 	echo "Updated CV published under https://registry.jsonresume.org/$$GITHUB_USERNAME"
 
@@ -112,6 +118,7 @@ export-pdf: needs-gh needs-chromium
 .PHONY: publish-to-web
 publish-to-web: build-web
 	rsync -vz --delete --recursive --chown=caddy:caddy web/ "${DEPLOY_TARGET}"
+	@echo ""
 	@echo "Updated CV app version published to web"
 
 ## publish: build, export PDF, publish to JSONResume and web

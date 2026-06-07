@@ -61,9 +61,9 @@
     }
     .cursor {
       position: absolute;
-      bottom: 0.1em;
+      bottom: 0.2em;
       width: 1ch;
-      height: 1.2em;
+      height: 1.3em;
       background: #E9E9EA;
       pointer-events: none;
       animation: blink 1s step-end infinite;
@@ -76,13 +76,29 @@
       border-top: 2px solid #EAD637;
       margin: 0.5rem 0;
     }
+    .home-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      opacity: 0.3;
+      transition: opacity 0.2s;
+      z-index: 5;
+    }
+    .home-link:hover {
+      opacity: 1;
+    }
+    .home-link img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
     .github-link,
     .pdf-link,
     .json-link {
       position: fixed;
-      bottom: 1rem;
+      bottom: 0.25rem;
       color: #EAD637;
-      opacity: 0.6;
+      opacity: 0.3;
       transition: opacity 0.2s;
     }
     .github-link {
@@ -203,6 +219,9 @@
   </style>
 </head>
 <body>
+  <a class="home-link" href="/" aria-label="Homepage">
+    <img src="favicon.png" alt="Home">
+  </a>
   <div id="splash" role="dialog" aria-labelledby="splash-title">
     <div class="splash-content">
       <div class="splash-prompt" id="splash-title"><span>$</span>cv --view<span class="comment" id="splash-version"></span></div>
