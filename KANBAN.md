@@ -10,7 +10,7 @@
 
 ## Doing
 
-- [ ] try to improve UX on smaller screens like on a smartphone
+n/a
 
 ### Done
 
@@ -54,3 +54,4 @@
 - [x] add tests
 - [x] support additional themes
 - [x] embed app version in splash screen
+- [x] disable terminal option on smaller screens like smartphone

@@ -216,6 +216,17 @@
       border-color: #EAD637;
       outline: none;
     }
+    @media (max-width: 600px) {
+      #splash-interactive {
+        opacity: 0.4;
+        cursor: default;
+      }
+      #splash-interactive:hover,
+      #splash-interactive:focus {
+        border-color: #3a4147;
+        background-color: transparent;
+      }
+    }
   </style>
 </head>
 <body>
@@ -326,13 +337,25 @@
       splash.remove();
       input.focus();
     }
-    splashInteractive.addEventListener("click", dismissSplash);
+    const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
+    if (isSmallScreen) {
+      splashInteractive.setAttribute("disabled", "");
+      splashInteractive.setAttribute("title", "Interactive terminal requires a larger screen");
+      splashInteractive.setAttribute("tabindex", "-1");
+      splashInteractive.removeAttribute("autofocus");
+      splashPdf.focus();
+    }
+    splashInteractive.addEventListener("click", () => {
+      if (!isSmallScreen) dismissSplash();
+    });
     splashJson.addEventListener("click", (e) => {
       if (splashJson.getAttribute("href") === "#") e.preventDefault();
     });
-    const splashOptions = [splashInteractive, splashPdf, splashJson];
+    const splashOptions = isSmallScreen
+      ? [splashPdf, splashJson]
+      : [splashInteractive, splashPdf, splashJson];
     splash.addEventListener("keydown", (e) => {
-      if (e.key === "1") {
+      if (e.key === "1" && !isSmallScreen) {
         e.preventDefault();
         dismissSplash();
       } else if (e.key === "2") {
