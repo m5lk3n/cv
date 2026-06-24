@@ -316,7 +316,8 @@
       document.title = cvName() + "'s CV";
       registryBaseUrl = "https://registry.jsonresume.org/" + ghUsername();
       document.getElementById("json-link").href = registryBaseUrl;
-      document.getElementById("splash-version").textContent = "# v" + cvVersion();
+      const splashVersion = document.getElementById("splash-version");
+      if (splashVersion) splashVersion.textContent = "# v" + cvVersion();
       updateSplashJsonHref();
       const loading = document.getElementById("loading");
       if (loading) loading.remove();
