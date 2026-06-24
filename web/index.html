@@ -265,12 +265,33 @@
         background-color: transparent;
       }
     }
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(calc(100% + 2rem));
+      background: #232A2F;
+      border: 1px solid #3a4147;
+      color: #E9E9EA;
+      padding: 0.6rem 1.2rem;
+      font: inherit;
+      font-size: 0.9rem;
+      text-align: center;
+      z-index: 20;
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
   <a class="home-link" href="/" aria-label="Homepage">
     <img src="favicon.png" alt="Home">
   </a>
+  <div class="toast" id="toast"></div>
   <div id="splash" role="dialog" aria-labelledby="splash-title">
     <div class="splash-content">
       <div class="splash-prompt" id="splash-title"><span>$</span>cv --view<span class="comment" id="splash-version"></span></div>
@@ -389,14 +410,23 @@
     }
     const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
     if (isSmallScreen) {
-      splashInteractive.setAttribute("disabled", "");
-      splashInteractive.setAttribute("title", "Interactive terminal requires a larger screen");
+      splashInteractive.setAttribute("aria-disabled", "true");
+      splashInteractive.setAttribute("title", "Interactive terminal\nrequires a larger screen");
       splashInteractive.setAttribute("tabindex", "-1");
       splashInteractive.removeAttribute("autofocus");
       splashPdf.focus();
     }
+    const toast = document.getElementById("toast");
+    let toastTimer;
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 3000);
+    }
     splashInteractive.addEventListener("click", () => {
-      if (!isSmallScreen) dismissSplash();
+      if (isSmallScreen) showToast(splashInteractive.getAttribute("title"));
+      else dismissSplash();
     });
     splashJson.addEventListener("click", (e) => {
       if (splashJson.getAttribute("href") === "#") e.preventDefault();
