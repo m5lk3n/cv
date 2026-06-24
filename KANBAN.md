@@ -10,7 +10,7 @@
 
 ## Doing
 
-- [ ] show built-in commands (clear, reset and up/down)
+n/a
 
 ### Done
 
@@ -56,3 +56,4 @@
 - [x] embed app version in splash screen
 - [x] disable terminal option on smaller screens like smartphone
 - [x] indicate "loading..." (for slow connections)
+- [x] show built-in commands (clear, reset and up/down)

@@ -2,7 +2,7 @@
   "meta": {
     "format": "https://jsonresume.org/schema/",
     "theme": "even",
-    "lastModified": "2026-05-16T06:12:26Z"
+    "lastModified": "2026-06-24T09:03:37Z"
   },
   "basics": {
     "name": "Michael Klein",
@@ -239,7 +239,9 @@
     {
       "name": "Cloud Operations",
       "keywords": [
-        "CloudOps Processes"
+        "CloudOps Processes",
+        "MCP-enabled CloudOps",
+        "Agent-based CloudOps"
       ]
     },
     {
