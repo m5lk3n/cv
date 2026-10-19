@@ -48,8 +48,8 @@ My CV, via command line interface or via a browser terminal.
 
 | Area | Technology |
 | :--- | :--- |
-| CLI  | [Go](https://go.dev/) |
-| Web  | [WebAssembly](https://webassembly.org/) |
+| CLI | [Go](https://go.dev/) |
+| Web | [WebAssembly](https://webassembly.org/) |
 | Data | [JSON Resume](https://jsonresume.org/) |
 
 ## 🏗 Architecture
