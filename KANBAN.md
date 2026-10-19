@@ -2,11 +2,12 @@
 
 ## To do
 
+- [ ] add an MCP server for my `resume.json`?
 - [ ] ASCII art?
 - [ ] animated pointer to PDF download?
 - [ ] `favicon.png` could be the `resume.json`'s `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?
-- [ ] check out https://github.com/igolaizola/webcli
+- [ ] check out <https://github.com/igolaizola/webcli>
 
 ## Doing
 
@@ -37,14 +38,14 @@ n/a
   - [x] `projects`
 - [x] address FIXMEs
 - [x] add licenses
-- [x] https://cv.michael-klein.info/
+- [x] <https://cv.michael-klein.info/>
 - [x] resume as downloadable PDF
-- [x] publish `resume.json` under https://registry.jsonresume.org/
-- [x] add link to published resume under https://registry.jsonresume.org/
+- [x] publish `resume.json` under <https://registry.jsonresume.org/>
+- [x] add link to published resume under <https://registry.jsonresume.org/>
 - [x] add `publish-to-web` target to Makefile
   - [x] using `Makefile`
-  - [ ] ~~using GitHub workflow (see https://github.com/thomasdavis/resume)~~
-- [x] move repo to https://github.com/m5lk3n/cv
+  - [ ] ~~using GitHub workflow (see <https://github.com/thomasdavis/resume>)~~
+- [x] move repo to <https://github.com/m5lk3n/cv>
 - [x] fix hardcodings
 - [x] add `.env.example`
 - [x] complete `README.md`

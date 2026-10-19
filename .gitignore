@@ -1,5 +1,6 @@
 .claude
 .env
+.rumdl_cache
 .vscode
 cv
 dist

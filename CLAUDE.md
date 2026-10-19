@@ -1,5 +1,5 @@
-# Style Guide
+# CLAUDE.md
 
-- Every time you update Markdown content, run linting afterwards.
+- Do NOT `git commit` or `git push`.
+- After editing any Markdown file, run make lint-md and fix all reported issues.
 - Do not attempt to lint HTML files.
-- Refer to the user in the second person.

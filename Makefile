@@ -20,6 +20,8 @@ LDFLAGS := -X 'lttl.dev/cv/buildinfo.Version=$(VERSION)' \
            -X 'lttl.dev/cv/buildinfo.NameOnCV=$(NAME_ON_CV)' \
            -X 'lttl.dev/cv/buildinfo.GitHubUsername=$(GITHUB_USERNAME)'
 
+.DEFAULT_GOAL := help
+
 ## help: print this help message
 .PHONY: help
 help:
@@ -29,30 +31,39 @@ help:
 	@echo
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' | sed -e 's/^/ /'
 
+.PHONY: needs-python3
 needs-python3:
 	@command -v python3 >/dev/null 2>&1 || { echo >&2 "python3 is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-jq
 needs-jq:
 	@command -v jq >/dev/null 2>&1 || { echo >&2 "jq is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-gh
 needs-gh:
 	@command -v gh >/dev/null 2>&1 || { echo >&2 "gh is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-chromium
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-rsync
 needs-rsync:
 	@command -v rsync >/dev/null 2>&1 || { echo >&2 "rsync is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-golangci-lint
 needs-golangci-lint:
 	@command -v golangci-lint >/dev/null 2>&1 || { echo >&2 "golangci-lint is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-govulncheck
 needs-govulncheck:
 	@command -v govulncheck >/dev/null 2>&1 || { echo >&2 "govulncheck is required but it's not installed. Aborting."; exit 1; }
 
-needs-gosec:
-	@command -v gosec >/dev/null 2>&1 || { echo >&2 "gosec is required but it's not installed. Aborting."; exit 1; }
+.PHONY: needs-rumdl
+needs-rumdl:
+	@command -v rumdl >/dev/null 2>&1 || { echo >&2 "rumdl is required but it's not installed. Aborting."; exit 1; }
 
+.PHONY: needs-vhs
 needs-vhs:
 	@command -v vhs >/dev/null 2>&1 || { echo >&2 "vhs is required but it's not installed. Aborting."; exit 1; }
 
@@ -125,12 +136,16 @@ publish-to-web: build-web
 .PHONY: publish
 publish: tidy publish-to-jsonresume publish-to-web
 
-## check-security: run golangci-lint, govulncheck and gosec to check for security vulnerabilities
+## check-security: run golangci-lint (including gosec) and govulncheck to check for security vulnerabilities
 .PHONY: check-security
-check-security: needs-golangci-lint needs-govulncheck needs-gosec
+check-security: needs-golangci-lint needs-govulncheck
 	golangci-lint run ./...
 	govulncheck ./...
-	gosec ./...
+
+## lint-md: lint Markdown files with rumdl
+.PHONY: lint-md
+lint-md: needs-rumdl
+	rumdl check .
 
 ## record: record a terminal session using vhs for demo purposes
 .PHONY: record

@@ -1,9 +1,10 @@
+<!-- markdownlint-disable MD033 -->
 <h1 align="center"><img src="web/favicon.png" alt="Icon" height="24"> My CV & CV (Web)CLI</h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go&logoColor=white"/>
-<img src="https://img.shields.io/badge/License-MIT-green"/> (CV app)
-<img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV data)
+<img alt="Go badge" src="https://img.shields.io/badge/Go-1.26+-00ADD8?logo=go&logoColor=white"/>
+<img alt="License badge app" src="https://img.shields.io/badge/License-MIT-green"/> (CV app)
+<img alt="License badge data" src="https://img.shields.io/badge/License-All%20Rights%20Reserved-lightgrey"/> (CV data)
 </p>
 
 <p align="center">
@@ -26,6 +27,7 @@ My CV, via command line interface or via a browser terminal.
 <p align="center">
 <img src="cv.gif" alt="CV CLI usage illustrated" width="1000"/>
 </p>
+<!-- markdownlint-enable MD033 -->
 
 ## ✨ Features
 
@@ -86,7 +88,7 @@ To get a local copy up and running, follow these simple steps.
 
 #### Web Server
 
-A ([Caddy](https://caddyserver.com/)) web server location where to store static files (e.g., https://cv.example.com) is required. Have a look at [Makefile](Makefile)'s `publish-to-web` and `.env.example`'s `DEPLOY_TARGET` for implementation details. It should be relatively straightforward to customize the deployment to another web server.
+A ([Caddy](https://caddyserver.com/)) web server location where to store static files (e.g., <https://cv.example.com>) is required. Have a look at [Makefile](Makefile)'s `publish-to-web` and `.env.example`'s `DEPLOY_TARGET` for implementation details. It should be relatively straightforward to customize the deployment to another web server.
 
 #### Tooling
 
@@ -137,7 +139,7 @@ make build-web       # WebAssembly + PDF       → web/cv.wasm, web/resume.pdf
 make run-localhost
 ```
 
-Open http://localhost:8000 and type commands like `cv basics` at the prompt.
+Open <http://localhost:8000> and type commands like `cv basics` at the prompt.
 
 ### Develop
 

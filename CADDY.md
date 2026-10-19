@@ -47,18 +47,18 @@ What it does?
 - Reduces fingerprinting value
 - Adds security headers
 
-```
+```text
 (blocked_paths) {
-	@blocked_paths {
-		path /.env*
-		path /.git/*
-		path /wp-admin*
-		path /wp-includes*
-		path /wp-content*
-		path /server*
-		path /console*
-	}
-	respond @blocked_paths "Access Denied" 403
+    @blocked_paths {
+        path /.env*
+        path /.git/*
+        path /wp-admin*
+        path /wp-includes*
+        path /wp-content*
+        path /server*
+        path /console*
+    }
+    respond @blocked_paths "Access Denied" 403
 }
 
 (common_errors) {
@@ -116,11 +116,12 @@ cv.example.com {
 ### Rate-limit scanners & bots
 
 Requires
+
 - [caddy-ratelimit](https://github.com/mholt/caddy-ratelimit)
-- [xcaddy](https://github.com/caddyserver/xcaddy) 
+- [xcaddy](https://github.com/caddyserver/xcaddy)
 - `caddy` to be updated separately (due to custom `xcaddy` build)
 
-```
+```text
 @bots {
     header User-Agent *l9scan*
     header User-Agent *Go-http-client*
