@@ -5,10 +5,10 @@
 This project deploys to Cloudflare Workers (free tier) via the
 [Makefile](Makefile)'s `publish-to-web` target and [wrangler.jsonc](wrangler.jsonc).
 The rules below add defense-in-depth on the Cloudflare side against the
-attack patterns observed in the access logs (October 2026).
+attack patterns observed in my access logs (October 2026).
 
-All rules are configured under **Security > WAF > Custom rules** in the
-Cloudflare dashboard.
+All rules are configured under the managed domain's **Security >
+Security Rules > Custom rules** in the Cloudflare dashboard.
 
 ## Rule 1 — Block Empty User-Agent From Cloud Providers
 
@@ -123,7 +123,7 @@ method challenge is a catch-all at the bottom.
 After deploying the rules, verify they work as expected:
 
 ```sh
-# Should be blocked (empty UA from any IP):
+# Should be blocked (empty UA from a cloud ASN — run from a cloud VM):
 curl -s -o /dev/null -w "%{http_code}" -A "" https://cv.michael-klein.info/
 
 # Should be blocked (PHP probe):
@@ -146,13 +146,13 @@ origin.
 
 The [Caddyfile](CADDY.md) sets security headers via its
 `(security_headers)` snippet. When serving through Cloudflare instead
-of Caddy, replicate them with a **Transform Rule** under
-**Rules > Transform Rules > Modify Response Header**.
+of Caddy, replicate them with a rule under the managed domain's
+**Rules > Overview > Response Header Transform Rules**.
 
 | Field | Value |
 | :--- | :--- |
 | **Rule name** | Security headers |
-| **When** | All incoming requests (or: hostname equals `cv.michael-klein.info`) |
+| **When** | All incoming requests (or: `(http.host eq "cv.michael-klein.info")`) |
 
 Add each header as a **Set static** action:
 
@@ -194,20 +194,3 @@ curl -sI https://cv.michael-klein.info/ | grep -iE "x-content-type|x-frame|refer
 ```
 
 All five headers should appear in the response.
-
-## Managed Rulesets
-
-In addition to the custom rules above, enable these free managed
-rulesets under **Security > WAF > Managed rules**:
-
-- **Cloudflare Managed Ruleset** — broad coverage for OWASP-style
-  attacks (SQLi, XSS, RCE). Set to default action.
-- **Cloudflare OWASP Core Ruleset** — paranoia level 1 is appropriate
-  for a static site; higher levels may flag legitimate crawlers.
-
-## Bot Fight Mode
-
-Under **Security > Bots**, enable **Bot Fight Mode** (free tier). This
-challenges requests from known bad bots and data centers with no valid
-bot identity, covering scanning tools like Nuclei, ZGrab, and Masscan
-that the custom rules above may not catch by path alone.
