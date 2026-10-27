@@ -1,12 +1,3 @@
-ifneq (,$(wildcard ./.env))
-    include .env
-    export
-endif
-
-ifeq (,$(wildcard ./.env))
-$(error .env file not found. Please create .env (or copy .env.example))
-endif
-
 VERSION          := $(shell git describe --tags --abbrev=0)
 COMMIT           := $(shell git rev-parse --short HEAD)
 BUILD_TIME       := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
@@ -21,6 +12,16 @@ LDFLAGS := -X 'lttl.dev/cv/buildinfo.Version=$(VERSION)' \
            -X 'lttl.dev/cv/buildinfo.GitHubUsername=$(GITHUB_USERNAME)'
 
 .DEFAULT_GOAL := help
+
+# a site Makefile may set WRANGLER_VERSION before the include to pin a different version
+WRANGLER_VERSION ?= 4.152.0
+# valid WRANGLER_LOG values for `-e WRANGLER_LOG=`: none, error, warn, info, log (the default), debug
+WRANGLER := docker run --rm -it \
+	-v "$(CURDIR)":/app -w /app \
+	-u "$$(id -u):$$(id -g)" -e HOME=/tmp -e WRANGLER_SEND_METRICS=false -e NPM_CONFIG_UPDATE_NOTIFIER=false \
+	-e WRANGLER_LOG_PATH=/app/.wrangler/logs -e WRANGLER_LOG=log \
+	--env-file .env \
+	node:22-alpine npx --yes wrangler@$(WRANGLER_VERSION)
 
 ## help: print this help message
 .PHONY: help
@@ -47,10 +48,6 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
-.PHONY: needs-rsync
-needs-rsync:
-	@command -v rsync >/dev/null 2>&1 || { echo >&2 "rsync is required but it's not installed. Aborting."; exit 1; }
-
 .PHONY: needs-golangci-lint
 needs-golangci-lint:
 	@command -v golangci-lint >/dev/null 2>&1 || { echo >&2 "golangci-lint is required but it's not installed. Aborting."; exit 1; }
@@ -62,6 +59,14 @@ needs-govulncheck:
 .PHONY: needs-rumdl
 needs-rumdl:
 	@command -v rumdl >/dev/null 2>&1 || { echo >&2 "rumdl is required but it's not installed. Aborting."; exit 1; }
+
+.PHONY: needs-docker
+needs-docker:
+	@command -v docker >/dev/null 2>&1 || { echo >&2 "docker is required but it's not installed. Aborting."; exit 1; }
+
+.PHONY: needs-env
+needs-env:
+	@test -f .env || { echo >&2 ".env with CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID is required. Aborting."; exit 1; }
 
 .PHONY: needs-vhs
 needs-vhs:
@@ -127,8 +132,8 @@ export-pdf: needs-gh needs-chromium
 
 ## publish-to-web: build and make the web directory available online
 .PHONY: publish-to-web
-publish-to-web: build-web
-	rsync -vz --delete --recursive --chown=caddy:caddy web/ "${DEPLOY_TARGET}"
+publish-to-web: build-web needs-docker needs-env
+	$(WRANGLER) deploy
 	@echo ""
 	@echo "Updated CV app version published to web"
 

@@ -7,3 +7,4 @@ dist
 log
 web/cv.wasm
 web/resume.pdf
+.wrangler/

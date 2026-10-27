@@ -3,8 +3,6 @@
 ## To do
 
 - [ ] add an MCP server for my `resume.json`?
-- [ ] ASCII art?
-- [ ] animated pointer to PDF download?
 - [ ] `favicon.png` could be the `resume.json`'s `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?
 - [ ] check out <https://github.com/igolaizola/webcli>

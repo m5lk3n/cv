@@ -88,7 +88,16 @@ To get a local copy up and running, follow these simple steps.
 
 #### Web Server
 
-A ([Caddy](https://caddyserver.com/)) web server location where to store static files (e.g., <https://cv.example.com>) is required. Have a look at [Makefile](Makefile)'s `publish-to-web` and `.env.example`'s `DEPLOY_TARGET` for implementation details. It should be relatively straightforward to customize the deployment to another web server.
+A ([Caddy](https://caddyserver.com/)) web server is a simple, but great and recommended option to serve static files. [CADDY.md] describes an exemplified configuration. It should be relatively straightforward to customize the deployment to another web server.
+
+This project deploys to Cloudflare (using a Worker, all on free tier) though. See the [Makefile](Makefile)'s `publish-to-web` target and `.env.example` details. The latter expects:
+
+```sh
+CLOUDFLARE_API_TOKEN=...
+CLOUDFLARE_ACCOUNT_ID=...
+```
+
+Create the token with the "Edit Cloudflare Workers" template.
 
 #### Tooling
 
@@ -97,7 +106,7 @@ A ([Caddy](https://caddyserver.com/)) web server location where to store static 
 - Optional: `jq` (for `make tidy`)
 - Optional: [`gh`](https://cli.github.com/) (for `make publish-to-jsonresume`, authenticated via `gh auth login`)
 - Optional: `chromium` (for `make export-pdf` / `make build-web`)
-- Optional: `rsync` (for `make publish-to-web`)
+- Optional: `docker` (for `make publish-to-web`)
 
 `make publish-to-jsonresume` publishes [resume/resume.json](resume/resume.json) (with the `x-cv` section stripped) to a GitHub gist, making the CV available under `https://registry.jsonresume.org/<your-github-user>`. The gist ID is read from a `.env` file at the repo root (`.env.example`'s `GIST_ID` for details):
 
