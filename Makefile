@@ -1,3 +1,5 @@
+-include .env
+
 VERSION          := $(shell git describe --tags --abbrev=0)
 COMMIT           := $(shell git rev-parse --short HEAD)
 BUILD_TIME       := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
