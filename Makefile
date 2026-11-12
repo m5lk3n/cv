@@ -110,7 +110,7 @@ build-web: build-wasm export-pdf
 	@echo ""
 	@echo "WebAssembly module built and PDF exported to web/resume.pdf"
 
-## run-localhost: build, deploy, and run the WebAssembly module on a local web server
+## run-localhost: build and run on a local web server (static files only, no worker routes such as /mcp)
 .PHONY: run-localhost
 run-localhost: needs-python3 build-web
 	@echo ""
@@ -130,7 +130,13 @@ publish-to-jsonresume: needs-jq needs-gh
 .PHONY: export-pdf
 export-pdf: needs-gh needs-chromium
 	@GITHUB_USERNAME=$$(gh api user --jq .login); \
-	chromium --log-level=3 --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf https://registry.jsonresume.org/$$GITHUB_USERNAME
+	RESUME_URL="https://registry.jsonresume.org/$$GITHUB_USERNAME"; \
+	TMPHTML=$$(mktemp --suffix=.html); \
+	curl -fsSL "$$RESUME_URL" \
+		| sed 's|</head>|<style>body{zoom:0.76}</style></head>|' \
+		> "$$TMPHTML"; \
+	chromium --log-level=3 --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf "$$TMPHTML"; \
+	rm -f "$$TMPHTML"
 
 ## publish-to-web: build and make the web directory available online
 .PHONY: publish-to-web

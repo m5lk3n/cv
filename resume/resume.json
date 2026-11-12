@@ -11,7 +11,7 @@
     "email": "m5l.k3n@gmail.com",
     "phone": "",
     "url": "https://michael-klein.info/",
-    "summary": "Cloud Architect and Engineer with 20+ years across Silicon Valley and Europe, scaling Google Cloud Platform (GCP) from zero to €4M+ p.a. while cutting spend ~50% vs. on-prem. Hands-on with GCP, Platform Engineering, and CloudOps.",
+    "summary": "Cloud Architect and Engineer with 20+ years across Silicon Valley and Europe, scaling Google Cloud Platform (GCP) from zero to €4.5M+ p.a. while cutting spend ~50% vs. on-prem. Hands-on with GCP, Platform Engineering, and CloudOps.",
     "location": {
       "address": "",
       "postalCode": "",
@@ -41,7 +41,7 @@
       "endDate": "",
       "summary": "Lead architect for the European Patent Office's Google Cloud adoption — foundation, team build-out, infrastructure automation, CloudOps, and FinOps.",
       "highlights": [
-        "As Cloud Architect, drove GCP adoption from 0 to > €4M p.a., saving ~50% compared to on-premises",
+        "As Cloud Architect, drove GCP adoption from 0 to > €4.5M p.a., saving ~50% compared to on-premises",
         "Improved cost efficiency: ~40% effective discount on GCP list price through architectural design, custom pricing, and committed-use agreements (paying ~60 cents per €1 of list)",
         "Designed and built two Enterprise-grade GCP organizations including their foundational setup, operational processes, and boundaries",
         "Implemented several GCP discount agreements, including ~€270K in additional savings in 2023 and ~€350K in 2024",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "name": "IDS Scheer (later acquired by Software AG, now SAG ARIS GmbH)",
+      "name": "IDS Scheer (later acquired by Software AG, now ARIS GmbH)",
       "position": "Development Manager",
       "url": "https://aris.com/",
       "startDate": "2003-09",

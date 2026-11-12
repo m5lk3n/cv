@@ -2,7 +2,7 @@
 
 ## To do
 
-- [ ] add an MCP server for my `resume.json`?
+- [ ] clarify MCP semver and its lifecycle (see `SERVER_INFO` in `mcp.ts`)
 - [ ] `favicon.png` could be the `resume.json`'s `basic.image` (use app favicon as fallback)
 - [ ] make it bubbletea TUI?
 - [ ] check out <https://github.com/igolaizola/webcli>
@@ -56,3 +56,4 @@ n/a
 - [x] disable terminal option on smaller screens like smartphone
 - [x] indicate "loading..." (for slow connections)
 - [x] show built-in commands (clear, reset and up/down)
+- [x] add an MCP server for `resume.json`

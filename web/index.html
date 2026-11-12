@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noai, noimageai">
   <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="mcp-server-url" href="/mcp">
   <title>CV loading...</title>
   <style>
     body {
@@ -134,7 +135,8 @@
     }
     .github-link,
     .pdf-link,
-    .json-link {
+    .json-link,
+    .mcp-link {
       position: fixed;
       bottom: 0.25rem;
       color: #EAD637;
@@ -143,16 +145,22 @@
     }
     .github-link {
       right: 1rem;
+      z-index: 11;
+    }
+    .mcp-link {
+      right: 3rem;
+      z-index: 11;
     }
     .json-link {
-      right: 3rem;
+      right: 5rem;
     }
     .pdf-link {
-      right: 5rem;
+      right: 7rem;
     }
     .github-link:hover,
     .pdf-link:hover,
-    .json-link:hover {
+    .json-link:hover,
+    .mcp-link:hover {
       opacity: 1;
     }
     @keyframes shake {
@@ -351,10 +359,13 @@
     </div>
   </div>
   <script src="wasm_exec.js"></script>
-  <a class="pdf-link" href="resume.pdf" target="_blank" rel="noopener" aria-label="Download resume as PDF">
+  <a class="mcp-link" href="/mcp" aria-label="MCP server endpoint for AI agents" title="MCP server for AI agents">
+    <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor"><clipPath id="r"><circle cx="8" cy="8" r="8"/></clipPath><g clip-path="url(#r)"><circle cx="8" cy="8" r="8"/><rect x="3.5" y="6" width="9" height="7" rx="1.5" fill="none" stroke="#1D2226" stroke-width="1.2"/><circle cx="6.2" cy="9.2" r="1.1" fill="#1D2226"/><circle cx="9.8" cy="9.2" r="1.1" fill="#1D2226"/><rect x="6.2" y="11.2" width="3.6" height="0.8" rx="0.4" fill="#1D2226"/><line x1="8" y1="6" x2="8" y2="4" stroke="#1D2226" stroke-width="1.2"/><circle cx="8" cy="3.4" r="0.9" fill="#1D2226"/></g></svg>
+  </a>
+  <a class="pdf-link" href="resume.pdf" target="_blank" rel="noopener" aria-label="Download resume as PDF" title="Download PDF">
     <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0H4zm5.5 1.5v2A1.5 1.5 0 0 0 11 5h2v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/><text x="8" y="13" font-size="5" font-family="monospace" font-weight="bold" text-anchor="middle">PDF</text></svg>
   </a>
-  <a id="json-link" class="json-link" target="_blank" rel="noopener" aria-label="View resume on JSON Resume registry">
+  <a id="json-link" class="json-link" target="_blank" rel="noopener" aria-label="View resume on JSON Resume registry" title="JSON Resume">
     <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor"><path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0H4zm5.5 1.5v2A1.5 1.5 0 0 0 11 5h2v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/><text x="8" y="13" font-size="5" font-family="monospace" font-weight="bold" text-anchor="middle">{ }</text></svg>
   </a>
   <div class="terminal-hints" id="terminal-hints" hidden>
@@ -362,7 +373,7 @@
     <div><kbd>reset</kbd> reload page</div>
     <div><kbd>&uarr;</kbd><kbd>&darr;</kbd> command history</div>
   </div>
-  <a class="github-link" href="https://github.com/m5lk3n/cv/" target="_blank" rel="noopener" aria-label="GitHub repository">
+  <a class="github-link" href="https://github.com/m5lk3n/cv/" target="_blank" rel="noopener" aria-label="GitHub repository" title="GitHub">
     <svg width="24" height="24" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.63 7.63 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
   </a>
   <script>
@@ -421,7 +432,7 @@
       document.getElementById("terminal-hints").hidden = false;
       input.focus();
       setTimeout(() => {
-        document.querySelectorAll(".pdf-link, .json-link, .github-link").forEach((el, i) => {
+        document.querySelectorAll(".mcp-link, .pdf-link, .json-link, .github-link").forEach((el, i) => {
           setTimeout(() => {
             el.classList.add("shake");
             el.addEventListener("animationend", () => el.classList.remove("shake"), { once: true });

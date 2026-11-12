@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cv": {
+      "type": "http",
+      "url": "https://cv.michael-klein.info/mcp"
+    }
+  }
+}

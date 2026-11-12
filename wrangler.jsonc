@@ -1,11 +1,13 @@
 {
   "$schema": "https://unpkg.com/wrangler@4.152.0/config-schema.json",
   "name": "cv-michael-klein-info",
+  "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./web",
     "not_found_handling": "404-page",
-    "html_handling": "auto-trailing-slash"
+    "html_handling": "auto-trailing-slash",
+    "run_worker_first": ["/mcp", "/.well-known/mcp.json"]
   },
   "routes": [
     { "pattern": "cv.michael-klein.info", "custom_domain": true }

@@ -202,4 +202,5 @@ User-agent: YiBot
 User-agent: YiyanBot
 User-agent: YouBot
 User-agent: ZanistaBot
+Allow: /mcp
 Disallow: /
