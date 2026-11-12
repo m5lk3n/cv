@@ -36,6 +36,7 @@ My CV, via command line interface or via a browser terminal.
 - [x] **Single binary, no runtime I/O**: CV data is embedded at compile time via `//go:embed`, so the binary (and the WASM artifact) are self-contained.
 - [x] **[Cobra](https://github.com/spf13/cobra) CLI**: One subcommand per CV section ([basics](cmd/basics.go), [work](cmd/work.go), [education](cmd/education.go), [skills](cmd/skills.go), [projects](cmd/projects.go), [certificates](cmd/certificates.go), [languages](cmd/languages.go), [publications](cmd/publications.go), [references](cmd/references.go), [volunteering](cmd/volunteering.go), …) plus extras like [about](cmd/about.go), [faqs](cmd/faqs.go), [hashtags](cmd/hashtags.go), [quotes](cmd/quotes.go), and [version](cmd/version.go).
 - [x] **Browser terminal**: Keystroke-driven shell in [web/index.html](web/index.html) with command history (↑/↓), `clear`, and `reset`; URLs and email addresses are rendered as clickable links.
+- [x] **MCP server**: A [Model Context Protocol](https://modelcontextprotocol.io/) endpoint at `/mcp` lets AI assistants query the CV programmatically — one tool per section, served over Streamable HTTP from the same Cloudflare Worker.
 - [x] **MIT-licensed tooling, All-Rights-Reserved data**: Fork the tool freely; bring your own [resume.json](resume/resume.json).
 
 ### Limitations
@@ -51,15 +52,17 @@ My CV, via command line interface or via a browser terminal.
 | CLI | [Go](https://go.dev/) |
 | Web | [WebAssembly](https://webassembly.org/) |
 | Data | [JSON Resume](https://jsonresume.org/) |
+| AI | [Model Context Protocol](https://modelcontextprotocol.io/) |
 
 ## 🏗 Architecture
 
-One Go module, two entry points, one shared command tree:
+One Go module, two entry points, one shared command tree — plus an MCP server on the same Cloudflare Worker:
 
 - [main.go](main.go) builds a native CLI; [main_wasm.go](main_wasm.go) builds a WebAssembly module that exposes `cvRun(cmd)` to JavaScript. Build tags (`!js || !wasm` vs. `js && wasm`) pick the right entry per target.
 - [cmd/](cmd/) holds the [Cobra](https://github.com/spf13/cobra) command tree — one file per CV section ([basics.go](cmd/basics.go), [work.go](cmd/work.go), [education.go](cmd/education.go), …). [root.go](cmd/root.go) exposes `Execute()` for the CLI and `RunCommand(input)` for the WASM build, which captures stdout/stderr into a buffer so the browser terminal can render it.
 - [resume/](resume/) defines the [JSON Resume](https://jsonresume.org/) schema as Go structs and embeds [resume.json](resume/resume.json) at compile time via `//go:embed`. The data ships inside the binary — no filesystem reads at runtime, which is what makes the WASM build self-contained.
 - [web/](web/) is the browser shell: [index.html](web/index.html) renders a terminal UI and wires keystrokes to `cvRun`; [wasm_exec.js](web/wasm_exec.js) is Go's standard WASM runtime loader; `cv.wasm` is the compiled artifact.
+- [src/](src/) is the Cloudflare Worker: [index.ts](src/index.ts) routes requests — static assets to the WASM-powered site, `/mcp` to the MCP handler, and `/.well-known/mcp.json` to a discovery document. [mcp.ts](src/mcp.ts) implements a [Model Context Protocol](https://modelcontextprotocol.io/) server over Streamable HTTP, exposing one tool per CV section.
 
 ```text
 .
@@ -71,6 +74,9 @@ One Go module, two entry points, one shared command tree:
 ├── resume/
 │   ├── resume.go     # JSON Resume structs + //go:embed loader
 │   └── resume.json   # CV content (All Rights Reserved)
+├── src/              # Cloudflare Worker (TypeScript)
+│   ├── index.ts      # Router: static assets, /mcp, /.well-known/mcp.json
+│   └── mcp.ts        # MCP server — one tool per CV section
 └── web/              # Browser terminal hosting the WASM build
     ├── index.html
     ├── favicon.png
@@ -149,6 +155,23 @@ make run-localhost
 ```
 
 Open <http://localhost:8000> and type commands like `cv basics` at the prompt.
+
+#### MCP
+
+AI assistants that support [MCP](https://modelcontextprotocol.io/) can query the CV directly. Add the remote server to your client config:
+
+```json
+{
+  "mcpServers": {
+    "cv": {
+      "type": "http",
+      "url": "https://cv.michael-klein.info/mcp"
+    }
+  }
+}
+```
+
+The server exposes one tool per CV section (`get_basics`, `get_work_experience`, `get_skills`, `get_education`, `get_certificates`, `get_languages`, `get_projects`, `get_publications`, `get_references`, `get_volunteering`, `get_faqs`). A discovery document is also available at `/.well-known/mcp.json`.
 
 ### Develop
 
