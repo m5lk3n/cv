@@ -2,6 +2,7 @@ import { handleMCP } from "./mcp";
 
 interface Env {
   ASSETS: Fetcher;
+  AGENT_EMAIL?: string;
 }
 
 export default {
@@ -9,7 +10,7 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/mcp") {
-      return handleMCP(request);
+      return handleMCP(request, env);
     }
 
     if (url.pathname === "/.well-known/mcp.json") {

@@ -50,6 +50,7 @@ needs-gh:
 needs-chromium:
 	@command -v chromium >/dev/null 2>&1 || { echo >&2 "chromium is required but it's not installed. Aborting."; exit 1; }
 
+
 .PHONY: needs-golangci-lint
 needs-golangci-lint:
 	@command -v golangci-lint >/dev/null 2>&1 || { echo >&2 "golangci-lint is required but it's not installed. Aborting."; exit 1; }

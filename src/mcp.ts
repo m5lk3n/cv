@@ -30,7 +30,7 @@ const PROTOCOL_VERSION = "2025-03-26";
 
 const SERVER_INFO = {
   name: `${resume.basics.name}'s CV`,
-  version: "1.0.0",
+  version: "1.0.1",
 };
 
 const tools: Tool[] = [
@@ -100,14 +100,18 @@ const tools: Tool[] = [
   },
 ];
 
-function callTool(name: string): { content: Array<{ type: "text"; text: string }> } | undefined {
+interface Env {
+  AGENT_EMAIL?: string;
+}
+
+function callTool(name: string, env: Env): { content: Array<{ type: "text"; text: string }> } | undefined {
   const text = (data: unknown) => ({
     content: [{ type: "text" as const, text: JSON.stringify(data, null, 2) }],
   });
 
   switch (name) {
     case "get_basics":
-      return text(resume.basics);
+      return text({ ...resume.basics, email: env.AGENT_EMAIL ?? resume.basics.email });
     case "get_work_experience":
       return text(resume.work);
     case "get_skills":
@@ -133,7 +137,7 @@ function callTool(name: string): { content: Array<{ type: "text"; text: string }
   }
 }
 
-function handleRequest(req: JsonRpcRequest): JsonRpcResponse | null {
+function handleRequest(req: JsonRpcRequest, env: Env): JsonRpcResponse | null {
   if (!("id" in req) || req.id === undefined) {
     return null;
   }
@@ -165,7 +169,7 @@ function handleRequest(req: JsonRpcRequest): JsonRpcResponse | null {
           error: { code: -32602, message: "Missing tool name" },
         };
       }
-      const result = callTool(toolName);
+      const result = callTool(toolName, env);
       if (!result) {
         return {
           jsonrpc: "2.0",
@@ -192,7 +196,7 @@ function jsonResponse(body: unknown, status = 200): Response {
   });
 }
 
-export async function handleMCP(request: Request): Promise<Response> {
+export async function handleMCP(request: Request, env: Env): Promise<Response> {
   if (request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
   }
@@ -236,7 +240,7 @@ export async function handleMCP(request: Request): Promise<Response> {
 
   if (Array.isArray(body)) {
     const responses = (body as JsonRpcRequest[])
-      .map((req) => handleRequest(req))
+      .map((req) => handleRequest(req, env))
       .filter((r): r is JsonRpcResponse => r !== null);
     if (responses.length === 0) {
       return new Response(null, { status: 204, headers: CORS_HEADERS });
@@ -244,7 +248,7 @@ export async function handleMCP(request: Request): Promise<Response> {
     return jsonResponse(responses);
   }
 
-  const response = handleRequest(body as JsonRpcRequest);
+  const response = handleRequest(body as JsonRpcRequest, env);
   if (response === null) {
     return new Response(null, { status: 204, headers: CORS_HEADERS });
   }
