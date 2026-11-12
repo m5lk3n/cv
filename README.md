@@ -183,9 +183,9 @@ make help            # list all targets
 
 The CV content lives in [resume/resume.json](resume/resume.json) and is rendered by the subcommands in [cmd/](cmd/).
 
-## 🎯 Goals
+## 🎯 Goal
 
-My goals of this projects were to open-source my CV, give it a CLI, and to use Go with WebAssembly for that which I hadn't used before.
+My goal in this project was to open-source my CV, add an MCP, build a CLI, and use Go with WebAssembly for the latter. It was something I had not used before.
 
 ## ※ Disclaimer
 
