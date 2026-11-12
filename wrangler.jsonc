@@ -9,6 +9,9 @@
     "html_handling": "auto-trailing-slash",
     "run_worker_first": ["/mcp", "/.well-known/mcp.json"]
   },
+  "vars": {
+    "AGENT_EMAIL": "m5lk3n+agent@gmail.com"
+  },
   "routes": [
     { "pattern": "cv.michael-klein.info", "custom_domain": true }
   ]
