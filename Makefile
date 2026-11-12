@@ -134,7 +134,7 @@ export-pdf: needs-gh needs-chromium
 	RESUME_URL="https://registry.jsonresume.org/$$GITHUB_USERNAME"; \
 	TMPHTML=$$(mktemp --suffix=.html); \
 	curl -fsSL "$$RESUME_URL" \
-		| sed 's|</head>|<style>body{zoom:0.76}</style></head>|' \
+		| sed 's|</head>|<style>body{zoom:0.8}.masthead{break-after:avoid;padding:1em 0}</style></head>|' \
 		> "$$TMPHTML"; \
 	chromium --log-level=3 --headless --no-pdf-header-footer --print-to-pdf=web/resume.pdf "$$TMPHTML"; \
 	rm -f "$$TMPHTML"
